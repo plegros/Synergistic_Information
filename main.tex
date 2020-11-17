@@ -1,0 +1,272 @@
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+\bibliographystyle{plainnat}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+\usepackage[scr]{rsfso}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{array, multirow}
+\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tikz}
+\hypersetup{
+colorlinks,
+citecolor=NavyBlue,
+linkcolor=NavyBlue,
+urlcolor=NavyBlue}
+\usetikzlibrary{matrix}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{ass}{Assumption}
+\newtheorem{result}{Result}
+\newtheorem{condition}{Condition}
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Definition}{Definition}
+
+\newenvironment{reusefigure}[2][htbp]
+  {\addtocounter{figure}{-1}%
+   \renewcommand{\theHfigure}{dupe-fig}% If you're using hyperref
+   \renewcommand{\thefigure}{\ref{#2}}% Figure counter is \ref
+   \renewcommand{\addcontentsline}[3]{}% Avoid placing figure in LoF
+   \begin{figure}[#1]}
+  {\end{figure}}
+  
+  \usepackage{titlesec}
+
+%\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+  \usepackage{geometry}
+ \geometry{
+ a4paper,
+ total={170mm,257mm},
+ left=2cm,
+ right=2cm,
+ top=1.2cm,
+ bottom=1.2cm,
+ }
+ 
+ \newcommand{\E}{\mathbb E}
+\renewcommand{\th}{\hat\theta}
+\renewcommand{\t}{\theta}
+
+\begin{document}
+
+
+\title{Synergistic information\thanks{We would like to thank.}}
+
+\date{\today}
+
+%\author{Antoine Dubus\thanks{~~Université Libre de Bruxelles, ECARES; \href{mailto:antoine1dubus@gmail.com}{antoine1dubus@gmail.com}.}}
+
+\maketitle
+
+\begin{abstract}
+
+\noindent 
+
+\end{abstract}
+ 
+\textbf{Very preliminary, do not circulate.}
+
+\baselineskip0.7cm
+
+
+
+\section{Model}
+
+
+\begin{itemize}
+	\item Two firms, 1 and 2. 
+	\item Firm $1$ is endowed with a data set $X$. Firms make profits using data/ 
+	\item Firm 2 want to merge with Firm 1. The merged entity makes profits $\Pi_m=X(1+\t)$ where $\t$ is the synergistic value of information owned by Firm 1 when combined with the data owned by firm $2$. 
+	\item Firm 2 and a regulator believe that the type of Firm 1 is uniformly distributed over $[\underline{\t},\overline{\t}]$.
+    \item Firm $1$ can share $s$ information from the total data set $X$, which is verifiable by Firm $2$ and the regulator.
+	\item The regulator will choose whether to allow the merger or not. The regulator tradeoffs the cost from increased market power (assumed to simplify to be proportional to the industry profit) and the gain from synergies. There is some uncertainty on the weight $w$ the regulator will put on synergies, and this uncertainty is resolved only at the time the regulator evaluates the merger proposal, that is after firms $1,2$ have played their mechanism, and $s$ has been shared.
+	\item If the merger fails, the information that has been shared by Firm $1$ can be used by Firm 2 during the competition, and information sharing changes the profit of Firm $1$: $\Pi_{c1}=X-l(s)$; and of Firm 2: $\Pi_{c2}=\t s$. We assume Inada conditions $l(0)=0,l'(O)=0$.
+	\item There are two cases to consider:
+\begin{itemize}
+    \item $l(s)\geq 0$: sharing information increases competition and incurs a loss for a firm
+    \item $l(s)< 0$: sharing information facilitates coordination and increases the profits of a firm (à la \cite{vives1984duopoly} for instance)
+ \end{itemize}
+    \item We adopt a mechanism design approach where Firm 2 designs a mechanism. We apply the revelation principle and we consider truthtelling by each firm, under incentive compatibility constraints.
+    \item A mechanism imposed by Firm 2 consists for Firm 1 in announcing its type $\t$ and sharing a verifiable amount of information $s(\t)$. If the merger occurs, firm $1$ agrees to make a transfer  $T(\t,s)$ to Firm 1 and be residual claimant on the profit.\footnote{%
+    This payment scheme is without loss of generality. What matters is that the profit of firm $1$ in case of merger depends on its true type, for otherwise revelation of information is impossible.}
+    
+\end{itemize}
+
+\paragraph{The timing of the game is the following.} ($U[a,b]$ denotes the uniform distribution on $[a,b]$; we could use more general distributions...)
+\begin{enumerate}\setlength\itemsep{0em}
+    \item Firm $2$ offers a revelation mechanism with outcome $(s(\t),x(\t,s),T(\t))$, $s(\t)$ being the sharing of data that firm $1$ should do, $x(\t,s)$ is the probability that firm $2$ will agree to a merger is the type is $\t$ and the firm shares $s$, and $T(\t,s)$ is the price firm $2$ agrees to pay to firm $1$ if the merger is agreed and the regulator authorizes it. To facilitate incentive compatibility, we assume that $x(\t,s(\t))=1$ and $x(\t,s)=0$ if $s\neq s(\t)$.
+    \item Firm 1 privately learns its type $\t\sim U[\underline{\t},\overline{\t}]$ and makes an announcement in the mechanism and plays $s$.
+    \item Firm $2$ approaches the regulator with probability $x(\t,s)$ and asks for the merger to be approved.
+    \item The regulator observes $s$ and has a draw $w$ from a distribution $F$ on $\mathbb R_+$ with a continuous density. The regulator decides to allows or prevents the merger. The market structure, profits and welfare, are realized.
+\end{enumerate}
+%
+\subsection{The Regulator's Problem}
+   The regulator maximizes a social welfare function that weights the social cost of high industry profits and the social benefit of synergies. Contrary to the usual view that synergies are created only during the merger, synergies endogenously happen without a merger if firm $1$ shares some of its data with firm $2$. Hence, when evaluating a merger proposal, the regulator will compare the \emph{relative synergy gain} to the \emph{relative industry profit gain.}
+
+   At the time the regulator has to evaluate a merger, firm $1$ has already shared $s$ with firm $2$, following a strategy $\sigma(\t)$ in the revelation game (remember that the regulator observes $s$, but not the message sent by firm $1$ to firm $2$).  Let $\sigma^{-1}=\{\t|\sigma(\t)=s\}$ be the set of types of firm $1$ consistent with a sharing of $s$ given the equilibrium strategy $\sigma$. Hence, conditional on observing $s$, the regulator believes that the expected synergy is the conditional expectation $$\t_s:=\E[\t|\t\in\sigma^{-1}(s)].$$
+     
+    If the merger is allowed and firm $2$ takes control of firm $1$, the loss from industry profit is $-[X(1+\t)]$ while the synergy gain is $w[X(1+\t)]$, hence welfare is
+    
+    $$W_m=(w-1)X(1+\t_s)$$
+    
+    If the merger is prevented or the firms decide not to go ahead with it, firm $2$ benefits from the information given by firm $1$ (by a factor of $\t s$, where $\t$ is the true state of the world), and firm $1$ has a loss of $l(s)$, implying that the total industry profit increases by $\t s -l(s)$. Therefore, the regulator believes that the realized industry profit will be $X_1-l(s)+X_2+\t_s s$   if he does not authorize the merger, while the synergy benefit would be $w[X+\t_s s]$.\footnote{%
+    As it should be, the regulator ignores the market loss $l(s)$ to firm $1$.} Hence the expected welfare under competition is
+      $$W_c=-X+l(s)-\t_s s + w (X+\t_s s)$$
+   The regulator allows the merger when $W_m\geq W_c$, or
+    
+    \begin{equation}
+           w\geq w^*(s):=1 + \frac{l(s)}{\t_s(X-s)}
+    \end{equation}
+%
+At the ex-ante stage, when firms play their mechanism to share information, the probability that a merger will be approved when firm $1$ shares $s$ with firm $2$ is then equal to  
+\[
+a(s):=1-F(w^*(s)).
+\]
+
+\section{Playing the Regulatory Game}
+At the time firms $1,2$ play the mechanism, the probabilities $a(s)$  are taken as given because if called upon to act, the regulator has sunk beliefs (he believes that types in $\sigma^{-1}(s)$ of firm $1$ have shared $s$.) In the mechanism, firm $2$ will ask for a merger only if when firm $1$ claims to be of type $\t$, firm $1$ agrees to share a quantity $s=s(\t)$ of data. As is standard, there are two types of incentive conditions to be satisfied: one related to using the requested share, and the other related to telling the truth. If these conditions are satisfied, it must also be the case that firm $1$ prefers to play the mechanism than not playing it, and foregoing the possibility of a merger. 
+
+The interim individual rationality constraint of firm $1$ is then
+\begin{equation}\label{cond:IR}
+    a(s(\t))T(\t,s(\t))+(1-a(s(\t)))(X-l(s(\t)))\geq X.   
+\end{equation}
+
+\paragraph{The Incentives to Share.}
+Suppose first that firm $1$ of type $\t$ does not lie and announces $\t$.  WIth some abuse of notation we write $ T(\t):=T(\t,s(\t))$. If firm $1$ shares $s(\t)$ as recommended by the mechanism, there will be a merger with probability $a(s(\t))$, hence firm 1's expected profit is
+\[
+U(\t):= a(s(\t))(X(1+\t)-T(\t))+(1-a(s(\t)))(X_1-l(s(\t))),
+\]
+while by deviating to $s\neq s(\t)$ there is competition for sure and firm $1$'s payoff is $X-l(s)$. Clearly, the optimal deviation is $s=0$. Hence,  following the recommended share while telling the truth is optimal when the IR constraint \eqref{cond:IR} is satisfied.
+
+If type $\t$ does not tell the truth and claims $\th\neq \t$, he will choose to follow the recommendation $s(\th)$ when the IR condition for type $\th$ is satisfied since by deviating to $\th$ and doing $s(\th)$, type $\t$ gets
+
+  \begin{align*}
+    U(\th|\t)&:=a(s(\th))(X(1+\t)-T(\th))+(1-a(s(\th)))(X-l(s(\th)))
+  \end{align*}
+which is greater than $X$ when the IR constraint of $\th$ is satisfied.
+
+It remains therefore to verify that type $\t$ does not want to deviate to $\th$ and follow the recommended shares, that is that $U(\t)\geq U(\th|\t)$. Now,
+\begin{align*}
+U(\th|\t)=U(\th)+a(s(\th))X(\t-\th)
+\end{align*}
+%
+and therefore the two incentive constraints $U(\th|\t)\leq U(\t)$ and $U(\t|\th)\geq U(\th)$ yield
+\[
+a(s(\th))X(\t-\th)\leq U(\t)-U(\th)\leq a(s(\t))X(\t-\th)
+\]
+Therefore, $a(\t)$ and $U(\t)$ are monotonic non-decreasing functions.
+
+\section{PREVIOUS STUFF}
+%%%%%
+%   
+% Antoine's stuff  %             
+%    
+%%%%%
+
+We apply the revelation principle and focus our analysis on equilibrium with truthtelling. Firm 2 maximizes its profits by proposing an incentive compatible mechanism where Firm 1 reveals its type $\t$ and sharing information $s(\t)$. Sharing information is used to prevent mimicking between different types of $\t$ and ensures that the equilibrium is separating. Firm 2 then proceeds to the transfer $T(.)$ that it proposed to Firm 1. Thus the objective function of Firm 2 is the following, under incentive compatibility constraints for Firm 1 in order to guarantee truthtelling:
+
+
+\begin{equation}
+    \begin{aligned}
+    &max_{T(.),s}\{(1-F(\t,s)[\frac{X_1(1+\t)+X_2}{2}-T(\t,s)]+F(\t,s)(X_2+\t s)\}\\
+    \\
+    &s.t.PC: (1-F(\t,s))[\frac{X_1(1+\t)+X_2}{2}+T(\t,s)]+F(\t,s)(X_1-l(s))\geq X_1\\
+    \\
+    &s.t.~~IC:~~\forall~~\hat{\t}_1\neq\t,~~ \Pi(\t,s)\geq \Pi(\t, \hat{\t}_1,\hat{s}_1)
+    \end{aligned}
+\end{equation}
+
+Patrick dans le pdf que tu m'as envoyé il y aussi une incentive compatibility constraint sur s: $IC_s: \forall \t s(\t)$ is maximized. Je ne suis pas sur que ca soit indispensable comme $s$ est verifiable
+
+The PC constraint is binding for the lowest type, and naturally satisfied for all other types as the outside option is constant.
+
+
+Consider $\t < \hat{\t}_1$. IC constraints can be written:
+
+$$\Pi(\t,s)\geq \Pi(\t, \hat{\t}_1,\hat{s}_1)~~and~~\Pi(\hat{\t}_1,\hat{s}_1)\geq \Pi(\hat{\t}_1, \t,s).$$
+
+Rearranging the inequalities we can derive the following expression:
+
+\begin{equation}
+    \begin{aligned}
+    (1-F(\hat{\t}_1,\hat{s}_1))\frac{X_1}{2}(\hat{\t}-\t) &\geq \Pi(\hat{\t}_1,\hat{s}_1)-\Pi(\t,s)
+    \\
+    \geq (1-F(\t,s))\frac{X_1}{2}(\hat{\t}-\t)
+    \end{aligned}
+\end{equation}
+
+
+We now show that $\psi(\t)=s$ is increasing in $\t$. Consider $\hat{\t}_1>\t$:
+
+$$(1-F(\hat{\t}_1,\hat{s}_1))\frac{X_1}{2}(\hat{\t}-\t)$$
+
+$$\geq (1-F(\t,s))\frac{X_1}{2}(\hat{\t}-\t)$$
+
+
+we can write 
+
+$$F(\t,s)\geq F(\hat{\t}_1,\hat{s}_1)$$
+
+If we have single crossing conditions on $-F(.)$, we have $\hat{s}_1\geq s$.
+
+
+Is it the case? let's look at the derivative of $F$ with respect to $\t$ and $s$:
+
+$\frac{\partial^2 F(\t,s)}{\partial \t \partial s}=\frac{1}{\overline{w}-\underline{w}}\frac{l'(s)(X_1-s)+l(s)}{\t^2(X_1-s)^2}$
+
+Whose sign is identical to that of $l'(s)(X_1-s)+l(s)$
+
+\begin{itemize}
+    \item When $l'(s)(X_1-s)+l(s)\leq 0$: $s(\t)$ is increasing 
+    \item When $l'(s)(X_1-s)+l(s)\geq 0$: $s(\t)$ is decreasing 
+\end{itemize}
+
+We now derive the expression of the first degree derivative of $\Pi(\t,s)$ with respect with $\t$.
+
+
+\begin{equation}
+    \begin{aligned}
+    (1-F(\hat{\t}_1,\hat{s}_1))\frac{X_1}{2} &\geq \frac{\Pi(\hat{\t}_1,\hat{s}_1)-\Pi(\t,s)}{\hat{\t}-\t}
+    \\
+    \geq (1-F(\t,s))\frac{X_1}{2}
+    \end{aligned}
+\end{equation}
+
+Considering the limit case where $\hat{\t}_1\rightarrow \t$ proves the differentiability of $\Pi(\t,s)$, moreover by the sandwich theorem:
+
+
+$$\frac{\partial \Pi(\t,s)}{\partial \t}=(1-F(\t,s))\frac{X_1}{2}$$
+
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
+
+
+
+
+\end{document}
+
