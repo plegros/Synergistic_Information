@@ -100,30 +100,30 @@ urlcolor=NavyBlue}
 	\item Firm 2 and a regulator believe that the type of Firm 1 is uniformly distributed over $[\underline{\t},\overline{\t}]$.
     \item Firm $1$ can share $s$ information from the total data set $X$, which is verifiable by Firm $2$ and the regulator.
 	\item The regulator will choose whether to allow the merger or not. The regulator tradeoffs the cost from increased market power (assumed to simplify to be proportional to the industry profit) and the gain from synergies. There is some uncertainty on the weight $w$ the regulator will put on synergies, and this uncertainty is resolved only at the time the regulator evaluates the merger proposal, that is after firms $1,2$ have played their mechanism, and $s$ has been shared.
-	\item If the merger fails, the information that has been shared by Firm $1$ can be used by Firm 2 during the competition, and information sharing changes the profit of Firm $1$: $\Pi_{c1}=X-l(s)$; and of Firm 2: $\Pi_{c2}=\t s$. We assume Inada conditions $l(0)=0,l'(0)=0$.
+	\item If the merger fails, the information that has been shared by Firm $1$ can be used by Firm 2 during the competition, and information sharing changes the profit of Firm $1$: $\Pi_{c1}=X-\theta l(s)$; and of Firm 2: $\Pi_{c2}=\t s$. We assume Inada conditions $l(0)=0,l'(0)=0$.
 	\item There are two cases to consider:
 \begin{itemize}
     \item $l(s)\geq 0$: sharing information increases competition and incurs a loss for a firm
     \item $l(s)< 0$: sharing information facilitates coordination and increases the profits of a firm (à la \cite{vives1984duopoly} for instance)
  \end{itemize}
-    \item We adopt a mechanism design approach where Firm 2 designs a mechanism. We apply the revelation principle and we consider truthtelling by each firm, under incentive compatibility constraints.
-    \item A mechanism imposed by Firm 2 consists for Firm 1 in announcing its type $\t$ and sharing a verifiable amount of information $s(\t)$. If the merger occurs, Firm $2$ agrees to make a transfer  $T(\t,s)$ to Firm 1 and be residual claimant on the profit.\footnote{%
-    This payment scheme is without loss of generality. What matters is that the profit of firm $1$ in case of merger depends on its true type, for otherwise revelation of information is impossible.}
+    \item Firm 2 offers a menu $(s,T(s))$ and firm $1$ chooses -- as a function of her type $\theta$ -- how much to share. Conditional on obverving $s$, both firms decide to approach the regulator to authorize the merger. We assume that there is no renegotiation on $T(s)$ at this stage.
+    \item If the merger occurs, Firm $2$ agrees to make a transfer  $T(s)$ to Firm 1 and be residual claimant on the profit.\footnote{%
+    This payment scheme is without loss of generality. What matters is that the profit of firm $1$ in case of merger depends on its true type, for otherwise revelation of information is impossible. Also, for incentive compatibility, it is clear that if two $\theta$s share the same $s$, they will claim to be of the type that minimizes $T(\theta,s)$.}
     
 \end{itemize}
 
 \paragraph{The timing of the game is the following.} ($U[a,b]$ denotes the uniform distribution on $[a,b]$; we could use more general distributions...)
 \begin{enumerate}\setlength\itemsep{0em}
-    \item Firm $2$ offers a revelation mechanism with outcome $(s(\t),x(\t,s),T(\t))$, $s(\t)$ being the sharing of data that firm $1$ should do, $x(\t,s)$ is the probability that firm $2$ will agree to a merger is the type is $\t$ and the firm shares $s$, and $T(\t,s)$ is the price firm $2$ agrees to pay to firm $1$ if the merger is agreed and the regulator authorizes it. To facilitate incentive compatibility, we assume that $x(\t,s(\t))=1$ and $x(\t,s)=0$ if $s\neq s(\t)$.
+    \item Firm $2$ offers a rmenu $(s,T(s)$, $s$ being the sharing of data that firm $1$ should do and $T(s)$ is the price firm $2$ agrees to pay to firm $1$ if the merger is agreed and the regulator authorizes it.
     \item Firm 1 privately learns its type $\t\sim U[\underline{\t},\overline{\t}]$ and makes an announcement in the mechanism and plays $s$.
-    \item Firm $2$ approaches the regulator with probability $x(\t,s)$ and asks for the merger to be approved.
-    \item The regulator observes $s$ and has a draw $w$ from a distribution $F$ on $\mathbb R_+$ with a continuous density. The regulator decides to allow or to prevent the merger. The market structure, profits and welfare, are realized.
+    \item If both firms anticipate to be better off via a merger, they approach the regulator  and ask for the merger to be approved. At this point, the regulator sees $s,T(s)$.
+    \item The regulator observes a draw $w$ from a distribution $F$ on $\mathbb R_+$ with a continuous density. The regulator decides to allow or to prevent the merger. The market structure, profits and welfare, are realized.
 \end{enumerate}
 %
 \subsection{The Regulator's Problem}
    The regulator maximizes a social welfare function that weights the social cost of high industry profits and the social benefit of synergies. Contrary to the usual view that synergies are created only during the merger, synergies endogenously happen without a merger if firm $1$ shares some of its data with firm $2$. Hence, when evaluating a merger proposal, the regulator will compare the \emph{relative synergy gain} to the \emph{relative industry profit gain.}
 
-   At the time the regulator has to evaluate a merger, firm $1$ has already shared $s$ with firm $2$, following a strategy $\sigma(\t)$ in the revelation game (remember that the regulator observes $s$, but not the message sent by firm $1$ to firm $2$).  Let $\sigma^{-1}=\{\t|\sigma(\t)=s\}$ be the set of types of firm $1$ consistent with a sharing of $s$ given the equilibrium strategy $\sigma$. Hence, conditional on observing $s$, the regulator believes that the expected synergy is the conditional expectation $$\t_s:=\E[\t|\t\in\sigma^{-1}(s)].$$
+   At the time the regulator has to evaluate a merger, firm $1$ has already shared $s$ with firm $2$, following a strategy $\sigma(\t)$ in the sharing game.  Let $\sigma^{-1}=\{\t|\sigma(\t)=s\}$ be the set of types of firm $1$ consistent with a sharing of $s$ given the equilibrium strategy $\sigma$. Hence, conditional on observing $s$, the regulator believes that the expected synergy is the conditional expectation $$\t_s:=\E[\t|\t\in\sigma^{-1}(s)].$$
      
     If the merger is allowed and firm $2$ takes control of firm $1$, the loss from industry profit is $-[X(1+\t)]$ while the synergy gain is $w[X(1+\t)]$, hence welfare is
     
@@ -135,13 +135,17 @@ urlcolor=NavyBlue}
    The regulator allows the merger when $W_m\geq W_c$, or
     
     \begin{equation}
-           w\geq w^*(s):=1 + \frac{l(s)}{\t_s(X-s)}
+           w\geq w^*(s):=1 + \frac{l(s)}{(X-s)}
     \end{equation}
 %
+Our specification implies therefore that the probability that the merger is authorized depdns only on the share $s$ but not on the beliefs of the regulator about $\t$.
+
 At the ex-ante stage, when firms play their mechanism to share information, the probability that a merger will be approved when firm $1$ shares $s$ with firm $2$ is then equal to  
 \[
 a(s):=1-F(w^*(s)).
 \]
+
+TBC....
 
 \section{Playing the Regulatory Game}
 At the time firms $1,2$ play the mechanism, the probabilities $a(s)$  are taken as given because if called upon to act, the regulator has sunk beliefs (he believes that types in $\sigma^{-1}(s)$ of firm $1$ have shared $s$.) In the mechanism, firm $2$ will ask for a merger only if when firm $1$ claims to be of type $\t$, firm $1$ agrees to share a quantity $s=s(\t)$ of data. As is standard, there are two types of incentive conditions to be satisfied: one related to using the requested share, and the other related to telling the truth. If these conditions are satisfied, it must also be the case that firm $1$ prefers to play the mechanism than not playing it, and foregoing the possibility of a merger. 
