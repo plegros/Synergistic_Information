@@ -100,14 +100,14 @@ urlcolor=NavyBlue}
 	\item Firm 2 and a regulator believe that the type of Firm 1 is uniformly distributed over $[\underline{\t},\overline{\t}]$.
     \item Firm $1$ can share $s$ information from the total data set $X$, which is verifiable by Firm $2$ and the regulator.
 	\item The regulator will choose whether to allow the merger or not. The regulator tradeoffs the cost from increased market power (assumed to simplify to be proportional to the industry profit) and the gain from synergies. There is some uncertainty on the weight $w$ the regulator will put on synergies, and this uncertainty is resolved only at the time the regulator evaluates the merger proposal, that is after firms $1,2$ have played their mechanism, and $s$ has been shared.
-	\item If the merger fails, the information that has been shared by Firm $1$ can be used by Firm 2 during the competition, and information sharing changes the profit of Firm $1$: $\Pi_{c1}=X-l(s)$; and of Firm 2: $\Pi_{c2}=\t s$. We assume Inada conditions $l(0)=0,l'(O)=0$.
+	\item If the merger fails, the information that has been shared by Firm $1$ can be used by Firm 2 during the competition, and information sharing changes the profit of Firm $1$: $\Pi_{c1}=X-l(s)$; and of Firm 2: $\Pi_{c2}=\t s$. We assume Inada conditions $l(0)=0,l'(0)=0$.
 	\item There are two cases to consider:
 \begin{itemize}
     \item $l(s)\geq 0$: sharing information increases competition and incurs a loss for a firm
     \item $l(s)< 0$: sharing information facilitates coordination and increases the profits of a firm (à la \cite{vives1984duopoly} for instance)
  \end{itemize}
     \item We adopt a mechanism design approach where Firm 2 designs a mechanism. We apply the revelation principle and we consider truthtelling by each firm, under incentive compatibility constraints.
-    \item A mechanism imposed by Firm 2 consists for Firm 1 in announcing its type $\t$ and sharing a verifiable amount of information $s(\t)$. If the merger occurs, firm $1$ agrees to make a transfer  $T(\t,s)$ to Firm 1 and be residual claimant on the profit.\footnote{%
+    \item A mechanism imposed by Firm 2 consists for Firm 1 in announcing its type $\t$ and sharing a verifiable amount of information $s(\t)$. If the merger occurs, Firm $2$ agrees to make a transfer  $T(\t,s)$ to Firm 1 and be residual claimant on the profit.\footnote{%
     This payment scheme is without loss of generality. What matters is that the profit of firm $1$ in case of merger depends on its true type, for otherwise revelation of information is impossible.}
     
 \end{itemize}
@@ -117,7 +117,7 @@ urlcolor=NavyBlue}
     \item Firm $2$ offers a revelation mechanism with outcome $(s(\t),x(\t,s),T(\t))$, $s(\t)$ being the sharing of data that firm $1$ should do, $x(\t,s)$ is the probability that firm $2$ will agree to a merger is the type is $\t$ and the firm shares $s$, and $T(\t,s)$ is the price firm $2$ agrees to pay to firm $1$ if the merger is agreed and the regulator authorizes it. To facilitate incentive compatibility, we assume that $x(\t,s(\t))=1$ and $x(\t,s)=0$ if $s\neq s(\t)$.
     \item Firm 1 privately learns its type $\t\sim U[\underline{\t},\overline{\t}]$ and makes an announcement in the mechanism and plays $s$.
     \item Firm $2$ approaches the regulator with probability $x(\t,s)$ and asks for the merger to be approved.
-    \item The regulator observes $s$ and has a draw $w$ from a distribution $F$ on $\mathbb R_+$ with a continuous density. The regulator decides to allows or prevents the merger. The market structure, profits and welfare, are realized.
+    \item The regulator observes $s$ and has a draw $w$ from a distribution $F$ on $\mathbb R_+$ with a continuous density. The regulator decides to allow or to prevent the merger. The market structure, profits and welfare, are realized.
 \end{enumerate}
 %
 \subsection{The Regulator's Problem}
