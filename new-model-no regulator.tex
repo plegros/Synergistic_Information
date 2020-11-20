@@ -108,9 +108,55 @@ urlcolor=NavyBlue}
 \bibliographystyle{plain}
 \bibliography{Bibliography}
 
-$l>0$, if share $s$ and compete profits are $X-\t l s$ for $1$ and $\t s$ for $2$. Firm $2$ has full negotiation power. There are two relevant levels of sharing: $O$ and $s$. If $0$, firm $2$ does not know $\t$ at the time of merger; if sharing is $s$, firm $2$ knows $\t$.
+$l>0$, if share $s$ and compete profits are $X-\t l s$ for $1$ and $\t s$ for $2$. Firm $2$ has full negotiation power. There are two relevant levels of sharing: $s=0$ and $s^*$. If $0$, firm $2$ does not know $\t$ at the time of merger; if sharing is $s^*$, firm $2$ knows $\t$.
 
 $\t$ has ex-ante distribution $F(\t)$, with continuous density, MLRP satisfied.
+
+Note: given $s^*$, the threat point of firm $1$ is a decreasing function of $\t$ while the threat point of firm $2$ is an increasing function of $\t$. Since firm $2$ has full bargaining power, firm $1$ accepts a price for her asset of $p(\t)=X-\t l s^*$, and firm $2$ has a surplus from merger of $X(1+\t)-p(\t)=\t (X-(1-l)s^*$. Ex-ante, the parties have to agree on a price $T$ for sharing $s^*$. Type $\t$ accepts to share if $p(\t)+T\geq u_0(\t)$, where $u_0(\t)$ is $\t$'s payoff if there is no sharing of information.
+
+(Note that if firm $2$ offers a price $T$ for a sharing of $s^*$, and a set $\Theta(T)$ refuses the offer, when the merger possibility arises, firm $2$ believes that firm $1$ is of type in $\Theta(T)$. 
+
+In a revelation game at the merging stage, the variation of equilibrium utility given to type $\t$ is (assuming that $\Theta(T)$ has compact support, hence that the conditional distribution has a positive density on its support) is increasing in $\t$ (note that all type in $\Theta(t))$ have the same outside option of $X$).
+
+The value to the merger is $\frac{1}{2}X(1+\t)$. There is no loss of generality in assuming that firm $1$ gets all the surplus in exchange for paying a price to firm $2$. 
+
+A mechanism is $(p(\t),z(\t))$, where $p(\t)$ is the price paid by firm $1$ to firm $2$ and $z(\t)$ is the probability that firm $1$ agrees to the merger. The participation constraint is
+\begin{equation}
+  -p(\t)+z(\t)X(1+\t)+(1-z(\t))X\geq X 
+\end{equation}
+or
+\begin{equation*}
+  p(\t)\leq z(\t)X \t
+\end{equation*}
+while the truth-telling constraint is
+\begin{equation*}
+  \t \in \arg\max U(\th|\t):=-p(\th)+X+ z(\th)X\t
+\end{equation*}
+%
+Usual manipulations yield 
+
+%
+\[
+  X z(\th)(\t-\th)\leq U(\t)-U(\th)\leq Xz(\t)(\t-\th)
+\]
+%
+hence that $U(\t)$ and $z(\t)$ are non-decreasing function. Moreover, by the envelop theorem, $\dot U(\theta)=z(\t)X$. 
+
+Hence, firm $2$ offers a mechanism $(p,z)$ to solve
+\begin{align*}
+  \max_{(p(\cdot);z(\dot))} \int \left(-U(\t)+X+Xz(\t)\t \right)&dF(\t)\\ 
+  U(\t) \geq X & \hspace{2cm} \text{(IR)} \\ 
+  \dot{U}(\t)=z(\t)X & \hspace{2cm} \text{(IC)} \\ 
+\end{align*}
+Standard derivations show that $U(\underline \t)=X$ and that $z(\t)$ solves  
+
+\begin{align*}
+\max_{\{z(\t)\}} &\int_{\underline \t}^{\overline \t}z(\t)\left( \t-\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t.
+\end{align*}
+%
+Clearly, by MLRP, there exists $t^*$ such that the optimal solution is to set $z(\t)=0$ for $\t<\t^*$ and $z(\t)=1$ for $\t>\t^*$. 
+%
+
 
 
 
