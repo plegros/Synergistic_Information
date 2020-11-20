@@ -1,0 +1,120 @@
+%  Synergies and mergers-Thursday, 19 November 2020
+%
+%  Created by Patrick on 2020-11-19.
+%  Copyright (c) 2020 __Patrick Legros__. All rights reserved.
+%
+%!TEX encoding = UTF-8 Unicode  
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{hyperref}
+%\usepackage[round]{natbib}
+%\bibliographystyle{plainnat}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+\usepackage[scr]{rsfso}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{array, multirow}
+\newcommand*{\qed}{\hfill\ensuremath{\blacksquare}}%
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{todonotes}
+
+\usepackage{tikz}
+\hypersetup{
+colorlinks,
+citecolor=NavyBlue,
+linkcolor=NavyBlue,
+urlcolor=NavyBlue}
+\usetikzlibrary{matrix}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{ass}{Assumption}
+\newtheorem{result}{Result}
+\newtheorem{condition}{Condition}
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Definition}{Definition}
+
+\newenvironment{reusefigure}[2][htbp]
+  {\addtocounter{figure}{-1}%
+   \renewcommand{\theHfigure}{dupe-fig}% If you're using hyperref
+   \renewcommand{\thefigure}{\ref{#2}}% Figure counter is \ref
+   \renewcommand{\addcontentsline}[3]{}% Avoid placing figure in LoF
+   \begin{figure}[#1]}
+  {\end{figure}}
+  
+  \usepackage{titlesec}
+
+%\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+ \usepackage{geometry}
+
+ 
+ \newcommand{\E}{\mathbb E}
+ \newcommand{\M}{\mathcal M}
+\renewcommand{\th}{\hat\theta}
+\renewcommand{\t}{\theta}
+
+\begin{document}
+
+
+\title{Synergistic information$^{3.0}$}
+\author{Antoine Dubus and Patrick Legros\thanks{We would like to thank.}}
+\date{\today}
+
+%\author{Antoine Dubus\thanks{~~Université Libre de Bruxelles, ECARES; \href{mailto:antoine1dubus@gmail.com}{antoine1dubus@gmail.com}.}}
+
+\maketitle
+
+\begin{abstract}
+
+\noindent 
+
+\end{abstract}
+ 
+\textbf{Very preliminary, do not circulate.}
+
+\baselineskip0.7cm
+
+\section{Literature}
+\begin{itemize}\setlength\itemsep{-1em}
+    \item Optimal merger policy when firms have private information \cite{Besanko1993}
+    \item Information sharing in oligopolies
+    \item Data as assets
+    \item Computer science and data synergies
+    \item Joint ventures before merger
+\end{itemize}
+
+\section{Model}
+
+
+
+\bibliographystyle{plain}
+\bibliography{Bibliography}
+
+$l>0$, if share $s$ and compete profits are $X-\t l s$ for $1$ and $\t s$ for $2$. Firm $2$ has full negotiation power. There are two relevant levels of sharing: $O$ and $s$. If $0$, firm $2$ does not know $\t$ at the time of merger; if sharing is $s$, firm $2$ knows $\t$.
+
+$\t$ has ex-ante distribution $F(\t)$, with continuous density, MLRP satisfied.
+
+
+
+
+
+\end{document}
+
