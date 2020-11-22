@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex new-model-no regulator"] 1606054489 "new-model-no regulator.aux" "new-model-no regulator.bbl" "new-model-no regulator" 1606075592
+["bibtex new-model-no regulator"] 1606054489 "new-model-no regulator.aux" "new-model-no regulator.bbl" "new-model-no regulator" 1606076411
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/harvard/agsm.bst" 1136766823 25549 e3d0f1ab4ae55e777f7352db30e2c6f7 ""
   "biblio-synergies.bib" 1605956833 11319 1e1ae0b9d41f9b5e1da3edb02f51f294 ""
-  "new-model-no regulator.aux" 1606075591 1883 18cfc3d9e898cd5d275763fb6b0a7212 "pdflatex"
+  "new-model-no regulator.aux" 1606076410 1883 18cfc3d9e898cd5d275763fb6b0a7212 "pdflatex"
   (generated)
-  "new-model-no regulator.blg"
   "new-model-no regulator.bbl"
-["pdflatex"] 1606075590 "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.tex" "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.pdf" "new-model-no regulator" 1606075592
-  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.aux" 1606075591 1883 18cfc3d9e898cd5d275763fb6b0a7212 ""
-  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.tex" 1606075590 15488 0d0cebdb19bc81bce64a40d56e4eb398 ""
+  "new-model-no regulator.blg"
+["pdflatex"] 1606076410 "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.tex" "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.pdf" "new-model-no regulator" 1606076411
+  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.aux" 1606076410 1883 18cfc3d9e898cd5d275763fb6b0a7212 ""
+  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.tex" 1606076409 15992 7f9a60e11f3f4e71aad80d58d7e567f2 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1136768653 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -210,14 +210,14 @@
   "/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1586288239 4811913 0be9a7e86c70a26e5e3042966bcd7097 ""
   "/usr/local/texlive/2020/texmf-var/web2c/pdftex/pdflatex.fmt" 1598022670 2432462 936a9c10fe2222aba905c9c90de6227d ""
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
-  "new-model-no regulator.aux" 1606075591 1883 18cfc3d9e898cd5d275763fb6b0a7212 "pdflatex"
+  "new-model-no regulator.aux" 1606076410 1883 18cfc3d9e898cd5d275763fb6b0a7212 "pdflatex"
   "new-model-no regulator.bbl" 1606054489 848 5ebb8608f4cba4d5c911357ccee12f0a "bibtex new-model-no regulator"
-  "new-model-no regulator.out" 1606075591 188 f39e15b8e5a7667d5f42e6e462037624 "pdflatex"
-  "new-model-no regulator.tex" 1606075590 15488 0d0cebdb19bc81bce64a40d56e4eb398 ""
+  "new-model-no regulator.out" 1606076410 188 f39e15b8e5a7667d5f42e6e462037624 "pdflatex"
+  "new-model-no regulator.tex" 1606076409 15992 7f9a60e11f3f4e71aad80d58d7e567f2 ""
   (generated)
+  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.log"
   "new-model-no regulator.out"
-  "new-model-no regulator.pdf"
-  "new-model-no regulator.log"
   "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.pdf"
   "new-model-no regulator.aux"
-  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/new-model-no regulator.log"
+  "new-model-no regulator.log"
+  "new-model-no regulator.pdf"
