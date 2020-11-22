@@ -1,9 +1,18 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{xx}
 
-\bibitem{Besanko1993}
-David Besanko and Daniel~F Spulber.
-\newblock Contested mergers and equilibrium antitrust policy.
-\newblock {\em The Journal of Law, Economics, and Organization}, 9(1):1--29,
-  1993.
+\harvarditem{Anton \harvardand\ Yao}{2002}{anton2002sale}
+Anton, J.~J. \harvardand\ Yao, D.~A.  \harvardyearleft 2002\harvardyearright ,
+  `The sale of ideas: Strategic disclosure, property rights, and contracting',
+  {\em The Review of Economic Studies} {\bf 69}(3),~513--531.
+
+\harvarditem{Besanko \harvardand\ Spulber}{1993}{Besanko1993}
+Besanko, D. \harvardand\ Spulber, D.~F.  \harvardyearleft 1993\harvardyearright
+  , `Contested mergers and equilibrium antitrust policy', {\em The Journal of
+  Law, Economics, and Organization} {\bf 9}(1),~1--29.
+
+\harvarditem{Che \harvardand\ Hausch}{1999}{Che1999}
+Che, Y. \harvardand\ Hausch, D.  \harvardyearleft 1999\harvardyearright ,
+  `Cooperative investments and the value of contracting', {\em American
+  Economic Review} {\bf 89}(1),~125--147.
 
 \end{thebibliography}
