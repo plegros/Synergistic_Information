@@ -1,0 +1,175 @@
+%  Synergies and mergers-Thursday, 19 November 2020
+%
+%  Created by Patrick on 2020-11-19.
+%  Copyright (c) 2020 __Patrick Legros__. All rights reserved.
+%
+%!TEX encoding = UTF-8 Unicode  
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm,amsmath,amssymb,amsfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+%\bibliographystyle{plainnat}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+\usepackage[scr]{rsfso}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{array, multirow}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{todonotes}
+
+\usepackage{tikz}
+\hypersetup{
+colorlinks,
+citecolor=NavyBlue,
+linkcolor=NavyBlue,
+urlcolor=NavyBlue}
+\usetikzlibrary{matrix}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{ass}{Assumption}
+\newtheorem{result}{Result}
+\newtheorem{condition}{Condition}
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\newenvironment{reusefigure}[2][htbp]
+  {\addtocounter{figure}{-1}%
+   \renewcommand{\theHfigure}{dupe-fig}% If you're using hyperref
+   \renewcommand{\thefigure}{\ref{#2}}% Figure counter is \ref
+   \renewcommand{\addcontentsline}[3]{}% Avoid placing figure in LoF
+   \begin{figure}[#1]}
+  {\end{figure}}
+  
+  \usepackage{titlesec}
+
+%\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+ \usepackage{geometry}
+
+ 
+ \newcommand{\E}{\mathbb E}
+ \newcommand{\N}{\mathcal N}
+\renewcommand{\th}{\hat\theta}
+\renewcommand{\t}{\theta}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+
+\begin{document}
+
+
+\title{Synergistic Information$^{3.0}$}
+\author{Antoine Dubus and Patrick Legros\thanks{We would like to thank.}}
+\date{\today}
+
+%\author{Antoine Dubus\thanks{~~Université Libre de Bruxelles, ECARES; \href{mailto:antoine1dubus@gmail.com}{antoine1dubus@gmail.com}.}}
+
+\maketitle
+
+ 
+\textbf{Very preliminary, do not circulate.}
+
+\baselineskip0.7cm
+
+If merger occurs:
+
+\begin{itemize}
+    \item Industry profits: $X(1+\t)e-\frac{e^2}{2}$, where e is an effort exerted by firm 1, inducing quadratic costs
+    \item Firm 2 gets the whole profits, and gives a share $\a$ to firm 1 to exert positive efforts
+    \item the profits of the firms are thus
+    
+    $$\Pi_2(\a(\t))= (1-\a(\t))X(1+\t)e-T(\t)$$
+
+    $$\Pi_1(\a(\t))= \a(\t) X(1+\t)e-\frac{e^2}{2}\geq \frac{X^2}{2}+T(\t)$$
+    
+    \item firm 2 does not know the type of firm 1, and thus ignores whether the share $\a$ that maximizes its profits is enough to ensure participation.
+    
+    \item the optimal effort for firm 1 is $$e^*=\a(\t) X(1+\t)$$ 
+    
+    and $$\Pi_1^*=\frac{\a(\t)^2 X^2(1+\t)^2}{2}+T(\t)$$
+    
+    which is larger than $X$ for $$\t\geq \frac{\sqrt{2 (X-T(\t))}}{\a(\t) X}-1$$
+    
+    \item With a fixed $\a$ and a fixed $T$, the profits of firm 2 thus are
+    
+    $$\int_{\frac{\sqrt{2 (X-T)}}{\a X}-1}^{\overline \t}\a(1-\a)X^2\frac{(1+\t)^2}{2}-T dF(\t)$$
+    
+    \item firm 2 can offer a screening contract composed of a couple $(T(\t),\a(\t))$, such that the profit of firm 1 of type $\t$ selecting couple $(\a(\th), T(\th))$ is
+    
+    $$U(\hat \t|\t)=\a(\hat \t) X(1+\t)e+T(\hat \t)-\frac{e^2}{2}$$
+    
+    and with the equilibrium value of e
+    
+    $$U(\hat \t|\t)=\frac{\a^2(\hat \t) X^2(1+\t)^2}{2}+ T(\hat \t)$$
+    
+    \item incentive compatibility constraint implies  
+    
+    $$\frac{\a^2(\hat \t) X^2[(2+\t+\hat \t)(\t - \hat \t)]}{2}\leq U(\t)-U(\hat \t)\leq \frac{\a^2(\t) X^2[(2+\t+\hat \t)(\t - \hat \t)]}{2}$$
+    \item This implies that $\a(\t)$ is non decreasing almost everywhere, and that 
+    
+    $$\dot U(\t)=\a^(\t)2 X^2(1+\t)$$
+    
+    \item The profit maximizing function of firm 2 is 
+    
+    \begin{equation}
+        \begin{aligned}
+       \max_{\a(.)}\int_{\underline \t}^{\overline \t}(1-\a(\t))\a(\t) X^2(1+\t)^2-T(\t)& dF(\t)&\\
+       \iff \max_{\a(.)}\int_{\underline \t}^{\overline \t}(1-\a(\t))\a(\t) X^2(1+\t)^2-U(\t)&+\frac{\a^2(\t) X^2(1+\t)^2}{2} dF(\t)&\\
+       U(\t)\geq& \frac{X^2}{2}&IR\\
+       U(\t)\geq& U(\hat \t|\t)&IC
+    \end{aligned}
+    \end{equation}
+    \item This is equivalent to maximizing
+
+\begin{equation}
+    \begin{aligned}
+       &\int_{\underline \t}^{\overline \t}(1-\a(\t))\a(\t) X^2(1+\t)^2-U(\t)+\frac{\a^2(\t) X^2(1+\t)^2}{2} dF(\t)\\
+       =&\int_{\underline \t}^{\overline \t}\a(\t) X^2(1+\t)^2-U(\t)-\frac{\a^2(\t) X^2(1+\t)^2}{2} dF(\t)\\
+       =&X^2\int_{\underline \t}^{\overline \t}\a(\t) (1+\t)^2-\int_{\underline \t}^{\t}\a^2(\t)(1+\t)d\t-\frac{\a^2(\t) (1+\t)^2}{2} dF(\t)\\
+       =&X^2\int_{\underline \t}^{\overline \t}\a(\t) (1+\t)^2-\a^2(\t)(1+\t)\left(\frac{(1+\t)}{2}+\frac{1-F(\t)}{f(\t)}\right) dF(\t)\\
+\end{aligned}
+\end{equation}
+    \item This is maximized for 
+    
+    $$\a^*(\t)=\frac{(1+\t)f(\t)}{(1+\t)f(\t)+2-2F(\t)}$$
+\end{itemize}
+
+
+
+
+Question: how to model partial information sharing with moral hazard?
+
+\begin{itemize}
+    \item Without mergers, firm 1 makes profits $Xe-\frac{e^2}{2}$ 
+    \item with information sharing, firm 1 makes profits $(X-ls^*)e-\frac{e^2}{2}$ and firm 2 makes profits $e\t s$
+    \item sharing information thus decreases the incentives to effort of firm 1
+    \item in turn, this changes the outside option of firm 1 when merging with prior information sharing:
+    
+    $$\a^2(\t) X^2(1+\t)\geq (X-ls^*)^2$$
+    \item The optimal share of information is identical to above, however the transfer changes as the bargaining power of Firm 1 decreases with prior information sharing
+\end{itemize}
+
+
+\bibliographystyle{agsm}
+\bibliography{biblio-synergies.bib}
+
+
+\end{document}
+

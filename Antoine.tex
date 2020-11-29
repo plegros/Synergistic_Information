@@ -70,6 +70,8 @@ urlcolor=NavyBlue}
 \renewcommand{\th}{\hat\theta}
 \renewcommand{\t}{\theta}
 
+\renewcommand{\b}{\beta}
+
 \begin{document}
 
 
@@ -167,46 +169,61 @@ which is a decreasing function of $\t$. By contrast, firms that do not share dat
 %
 Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X-\t l s^*$. Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-(X-\t ls^*)-T=\t(X+ls^*)-T$. Firm $1$ has expected payoff $X-\t ls^*+T$.
 
-\paragraph{Mechanism if firm $2$ believes that $\t\in\N$ at the merging phase.} At the merging stage, firm $2$ believes that types have a distribution with support on $\N=[\t_0,\overline \t]$. Note that all types in $\N$ do not share data and have the same outside option of $X$. The value to the merger is $X(1+\t)$. There is no loss of generality in assuming that firm $1$ gets all the surplus in exchange for paying a price to firm $2$.
+\paragraph{Mechanism if firm $2$ believes that $\t\in\N$ at the merging phase.} At the merging stage, firm $2$ believes that types have a distribution with support on $\N=[\t_0,\overline \t]$. Note that all types in $\N$ do not share data and have the same outside option of $X$. The value to the merger is $X(1+\t)$. There is no loss of generality in assuming that firm $1$ gets a share $1-\b$ of the total surplus in exchange for paying a price to firm $2$, who gets $\b$ of the total surplus on top of the transfer.
 
 A mechanism is then a menu $\{(p(\t),z(\t));t\in \N\}$, where $p(\t)$ is the price paid by firm $1$ to firm $2$ and $z(\t)$ is the probability that firm $2$ agrees to the merger. It should be clear that if $\t_0$ does not get a rent in the mechanism, types $\t<\t_0$ get a negative rent if they do not share data; by contrast they get a positive rent equal to $ls^* (\t_0-\t)$ if they share data. The participation constraint of firm $1$ is
 \begin{equation}
-  U(\t):=-p(\t)+z(\t)X(1+\t)+(1-z(\t))X\geq X 
+  U(\t):=-p(\t)+z(\t) (1-\beta) X(1+\t)+(1-z(\t))X\geq X 
 \end{equation}
 or
 \begin{equation*}
-  p(\t)\leq z(\t)X \t
+  p(\t)\leq z(\t)X (\t-\beta-\t \beta)
 \end{equation*}
+
+Note that for $\b\geq \frac{\t}{1+\t}$ firm 1 does not agree on transferring a positive sum to firm 2, but instead firm 2 makes a transfer to firm 1. Both cases lead to the same result. 
+
 while the truth-telling constraint is
 \begin{equation*}
-  \t \in \arg\max_{\th} U(\th|\t):=-p(\th)+X+ z(\th)X\t
+  \t \in \arg\max_{\th} U(\th|\t):=-p(\th)+X+ z(\th)X(\t-\b-\t\b)
 \end{equation*}
 %
 Usual manipulations yield 
 %
 \[
-  X z(\th)(\t-\th)\leq U(\t)-U(\th)\leq Xz(\t)(\t-\th)
+  X z(\th)(1-\b)(\t-\th)\leq U(\t)-U(\th)\leq Xz(\t)(1-\b)(\t-\th)
 \]
 %
-hence that $U(\t)$ and $z(\t)$ are almost everywhere non-decreasing function. Moreover, by the envelop theorem, $\dot U(\theta)=z(\t)X$. 
+hence that $U(\t)$ and $z(\t)$ are almost everywhere non-decreasing function. Moreover, by the envelop theorem, $\dot U(\theta)=z(\t)X(1-\b)$. 
 
-Hence, firm $2$ offers a mechanism $(p,z)$ to solve $\max_{\{p(\cdot),s(\cdot)\}}\int_{\t_0}^{\overline t}p(\t)f(\t)dt$ subject to the IR and IC constraints. By using $p(\t)=X+z(\t)X\t-U(\t)$, the problem can be rewritten as
+Hence, firm $2$ offers a mechanism $(p,z)$ to solve $\max_{\{p(\cdot),s(\cdot)\}}\int_{\t_0}^{\overline t}[\b z(\t)X(1+\t)+p(\t)]f(\t)dt$ subject to the IR and IC constraints. By using $p(\t)=X+z(\t)X(\t-\b-\t\b)-U(\t)$, and 
+
+
+\begin{equation}
+    \begin{aligned}
+    &\int_{\t_0}^{\overline \t} \left(\b z(\t)X(1+\t)-U(\t)+X+z(\t)X(\t-\b-\t\b) \right)\frac{f(\t)}{1-F(\t_0)}d\t\\
+    =&\int_{\t_0}^{\overline \t} \left(-U(\t)+X+z(\t)X(\t) \right)\frac{f(\t)}{1-F(\t_0)}d\t\\
+    \end{aligned}
+\end{equation}
+
+
+the problem can be rewritten as
+
 \begin{align*}
-  \max_{(p(\cdot);z(\dot))} \int_{\t_0}^{\overline \t} \left(-U(\t)+X+Xz(\t)\t \right)&\frac{f(\t)}{1-F(\t_0)}d\t\\ 
+  \max_{(p(\cdot);z(\dot))} \int_{\t_0}^{\overline \t} \left(-U(\t)+X+z(\t)X\t \right)&\frac{f(\t)}{1-F(\t_0)}d\t\\ 
   U(\t) \geq X & \hspace{2cm} \text{(IR)} \\ 
-  \dot{U}(\t)=z(\t)X & \hspace{2cm} \text{(IC)} \\ 
+  \dot{U}(\t)=z(\t)X(1-\b) & \hspace{2cm} \text{(IC)} \\ 
 \end{align*}
 %
 Standard derivations yield to the equivalent problem 
 %
 \begin{align*}
-\max_{\{z(\t)\}} &\int_{\t\in \N}z(\t)\left( \t-\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t.
+\max_{\{z(\t)\}} &\int_{\t\in \N}z(\t)\left( \t-\frac{1-F(\t)}{f(\t)}(1-\b)\right)f(\t)d\t.
 \end{align*}
 %
 Clearly, by MLRP, there exists a unique value $\t^*$ solving
 %
 \[
-\t^*=\frac{1-F(\t^*)}{f(\t^*)}.
+\t^*=\frac{1-F(\t^*)}{f(\t^*)}(1-\b).
 \]
 %
 Hence, the optimal solution is to set $z(\t)=0$ for $\t<\t^*$ and $z(\t)=1$ for $\t>\t^*$. It follows that the expected payoff to firm $2$ is (using $T=\t_0 l s^*$)\footnote{
@@ -215,8 +232,8 @@ Hence, the optimal solution is to set $z(\t)=0$ for $\t<\t^*$ and $z(\t)=1$ for 
 %
 \begin{equation}\label{eq:V-t0}
   V(\t_0):=\begin{cases}
-    \int_0^{\t_0} (\t X-(\t_0-\t)ls^*)f(\t)d\t +X \int_{\t^*}^{\overline \t}\left(\t-\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t & \text{ if } \t_0\leq\t^*\\ 
-    \int_0^{\t_0}(\t X-(\t_0-\t)ls^*)f(\t)d\t +X \int_{\t_0}^{\overline \t}\left(\t-\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t & \text{ if } \t_0\geq\t^*
+    \int_0^{\t_0} (\t X-(\t_0-\t)ls^*)f(\t)d\t +X \int_{\t^*}^{\overline \t}\left(\t-\frac{1-F(\t)}{f(\t)}(1-\b)\right)f(\t)d\t & \text{ if } \t_0\leq\t^*\\ 
+    \int_0^{\t_0}(\t X-(\t_0-\t)ls^*)f(\t)d\t +X \int_{\t_0}^{\overline \t}\left(\t-\frac{1-F(\t)}{f(\t)}(1-\b)\right)f(\t)d\t & \text{ if } \t_0\geq\t^*
   \end{cases}
 \end{equation}
 
