@@ -148,22 +148,41 @@ There are three possible cases: when $\t_0=0$ and there is no sharing of data, w
 
 Because type $\t_0$ has no rent if firm $1$ does not share data (that is $U(\t_0)=\frac{X^2}{2}$) it must be the case that it has also zero rent if firm $1$ shares data. Hence, we must have $\frac{(X-\t_0 l s^*)^2}{2}+p=\frac{X^2}{2}$, or
 %
+\begin{equation}\label{eq:p-data-sharing}
+    p=\frac{\t_0 l s^*}{2}(2X-\t_0 l s^*).   
+\end{equation}
+
+%
+For each $\t<\t_0$, at the merger stage, firm $2$ has perfect information and offers a merger contract $(\a(\t),T(\t))$ that binds the participation constraint of firm $1$. Because the effort level is $\frac{\a(\t)X(1+\t)}{2}$, the binding participation constraint if  $T(\t)= \frac{\a^2X^2(1+\t)^2}{2}-\frac{X^2}{2}$, and firm $2$ solves
+%
+\begin{align*}
+\max_{\a} (1-\a)\frac{\a X^2(1+\t)^2}{2}-\frac{\a^2X^2(1+\t)^2}{2}+\frac{X^2}{2},
+\end{align*}
+that is 
+%
 \[
-p=\frac{\t_0 l s^*}{2}(2X-\t_0 l s^*).
+\max_{\a} \a(1-2 \a)\frac{X^2(1+\t)^2}{2},
 \]
 %
-It follows that when some types of firm $1$ decide to share data, firm $2$ has an expected payoff of 
+and offers $\a(t)=\frac{1}{4}$ and $T(\t)= \frac{X^2(1+\t^2))}{32}-\frac{X^2}{2}$.\footnote{%
+This assumes that firm $1$ can make transfer payments at the time of the merger, in exchange for a share in the merged firm profits. If firm $1$ cannot make transfers, that is if $T$ must be non-negative, then firm $1$ will make rents at the merger phase.
+}
+Hence, the expected payoff of firm $2$ if firm $1$ shares data is (using \eqref{eq:p-data-sharing})
 %
 \[
-V(\t_0):=F(\t_0)\frac{\t_0 l s^*}{2}(2X-\t_0 l s^*)+X^2\int_{\t_0}^{\overline \t}\frac{(1+\t)^3}{2(1+\t)+\frac{1-F(\t)}{f(\t)}}f(\t)d\t
+ \frac{X^2(1+\t)^2}{16}-p= \frac{X^2(1+\t)^2}{16}-\frac{\t_0 l s^*}{2}(2X-\t_0 l s^*).
 \]
 %
 The  higher $p$ is, the more likely that firm $1$ shares data, that is that $\t_0>0$. If the rents $\dot U(\t)$ that have to be given to firm $1$ ofr $\t>\t_0$ are large on average, firm $2$ may prefer to induce data sharing for all types, that is choose $\t_0=\overline \t$.
 
 Somewhat unusual, if $\t_0\in(0,\overline \t)$, the equilibrium payoff of firm $1$ is not monotonic in $\t$: it is decreasing in $\t<\t_0$ because firms with high $\t$ lose more than lower types if there is data sharing and competition, hence are at a disadvantage when the merger happens.
 
-
-TBC...
+Hence, for a given $\t_0$, the expected payoff of firm $2$ is 
+%
+\[
+V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{16}-\frac{\t_0 l s^*}{2}(2X-\t_0 l s^*)\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2(1+\t)+\frac{1-F(\t)}{f(\t)}}f(\t)d\t.
+\] 
+%
 
 
 \section{Antoine's stuff}
