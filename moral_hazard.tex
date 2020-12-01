@@ -93,10 +93,10 @@ At time $0$, firm $2$ offers the option to firm $1$ to share amount of informati
 
 At time $0$, let $\N$ be the set of types of firm $1$ that firm $2$ expects \emph{not to share}. We claim that $\N=[\t_0,\overline \t]$.
 
-\begin{ass}[Convenient reformulation]\label{ass:L} loss from sharing data if competition is equal to $L(\t)$, and we assume that $L(0)=0$, $L'(0)=0$, $L'(\t)>0,L''(\t)<0$, with $X>L(\overline \t)$. (This last part is to simplify the derivation of the condition for having the mixed regime of sharing and no sharing. ALso having $l s^*$ is sort of window dressing since firm $1$ cannot share other amounts.)
+\begin{ass}[Convenient reformulation]\label{ass:L} loss from sharing data if competition is equal to $L(\t)$, and we assume that $L(0)=0$, $L'(0)=0$, $L'(\t)>0,L''(\t)<0$, with $X>L(\overline \t)$. (This last part is to simplify the derivation of the condition for having the mixed regime of sharing and no sharing. Also having $l s^*$ is sort of window dressing since firm $1$ cannot share other amounts.)
 \end{ass}
  
-\paragraph{Optimal mechanism at $t=1$ given $\N$.} At this stage, firm $1$ has for outside option not to accept the mechanism and obtain a profit level of $\max_e eX -\frac{e^2}{2}=\frac{X^2}{2}$, independent of $\t$. The problem is a standard screening problem for firm $2$, with the caveat that firm $1$'s effort when choosing the element $(\alpha,T)$ solves $\max_e \alpha X(1+\t)+T-\frac{e^2}{2}$, or $e=X\frac{1+\t}{2}$, increasing in $\t$. 
+\paragraph{Optimal mechanism at $t=1$ given $\N$.} At this stage, firm $1$ has for outside option not to accept the mechanism and obtain a profit level of $\max_e eX -\frac{e^2}{2}=\frac{X^2}{2}$, independent of $\t$. The problem is a standard screening problem for firm $2$, with the caveat that firm $1$'s effort when choosing the element $(\alpha,T)$ solves $\max_e  \alpha X(1+\t) e +T-\frac{e^2}{2}$, or $e=\a X(1+\t)$, increasing in $\t$. 
 
 If there is truth telling, type $\t$ has payoff
 %
@@ -114,16 +114,16 @@ U(\th|\t)=\alpha(\th)^2 \frac{X^2(1+\t)^2}{2}+T(\th).
 Noting that $U(\th|\t)=U(\th)+\a(\th)X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right)$, the incentive condditions $U(\t)\geq U(\th|\t)$ and $U(\th)\geq U(\t|\th)$ yield
 %
 \[
-\a(\t) X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right)   \leq U(\t)-U(\th) \leq \a(t)X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right) 
+\a(\hat \t) X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right)   \leq U(\t)-U(\th) \leq \a(\t)X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right) 
 \]
 %
 Therefore, as $\t>\th$, we must have $\a(\t)\geq \a(\th)$ and $U(\t)\geq U(\th)$.  The standard results follow: firm $2$ will want to bind the participation constraint of type $\t_0:=\inf \N$ and $U(\t)$ is an increasing function of $\t$.
 
-Now, if a type shares information, firm $2$ extracts all surplus at the merger stage, and therefore type $\t$ has payoff from sharing equal to $\frac{(X-\t ls^*)^2}{2}+p$. Her outside option is the best of not doing anything and get $\frac{X^2}{2}$ or plays the mechanism $\{\a(\t),T(\t)\}$. 
+Now, if a type shares information, firm $2$ extracts all surplus at the merger stage, and therefore type $\t$ has payoff from sharing equal to $\frac{(X-L(\t))^2}{2}+p$. Her outside option is the best of not doing anything and get $\frac{X^2}{2}$ or plays the mechanism $\{\a(\t),T(\t)\}$. 
 
-This allows us to show that $\N$ is an interval $[\t_0,\overline t]$. Indeed, suppose that types $\t,\t'$ are in $\N$. Any type in $(\t,\t')$ has the option not ot share data and play the mechanims and obtain at least $U(\t|\th)$, which is strictly greater than $\max\left\{\frac{X^2}{2}, \frac{(X-L(\t))^2}{2}+p\right\}$: the first element is because $U(\t|\th)\geq U(\t_0|th)\geq \frac{X^2}{2}$ and the second element is because type $t$ prefers not ot share than to share. 
+This allows us to show that $\N$ is an interval $[\t_0,\overline \t]$. Indeed, suppose that types $\t,\t'$ are in $\N$. Any type in $(\t,\t')$ has the option not ot share data and play the mechanims and obtain at least $U(\t|\th)$, which is strictly greater than $\max\left\{\frac{X^2}{2}, \frac{(X-L(\t))^2}{2}+p\right\}$: the first element is because $U(\t|\th)\geq U(\t_0|\th)\geq \frac{X^2}{2}$ and the second element is because type $\t$ prefers not to share than to share. 
 
-Incentive compatibility requires that for almost all $\t\in[\t_0,\overline \t]$, $$\dot U(\t)=\a^2(\t) X^2(1+\t),$$ hence in $2$'s problem we can replace $T(\t)$ by $-U(\t_0)-\int_{\t_0}^\t \a^(t)2 X^2(1+t)dt$, and after integration by parts, and binding $\t_0$'s participation constraint obtain the maximization problem
+Incentive compatibility requires that for almost all $\t\in[\t_0,\overline \t]$, $$\dot U(\t)=\a^2(\t) X^2(1+\t),$$ hence in $2$'s problem we can replace $T(\t)$ by $-U(\t_0)-\int_{\t_0}^\t \a(t)^2 X^2(1+t)dt$, and after integration by parts, and binding $\t_0$'s participation constraint obtain the maximization problem
 %
 \begin{equation}
 \begin{aligned}
@@ -144,11 +144,12 @@ This is maximized for
 Hence, conditional on firm $1$ not sharing, firm $2$'s expected payoff is 
 %
 \[
-   \frac{X^2}{1-F(\t_0)}\int_{\t_0}^{\overline \t} \frac{(1+\t)^3}{2(1+\t)+\ell(\t)}f(\t)d\t
+   \frac{X^2}{1-F(\t_0)}\int_{\t_0}^{\overline \t} \frac{(1+\t)^3}{2((1+\t)+2\ell(\t))}f(\t)d\t
 \]
 %
 \todo[inline]{Is it obvious that firm $2$ will always desire to merge? I think yes, but this should be established. Akin to showing that firm $2$ does not want to exclude some types.}
 
+\todo[inline]{A: if the outside option of firm 2 is zero (no profits from firm 1 sharing), desire to merge is straightforward. }
 
 
 \subsection*{Equilibrium Data Sharing}
@@ -161,25 +162,35 @@ Because type $\t_0$ has no rent if firm $1$ does not share data (that is $U(\t_0
 \end{equation}
 
 %
-For each $\t<\t_0$, at the merger stage, firm $2$ has perfect information and offers a merger contract $(\a(\t),T(\t))$ that binds the participation constraint of firm $1$. Because the effort level is $\frac{\a(\t)X(1+\t)}{2}$, the binding participation constraint if  $T(\t)= \frac{\a^2X^2(1+\t)^2}{2}-\frac{X^2}{2}$, and firm $2$ solves
+For each $\t<\t_0$, at the merger stage, firm $2$ has perfect information and offers a merger contract $(\a(\t),T(\t))$ that binds the participation constraint of firm $1$. Because the effort level is $\a(\t)X(1+\t)$, the binding participation constraint is  $T(\t)= \frac{\a^2X^2(1+\t)^2}{2}-\frac{X^2}{2}$
+\todo[inline]{because the profit of firms that have shared information is $\frac{(X-L(\t))^2}{2}$, and the participation constraint is $T(\t)+ \frac{\a^2X^2(1+\t)^2}{2}\geq \frac{(X-L(\t))^2}{2}$, the binding transfer is $T(\t)= -\frac{\a^2X^2(1+\t)^2}{2}+\frac{(X-L(\t))^2}{2}$}
+, and firm $2$ solves
 %
 \begin{align*}
 \max_{\a} (1-\a)\frac{\a X^2(1+\t)^2}{2}-\frac{\a^2X^2(1+\t)^2}{2}+\frac{X^2}{2},
 \end{align*}
+
+\todo[inline]{$$\max_{\a} (1-\a)\a X^2(1+\t)^2+\frac{\a^2X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}$}
 that is 
 %
 \[
 \max_{\a} \a(1-2 \a)\frac{X^2(1+\t)^2}{2},
 \]
 %
+\todo[inline]{$\max_{\a} \a(1-\frac{\a}{2})\frac{X^2(1+\t)^2}{2},
+$}
+
 and offers $\a(t)=\frac{1}{4}$ and $T(\t)= \frac{X^2(1+\t^2)}{32}-\frac{X^2}{2}$.\footnote{%
 This assumes that firm $1$ can make transfer payments at the time of the merger, in exchange for a share in the merged firm profits. If firm $1$ cannot make transfers, that is if $T$ must be non-negative, then firm $1$ will make rents at the merger phase.
 }
+\todo[inline]{and offers $\a(t)=1$ and $T(\t)= -\frac{X^2(1+\t)^2}{2}+\frac{(X-L(\t))^2}{2}$. Ce resultat est naturel: en donnant tout la part à la firm 1, firm 2 maximise son incitation à faire un effort, puis elle extrait tout le surplus à travers le transfert}
 Hence, the expected payoff of firm $2$ if firm $1$ shares data is (using \eqref{eq:p-data-sharing})
 %
 \[
  \frac{X^2(1+\t)^2}{16}-p= \frac{X^2(1+\t)^2}{16}-\frac{L(\t_0)}{2}(2X-L(\t_0)).
 \]
+
+\todo[inline]{$ \frac{X^2(1+\t)^2}{2}-p-\frac{(X-L(\t))^2}{2}=\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))$}
 %
 The  higher $p$ is, the more likely that firm $1$ shares data, that is that $\t_0>0$. If the rents $\dot U(\t)$ that have to be given to firm $1$ ofr $\t>\t_0$ are large on average, firm $2$ may prefer to induce data sharing for all types, that is choose $\t_0=\overline \t$.
 
@@ -190,6 +201,8 @@ Hence, for a given $\t_0$, the expected payoff of firm $2$ is
 \[
 V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{16}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2(1+\t)+\frac{1-F(\t)}{f(\t_0)}}f(\t)d\t.
 \] 
+
+\todo[inline]{$V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2(1+\t)+\frac{1-F(\t)}{f(\t_0)}}f(\t)d\t.$}
 %
 Direct computation shows that 
 %
@@ -198,11 +211,15 @@ V'(\t_0):=&\left[\frac{X^2}{16}(1+\t_0)^2-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(
 &-X^2\frac{(1+\t_0)^3}{2(1+\t_0)+\ell(\t)}f(\t_0)   
 \end{align*}
 %
+
+\todo[inline]{$V'(\t_0):=\left[\frac{X^2}{2}(1+\t_0)^2-\frac{X^2}{2}\right]f(\t_0)- F(\t_0)L'(\t_0)(X-L(\t_0))-X^2\frac{(1+\t_0)^3}{2(1+\t_0)+\ell(\t)}f(\t_0)$}
 hence,
 %
 \[
 V'(0)=f(0) X^2 \left[\frac{1}{16}-\frac{1}{2+\ell(0)} \right]
 \]
+
+\todo[inline]{$V'(0)=-f(0) X^2 \frac{1}{2+\ell(0)} $}
 %
 noting that $\ell(0)=\frac{1}{f(0)}$, we will have data sharing if
 %
@@ -210,6 +227,7 @@ noting that $\ell(0)=\frac{1}{f(0)}$, we will have data sharing if
 0<f(0)<\frac{1}{8}.
 \]
 %
+\todo[inline]{we have data sharing if $0<f(0)$ (always the case)}
 Could we have \emph{only} data sharing? A necessary condition is that $V'(\overline \t)\geq 0$. However,
 %
 \begin{align*}
