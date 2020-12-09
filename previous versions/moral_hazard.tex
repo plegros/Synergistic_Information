@@ -1,0 +1,282 @@
+%  Synergies and mergers-Thursday, 19 November 2020
+%
+%  Created by Patrick on 2020-11-19.
+%  Copyright (c) 2020 __Patrick Legros__. All rights reserved.
+%
+%!TEX encoding = UTF-8 Unicode  
+
+\documentclass[a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm,amsmath,amssymb,amsfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+%\bibliographystyle{plainnat}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+\usepackage[scr]{rsfso}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{array, multirow}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{todonotes}
+
+\usepackage{tikz}
+\hypersetup{
+colorlinks,
+citecolor=NavyBlue,
+linkcolor=NavyBlue,
+urlcolor=NavyBlue}
+\usetikzlibrary{matrix}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{ass}{Assumption}
+\newtheorem{result}{Result}
+\newtheorem{condition}{Condition}
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Definition}{Definition}
+\newtheorem{remark}{Remark}
+
+\newenvironment{reusefigure}[2][htbp]
+  {\addtocounter{figure}{-1}%
+   \renewcommand{\theHfigure}{dupe-fig}% If you're using hyperref
+   \renewcommand{\thefigure}{\ref{#2}}% Figure counter is \ref
+   \renewcommand{\addcontentsline}[3]{}% Avoid placing figure in LoF
+   \begin{figure}[#1]}
+  {\end{figure}}
+  
+  \usepackage{titlesec}
+
+%\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+ \usepackage{geometry}
+
+ 
+ \newcommand{\E}{\mathbb E}
+ \newcommand{\N}{\mathcal N}
+\renewcommand{\th}{\hat\theta}
+\renewcommand{\t}{\theta}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+
+\begin{document}
+
+
+\title{Synergistic Information$^{3.0}$}
+\author{Antoine Dubus and Patrick Legros\thanks{We would like to thank.}}
+\date{\today}
+
+%\author{Antoine Dubus\thanks{~~Université Libre de Bruxelles, ECARES; \href{mailto:antoine1dubus@gmail.com}{antoine1dubus@gmail.com}.}}
+
+\maketitle
+
+ 
+\textbf{Very preliminary, do not circulate.}
+
+\baselineskip0.7cm
+
+
+At time $0$, firm $2$ offers the option to firm $1$ to share amount of information $s^*$ at price $p$, in which case firm $2$ has full information about $\t$ when merger happens at time $1$. If firm $1$ does not share data, firm $2$ will offer a revelation mechanism $\{\alpha(\t),T(\t)\})$ to firm $1$.
+
+At time $0$, let $\N$ be the set of types of firm $1$ that firm $2$ expects \emph{not to share}. We claim that $\N=[\t_0,\overline \t]$.
+
+\begin{ass}[Convenient reformulation]\label{ass:L} loss from sharing data if competition is equal to $L(\t)$, and we assume that $L(0)=0$, $L'(0)=0$, $L'(\t)>0,L''(\t)<0$, with $X>L(\overline \t)$. (This last part is to simplify the derivation of the condition for having the mixed regime of sharing and no sharing. Also having $l s^*$ is sort of window dressing since firm $1$ cannot share other amounts.)
+\end{ass}
+ 
+\paragraph{Optimal mechanism at $t=1$ given $\N$.} At this stage, firm $1$ has for outside option not to accept the mechanism and obtain a profit level of $\max_e eX -\frac{e^2}{2}=\frac{X^2}{2}$, independent of $\t$. The problem is a standard screening problem for firm $2$, with the caveat that firm $1$'s effort when choosing the element $(\alpha,T)$ solves $\max_e  \alpha X(1+\t) e +T-\frac{e^2}{2}$, or $e=\a X(1+\t)$, increasing in $\t$. 
+
+If there is truth telling, type $\t$ has payoff
+%
+\[
+U(\t)=\alpha(\t)^2 \frac{X^2(1+\t)^2}{2}+T(\t)
+\]
+%
+
+Hence, by choosing $(\alpha(\th),T(\th)$, type $\t$ has payoff
+%
+\[
+U(\th|\t)=\alpha(\th)^2 \frac{X^2(1+\t)^2}{2}+T(\th).
+\]
+%
+Noting that $U(\th|\t)=U(\th)+\a^2(\th)X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right)$, the incentive conditions $U(\t)\geq U(\th|\t)$ and $U(\th)\geq U(\t|\th)$ yield
+%
+\[
+\a^2(\hat \t) X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right)   \leq U(\t)-U(\th) \leq \a^2(\t)X^2(\t-\th)\left(1+\frac{\t+\th}{2}\right) 
+\]
+%
+Therefore, as $\t>\th$, we must have $\a(\t)\geq \a(\th)$ and $U(\t)\geq U(\th)$.  The standard results follow: firm $2$ will want to bind the participation constraint of type $\t_0:=\inf \N$ and $U(\t)$ is an increasing function of $\t$.
+
+Now, if a type shares information, firm $2$ extracts all surplus at the merger stage, and therefore type $\t$ has payoff from sharing equal to $\frac{(X-L(\t))^2}{2}+p$. Her outside option is the best of not doing anything and get $\frac{X^2}{2}$ or plays the mechanism $\{\a(\t),T(\t)\}$. 
+
+This allows us to show that $\N$ is an interval $[\t_0,\overline \t]$. Indeed, suppose that types $\t,\t'$ are in $\N$. Any type in $(\t,\t')$ has the option not ot share data and play the mechanims and obtain at least $U(\t|\th)$, which is strictly greater than $\max\left\{\frac{X^2}{2}, \frac{(X-L(\t))^2}{2}+p\right\}$: the first element is because $U(\t|\th)\geq U(\t_0|\th)\geq \frac{X^2}{2}$ and the second element is because type $\t$ prefers not to share than to share. 
+
+Incentive compatibility requires that for almost all $\t\in[\t_0,\overline \t]$, $$\dot U(\t)=\a^2(\t) X^2(1+\t),$$ hence in $2$'s problem we can replace $T(\t)$ by $-U(\t_0)-\int_{\t_0}^\t \a^2(\t) X^2(1+\t)d\t$, and after integration by parts, and binding $\t_0$'s participation constraint obtain the maximization problem
+%
+\begin{equation}
+\begin{aligned}
+    \frac{X^2}{1-F(\t_0)}\int_{\t_0}^{\overline \t}\a(\t) (1+\t)^2-\a^2(\t)(1+\t)\left(\frac{(1+\t)}{2}+\frac{1-F(\t)}{f(\t)}\right) dF(\t)\\
+\end{aligned}
+\end{equation}
+This is maximized for 
+%
+\begin{equation}
+    \a^*(\t)=\frac{(1+\t)}{(1+\t)+2 \frac{1-F(\t)}{f(\t)}}.
+\end{equation}
+%
+\begin{remark}
+    The rent $\dot U(\t)$ is then equal to $X^2\frac{(1+\t)^3}{(1+\t+2\ell(\t))^2}$
+\end{remark}
+
+
+Hence, conditional on firm $1$ not sharing, firm $2$'s expected payoff is 
+%
+\[
+   \frac{X^2}{1-F(\t_0)}\int_{\t_0}^{\overline \t} \frac{(1+\t)^3}{2((1+\t)+2\ell(\t))}f(\t)d\t
+\]
+%
+\todo[inline]{Is it obvious that firm $2$ will always desire to merge? I think yes, but this should be established. Akin to showing that firm $2$ does not want to exclude some types.}
+
+\todo[inline]{A: if the outside option of firm 2 is zero (no profits from firm 1 sharing), desire to merge is straightforward. Does firm 2 want to exclude some type? the above integration is clearly decreasing in $\t_0$, such that exclusion is not profitable for firm 2.}
+
+\todo[inline]{A: remains the question of the profits of firm 2 when firm 1 shares $s^*$. Either they are equal to zero, or the are positive and depend on the amount of information shared, in which case they have to depend on the effort $e$, but this scenario is hard to support with concrete example}
+
+
+\subsection*{Equilibrium Data Sharing}
+There are three possible cases: when $\t_0=0$ and there is no sharing of data, when $\t_0\in(0,\overline \t)$, and there is a mixture of data sharing by firms with low values of $\t$, and when $\t_0=\overline \t$ and all firms share data.
+
+Because type $\t_0$ has no rent if firm $1$ does not share data (that is $U(\t_0)=\frac{X^2}{2}$) it must be the case that it has also zero rent if firm $1$ shares data. Hence, we must have $\frac{(X-L(\t_0))^2}{2}+p=\frac{X^2}{2}$, or
+%
+\begin{equation}\label{eq:p-data-sharing}
+    p=\frac{L(\t_0)}{2}(2X-L(\t_0)).   
+\end{equation}
+
+%
+For each $\t<\t_0$, at the merger stage, firm $2$ has perfect information and offers a merger contract $(\a(\t),T(\t))$ that binds the participation constraint of firm $1$. Because the effort level is $\a(\t)X(1+\t)$, and because the profit of firms that have shared information is $\frac{(X-L(\t))^2}{2}$, and the participation constraint is $T(\t)+ \frac{\a^2X^2(1+\t)^2}{2}\geq \frac{(X-L(\t))^2}{2}$, the binding transfer is $$T(\t)= -\frac{\a^2X^2(1+\t)^2}{2}+\frac{(X-L(\t))^2}{2}$$
+%
+and firm $2$ solves
+%
+\begin{align*}
+\max_{\a} (1-\a)\a X^2(1+\t)^2+\frac{\a^2X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2},
+\end{align*}
+
+that is 
+%
+\[
+\max_{\a} \a(1-\frac{\a}{2})\frac{X^2(1+\t)^2}{2},
+\]
+%
+and offers $\a(t)=1$ and $T(\t)= -\frac{X^2(1+\t)^2}{2}+\frac{(X-L(\t))^2}{2}$.\footnote{%
+This assumes that firm $1$ can make transfer payments at the time of the merger, in exchange for a share in the merged firm profits. If firm $1$ cannot make transfers, that is if $T$ must be non-negative, then firm $1$ will make rents at the merger phase.
+}
+Hence, the expected payoff of firm $2$ if firm $1$ shares data is (using \eqref{eq:p-data-sharing})
+%
+\[
+  \frac{X^2(1+\t)^2}{2}-p-\frac{(X-L(\t))^2}{2}=\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))
+\]
+%
+The  higher $p$ is, the more likely that firm $1$ shares data, that is that $\t_0>0$. If the rents $\dot U(\t)$ that have to be given to firm $1$ ofr $\t>\t_0$ are large on average, firm $2$ may prefer to induce data sharing for all types, that is choose $\t_0=\overline \t$.
+
+Somewhat unusual, if $\t_0\in(0,\overline \t)$, the equilibrium payoff of firm $1$ is not monotonic in $\t$: it is decreasing in $\t<\t_0$ because firms with high $\t$ lose more than lower types if there is data sharing and competition, hence are at a disadvantage when the merger happens.
+
+Hence, for a given $\t_0$, the expected payoff of firm $2$ is 
+%
+\[
+V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2((1+\t)+2\frac{1-F(\t)}{f(\t)})}f(\t)d\t.
+\] 
+%
+Direct computation shows that 
+%
+\begin{align*}
+V'(\t_0):=\left[\frac{X^2}{2}(1+\t_0)^2-\frac{X^2}{2}\right]f(\t_0)-F(\t_0)L'(\t_0)(X-L(\t_0))-X^2\frac{(1+\t_0)^3}{2((1+\t_0)+2\ell(\t_0))}f(\t_0) 
+\end{align*}
+%
+hence,
+%
+\[
+V'(0)=-f(0) X^2 \frac{1}{2+4\ell(0)} 
+\]
+%
+which is clearly always negative.
+%
+Moreover, 
+%
+\begin{align*}
+V'(\overline \t)=-f(\overline \t) \frac{X^2}{2}-L'(\overline \t)(X-L(\overline \t))         
+\end{align*}
+is negative by Assumption \ref{ass:L}.
+%
+
+A necessary condition to have information sharing is to have an interior solution, which requires:
+
+%
+\begin{align*}
+&V'(\t_0)\geq 0 \\
+\iff&\left[(1+\t_0)^2-1-\frac{(1+\t_0)^3}{(1+\t_0)+2\ell(\t_0)}\right]\frac{X^2}{2}f(\t_0)\geq F(\t_0)L'(\t_0)(X-L(\t_0))\\
+\iff&\left[\frac{2\ell(\t_0)\t_0(2+\t_0)-(1+\t_0)}{(1+\t_0)+2\ell(\t_0)}\right]\frac{X^2}{2}f(\t_0)\geq F(\t_0)L'(\t_0)(X-L(\t_0))
+\end{align*}
+%
+
+Note that the left hand term is positive for $\ell(\t_0)>\frac{1+\t_0}{2\t_0(2+\t_0)}$
+
+There are thus two cases to consider:
+
+
+\begin{itemize}
+    \item $\forall \t_0\in[0,\overline \t]~~\left[\frac{2\ell(\t_0)\t_0(2+\t_0)-(1+\t_0)}{(1+\t_0)+2\ell(\t_0)}\right]\frac{X^2}{2}f(\t_0)\leq F(\t_0)L'(\t_0)(X-L(\t_0))$, there is no interior solutions, and information sharing never occurs
+    \item $\exists \t_0 ~~s.t.~~\left[\frac{2\ell(\t_0)\t_0(2+\t_0)-(1+\t_0)}{(1+\t_0)+2\ell(\t_0)}\right]\frac{X^2}{2}f(\t_0)\geq F(\t_0)L'(\t_0)(X-L(\t_0))$, there are two interior solutions, one of which, $\t_0^*$, is a local maximum.
+    \item Is profit at this local maximum larger than $V(0)$?
+    \begin{itemize}
+        \item yes if 
+        
+        \begin{align*}
+            &V(\t_0^*)-V(0)\geq 0 \\
+            \iff&\int_0^{\t_0^*} \left[\frac{X^2}{2}\left[\frac{2\ell(\t)\t(2+\t)-(1+\t)}{(1+\t)+2\ell(\t)}\right]-\frac{(X-L(\t))^2}{2}+\frac{(X-L(\t_0^*))^2}{2}\right]f(\t)d\t\geq 0
+        \end{align*} 
+    \end{itemize}
+\end{itemize}
+
+$\frac{2\ell(\t)\t(2+\t)-(1+\t)}{(1+\t)+2\ell(\t)}$ and $-\frac{(X-L(\t))^2}{2}+\frac{(X-L(\t_0^*))^2}{2}$ are negative for $\t=0$
+
+$-\frac{(X-L(\t))^2}{2}+\frac{(X-L(\t_0^*))^2}{2}$increases with $\t$ and is equal to zero at $\t_0$
+
+Thus a necessary condition for the above equation to be positive is that $\frac{2\ell(\t)\t(2+\t)-(1+\t)}{(1+\t)+2\ell(\t)}$ increases on an interval, which is true under the condition that on this interval:
+
+$$\frac{(\t+1)\ell+4\ell^2}{(\t+1)^2}\geq-\ell'(\t)$$
+
+and that it is positive for certain values, which is equivalent to:
+
+$$\ell(\t)\geq \frac{1+\t}{2\t(2+\t)}}
+
+
+
+
+
+
+
+
+
+%
+
+
+\todo[inline]{Patrick à ce stade je suis un peu bloqué, la positivité de l'expression des profits dans l'intégrale dépend de condition sur $l$ et $L$ qui ne sont pas très lisibles}
+
+
+\bibliographystyle{agsm}
+\bibliography{biblio-synergies.bib}
+
+
+\end{document}
+

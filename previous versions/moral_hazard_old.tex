@@ -199,20 +199,20 @@ Somewhat unusual, if $\t_0\in(0,\overline \t)$, the equilibrium payoff of firm $
 Hence, for a given $\t_0$, the expected payoff of firm $2$ is 
 %
 \[
-V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{16}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2(1+\t)+\frac{1-F(\t)}{f(\t_0)}}f(\t)d\t.
+V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{16}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2((1+\t)+2\frac{1-F(\t)}{f(\t)})}f(\t)d\t.
 \] 
 
-\todo[inline]{$V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2(1+\t)+\frac{1-F(\t)}{f(\t_0)}}f(\t)d\t.$}
+\todo[inline]{$V(\t_0):=\int_0^{\t_0} \left[\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t + \int_{\t_0}^{\overline \t} X^2 \frac{(1+\t)^3}{2((1+\t)+2\frac{1-F(\t)}{f(\t)})}f(\t)d\t.$}
 %
 Direct computation shows that 
 %
 \begin{align*}
 V'(\t_0):=&\left[\frac{X^2}{16}(1+\t_0)^2-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t_0)- F(\t_0)L'(\t_0)(X-L(\t_0))\\ 
-&-X^2\frac{(1+\t_0)^3}{2(1+\t_0)+\ell(\t)}f(\t_0)   
+&-X^2\frac{(1+\t_0)^3}{2((1+\t_0)+2\ell(\t))}f(\t_0)   
 \end{align*}
 %
 
-\todo[inline]{$V'(\t_0):=\left[\frac{X^2}{2}(1+\t_0)^2-\frac{X^2}{2}\right]f(\t_0)- F(\t_0)L'(\t_0)(X-L(\t_0))-X^2\frac{(1+\t_0)^3}{2(1+\t_0)+\ell(\t)}f(\t_0)$}
+\todo[inline]{$V'(\t_0):=\left[\frac{X^2}{2}(1+\t_0)^2-\frac{X^2}{2}\right]f(\t_0)- F(\t_0)L'(\t_0)(X-L(\t_0))-X^2\frac{(1+\t_0)^3}{2((1+\t_0)+2\ell(\t_0))}f(\t_0)$}
 hence,
 %
 \[
@@ -227,7 +227,27 @@ noting that $\ell(0)=\frac{1}{f(0)}$, we will have data sharing if
 0<f(0)<\frac{1}{8}.
 \]
 %
-\todo[inline]{we have data sharing if $0<f(0)$ (always the case)}
+
+\todo[inline]{$V'(\t_0)\geq 0 \implies\left[(1+\t_0)^2-1-\frac{(1+\t_0)^3}{(1+\t_0)+2\ell(\t_0)}\right]\frac{X^2}{2}f(\t_0)\geq F(\t_0)L'(\t_0)(X-L(\t_0))$ }
+
+
+\todo[inline]{$\iff \left[\frac{2\ell(\t_0)\t_0(2+\t_0)-(1+\t_0)}{(1+\t_0)+2\ell(\t_0)}\right]\frac{X^2}{2}f(\t_0)\geq F(\t_0)L'(\t_0)(X-L(\t_0))$ a necessary condition for this inequality to hold is $2\ell(\t_0)\t_0(2+\t_0)-(1+\t_0)> 0$, which is verified for $\ell(\t_0)>\frac{1+\t_0}{2\t_0(2+\t_0)}$}
+
+
+\todo[inline]{There are thus two cases to consider:}
+\begin{itemize}
+    \item $\forall \t_0\in[0,\overline \t]~~\ell(\t_0)<\frac{1+\t_0}{2\t_0(2+\t_0)}$, there is no interior solutions, and information sharing never occurs
+    \item $\exists \t_0^* ~~s.t.~~\ell(\t_0)>\frac{1+\t_0}{2\t_0(2+\t_0)}$, there are two interior solutions, one of which is a local maximum.
+    \item Is profit at this local maximum larger than $V(0)$?
+    \begin{itemize}
+        \item yes if $V(\t_0^*)-V(0)\geq 0 \implies\int_0^{\t_0} \left[\frac{X^2}{2}\left[\frac{2\ell(\t)\t(2+\t)-(1+\t)}{(1+\t)+2\ell(\t)}\right]-\frac{(X-L(\t))^2}{2}+\frac{(X-L(\t_0))^2}{2}\right]f(\t)d\t\geq 0$
+        
+        $\Delta L(\t)=\frac{(X-L(\t))^2}{2}-\frac{(X-L(\t_0))^2}{2}=\frac{L(\t_0)}{2}(2X-L(\t_0))-\frac{L(\t)}{2}(2X-L(\t))\geq 0$
+    \end{itemize}
+\end{itemize}
+
+
+
 Could we have \emph{only} data sharing? A necessary condition is that $V'(\overline \t)\geq 0$. However,
 %
 \begin{align*}
@@ -239,6 +259,9 @@ is negative by Assumption \ref{ass:L}.
     Suppose that $0<f(0)<\frac{1}{8}$, then in equilibrium firm $2$ offers a price for data sharing that induces a positive measure of types to share data and the other types not to share data.
 \end{prop}
 %
+
+
+\todo[inline]{Choice of lowest $\t$ such that firm 2 accepts merger: If firm 2 refuses to merge for $\t \leq \underline \t$, profits are $\int_{0}^{\underline \t}\left[-\frac{X^2}{2}+\frac{(X-L(\t_0))^2}{2}\right]dF(\t)+\int_{\underline \t}^{\t_0}\left[\frac{X^2(1+\t)^2}{2}-\frac{(X-L(\t))^2}{2}-\frac{L(\t_0)}{2}(2X-L(\t_0))\right]f(\t)d\t$ which is maximized for $\underline \t=0$}
 
 
 
