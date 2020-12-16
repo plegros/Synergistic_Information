@@ -70,6 +70,8 @@ urlcolor=NavyBlue}
 \renewcommand{\th}{\hat\theta}
 \renewcommand{\t}{\theta}
 \renewcommand{\a}{\alpha}
+\renewcommand{\l}{\lambda}
+
 
 \begin{document}
 
@@ -118,8 +120,24 @@ urlcolor=NavyBlue}
 \section{Concrete example}
 
 \begin{itemize}
-    \item Profit sharing mechanisms between two firms: \href{https://www.nytimes.com/2020/11/21/us/politics/coronavirus-vaccine.html?referringSource=articleShare}{Politics, Science and the Remarkable Race for a Coronavirus Vaccine}.
+    \item pre merger information sharing
     
+    \href{https://sites-herbertsmithfreehills.vuturevx.com/46/12874/compose-email/the-altice-case--a-costly-warning-not-to-engage-in-gun-jumping-before-receiving-merger-control-clearance.asp}{Altice/OTL} The FCA found that Altice and SFR engaged in an extensive exchange of commercially sensitive information (including individualised trade data and future forecasts)
+    
+    \href{https://www.twobirds.com/en/news/articles/2020/global/double-caution-gun-jumping-risks-in-m-and-a-transactions}{Gun-jumping examples}
+    \item Acquisition failures:
+    
+    \href{https://www.investopedia.com/articles/insights/061816/4-cases-when-ma-strategy-failed-acquirer-ebay-bac.asp}{ebay/skype}: lack of complementarity
+    
+    \href{https://salessynergy.net/the-biggest-acquisition-disasters-that-put-companies-into-quite-a-bit-of-trouble/}{google/motorola}: android bugs on device
+    
+    \href{https://www.investopedia.com/articles/financial-theory/08/merger-acquisition-disasters.asp#:~:text=The\%20consolidation\%20of\%20AOL\%20Time,combination\%20up\%20until\%20that\%20time}{sprint/nextel} lack of common culture
+    
+    \item Regulator forbids merger:
+    
+    \href{https://www.livemint.com/companies/news/aurobindo-pharma-calls-off-1-billion-deal-with-sandoz-after-failing-to-get-ftc-nod-11585801128011.html}{Aurobindo/sandoz}
+    
+    \item Profit sharing mechanisms between two firms: \href{https://www.nytimes.com/2020/11/21/us/politics/coronavirus-vaccine.html?referringSource=articleShare}{Politics, Science and the Remarkable Race for a Coronavirus Vaccine}.
 \end{itemize}
 
 
@@ -137,15 +155,24 @@ Hence, waiting to merge generates ex-post inefficiencies while not waiting insur
 
 \section{Model}
 \begin{itemize}
-  \item If firm $1$ shares $s$ 
+    \item Firm 2 can acquire firm 1 without knowing its type:
+    \begin{itemize}
+        \item Firm 2 proposes a menu composed by couple $(\a(\t),p(\t))$. 
+        \item Firm 1 selects $(\a(\t),p(\t))$.
+        \item Firm 2 transfers $p(\t)$, and learns the type of Firm 1.
+        \item Firm 2 then either decides to go on with the merger, invests $c$, give $\a(\t)$ to firm 1 and profits are $(1-\a(\t))[(1+\t)X-c]-p(\t)$ for firm 2 and $\a(\t)[(1+\t)X-c]+p(\t)$ for firm 1.
+        \item Or firm 2 does not pursue and merger does not occur, Firm 1 gets $p(\t)+X$ and firms 2 makes $-p(\t)$.
+    \end{itemize}   
+  \item Or firm 2 can buy $s$ information from firm $1$ and learn its type:
   \begin{itemize}
       \item Either firm 2 does not exploit the data, firm 1 makes $X$ and firm 2 makes $0$
       \item Or firm 2 exploits the data at cost $c$, firms compete, the profits are $X-L(\t)$ for $1$ and $\t s-c$ for $2$.
       \item Or firms merge, exploit the data at cost $c$ and the industry profits are $X(1+\t)-c$
   \end{itemize}
-  \item Firm $2$ has full negotiation power. (Needed: firm $2$ cannot commit to a mechanism at the merging stage? Result below seems fine even if firm $2$ can commit. TO BE VERIFIED.) 
+  \item Firm $2$ has full negotiation power.
   \item There are two relevant levels of sharing: $s=0$ and $s^*$. If $0$, firm $2$ does not know $\t$ at the time of merger; if sharing is $s^*$, firm $2$ knows $\t$.
   \item $\t$ has ex-ante distribution $F(\t)$, with continuous density and support $[0,\overline \t]$ ($\overline \t=\infty$ is allowed), MLRP satisfied.
+  \item We assume that cost $c$ for firm 2 to exploit the data is never higher than the profits of firm 1: $X\geq c$
 \end{itemize}
 
 
@@ -154,10 +181,12 @@ Hence, waiting to merge generates ex-post inefficiencies while not waiting insur
   \item Let $T$ the price that firm $2$ offers to pay for data $s^*$.
   \item If firm $1$ accepts, $s^*$ is shared and firm $2$ learns $\t$. 
   \begin{itemize}
-      \item For $\t \leq \frac{c}{s}$ firm 2 does not exploit the data
-      \item for $\t \leq \frac{c}{X}$ firm 2 refuses merge
-  \end{itemize}  When merger opportunity arises, firm $2$ extracts all the surplus from merger. Let $U_1(\t|s=s^*)$ be the expected utility of type $\t$ of doing data sharing.
-  \item Let $\N$ be the subset of types that accept $T$.
+      \item For $\t \geq \frac{c}{s}$ it is profitable for firm 2 to merge or to exploit the data, merger is preferred to exploiting
+      \item For $\t \leq \frac{c}{s}$ firm 2 go on with the merger but does not find it profitable to exploit the data
+      \item for $\t \leq \frac{c}{X}$ firm 2 refuses merge or to exploit
+  \end{itemize}  
+  When merger opportunity arises, firm $2$ knows the type of firm 1 and extracts all the surplus from merger. Let $U_1(\t|s=s^*)$ be the expected utility of type $\t$ of doing data sharing.
+  \item Let $\N$ be the subset of types that decline $T$.
   \item\label{stage-merger} Given $\N$, there is an optimal revelation mechanism that maximizes firm $2$'s expected payoff subject to the IR and IC conditions for firm $1$. Let $U(\t|s=0)$ be the expected payoff of firm $1$ of type $\t$ when playing this mechanism (corresponding to the `sunk' belief of firm $2$ of facing firms $1$ with types in $\N$. Note that we can compute this value for any $\t$, which is obviously necessary in order to verify the incentives of different types to do data sharing or not.)
   \item Go back and verify that for each $\t\in \N$, $U_1(\t|s=0)\geq U_1(\t|s=s^*)$ and for each $\t\notin \N$, $U_1(\t|s=0)\leq U_1(\t|s=s^*)$
 \end{enumerate}
@@ -168,7 +197,7 @@ As an illustration of the mechanics of the model, suppose firm $2$ has full barg
 %
 
 \begin{itemize}
-    \item If $\t\in[0,\frac{c}{X}]$, neither merger nor competition are not profitable for firm 2 and
+    \item If $\t\in[0,\frac{c}{X}]$, neither merger nor competition are profitable for firm 2 and
     \[U_1(\t|s=s^*)=X+T\]
     \item If $\t\in[\frac{c}{X},\frac{c}{s}]$ firm 2 will always want to merge but does not want to compete with firm 1, thus the profit of firm 1 is
     
@@ -186,28 +215,28 @@ which is a decreasing function of $\t$. By contrast, firms that do not share dat
 \end{equation}
 %
 
-Consider $\t\in[\frac{c}{X},\frac{c}{s}]$
+\paragraph{Consider $\t\in[\frac{c}{X},\frac{c}{s}]$}
 
 
-Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X$, which corresponds to its outside option. Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-X-T-c=\t X-T-c$. Firm $1$ has expected payoff $X+T$.
+Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X$, which corresponds to its outside option. Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-X-L(\t_0)-c=\t X-L(\t_0)-c$. Firm $1$ has expected payoff $X+L(\t_0)$.
 
 
-Consider now $\t\in[\frac{c}{s},\overline \t]$
+\paragraph{Consider $\t\in[\frac{c}{s},\overline \t]$}
 
 
-Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X-L(\t)$, because if it declines the offer, firm 2 now has interest to compete. Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-(X-L(\t))-T-c=\t X +L(\t)-T-c$. Firm $1$ has expected payoff $X-L(\t)+T$.
+Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X-L(\t)$, because if it declines the offer, firm 2 now has interest to compete. Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-(X-L(\t))-L(\t_0)-c=\t X +L(\t)-L(\t_0)-c$. Firm $1$ has expected payoff $X-L(\t)+L(\t_0)$.
 
 
 \paragraph{Mechanism if firm $2$ believes that $\t\in\N$ at the merging phase.} At the merging stage, firm $2$ believes that types have a distribution with support on $\N=[\t_0,\overline \t]$. Note that all types in $\N$ do not share data and have the same outside option of $X$. The value to the merger is $X(1+\t)-c$. 
 
-A mechanism is then a menu $\{(p(\t),\a(\t));t\in \N\}$, where $p(\t)$ is the price paid by firm $1$ to firm $2$ and $\a(\t)$ is the share of the merged entity that firm $2$ gives to firm 1. Clearly firm 2 would prefer to give $p=X$ to all firms and get all the surplus. However, in this case firm 1 of type $\t\in[0,\frac{c}{X}]$ has interest not to sell information, and to bargain under asymmetric information. Indeed in this case firm 2 will pay $p$ but wont find it profitable to merge, and thus firm 1 will make $X+p>X+L(\t_0)$. Thus firm 2 cannot set $p>L(\t_0)$ and has to set $\a >0$ so that firm 1 accepts the offer. It should be clear that if $\t_0$ does not get a rent in the mechanism, types $\t<\t_0$ get a negative rent if they do not share data; by contrast they get a positive rent equal to $L(\t_0)-L(\t)$ if they share data. The participation constraint of firm $1$ is
+A mechanism is then a menu $\{(p(\t),\a(\t));\t\in \N\}$, where $p(\t)$ is the price paid by firm $1$ to firm $2$ and $\a(\t)$ is the share of the merged entity that firm $2$ gives to firm 1. Clearly firm 2 would prefer to give $p=X$ to all firms and get all the surplus. However, in this case firm 1 of type $\t\in[0,\frac{c}{X}]$ has interest not to sell information, and to bargain under asymmetric information. Indeed in this case firm 2 will pay $p$ but wont find it profitable to merge, and thus firm 1 will make $X+p>X+L(\t_0)$. Thus firm 2 cannot set $p>L(\t_0)$ and has to set $\a >0$ so that firm 1 accepts the offer. It should be clear that if $\t_0$ does not get a rent in the mechanism, types $\t<\t_0$ get a negative rent if they do not share data; by contrast they get a positive rent equal to $L(\t_0)-L(\t)$ if they share data. The participation constraint of firm $1$ is
 \begin{equation}
-  U(\t):=p(\t)+\a(\t)X(1+\t)\geq X 
+  U(\t):=p(\t)+\a(\t)[X(1+\t)-c]\geq X 
 \end{equation}
 
 while the truth-telling constraint is
 \begin{equation*}
-  \t \in \arg\max_{\th} U(\th|\t):=p(\th)+\a(\t)X(1+\t)
+  \t \in \arg\max_{\th} U(\th|\t):=p(\th)+\a(\t)[X(1+\t)-c]
 \end{equation*}
 %
 Usual manipulations yield 
@@ -218,124 +247,226 @@ Usual manipulations yield
 %
 hence that $U(\t)$ and $\a(\t)$ are almost everywhere non-decreasing function. Moreover, by the envelop theorem, $\dot U(\theta)=\a(\t)X$. 
 
-Hence, firm $2$ offers a mechanism $(p,\a)$ to solve $\max_{\{p(\cdot),\a(\cdot)\}}\int_{\t_0}^{\overline t}\left[(1-\a(\t))(1+\t)X-p(\t)\right]f(\t)dt$ subject to the IR and IC constraints. By using $-p(\t)=\a(\t)(1+\t)X-U(\t)$, the problem can be rewritten as
+Hence, firm $2$ offers a mechanism $(p,\a)$ to solve $\max_{\{p(\cdot),\a(\cdot)\}}\int_{\t_0}^{\overline \t}\left[(1-\a(\t))[(1+\t)X-c]-p(\t)\right]f(\t)d\t$ subject to the IR and IC constraints. By using $-p(\t)=\a(\t)[(1+\t)X-c]-U(\t)$, the problem can be rewritten as
 \begin{align*}
   \max_{(p(\cdot);\a(\dot))} \int_{\t_0}^{\overline \t} \left(-U(\t)+X(1+\t) \right)&\frac{f(\t)}{1-F(\t_0)}d\t\\ 
-  U(\t) \geq X & \hspace{2cm} \text{(IR)} \\ 
-  \dot{U}(\t)=\a(\t)X & \hspace{2cm} \text{(IC)} \\ 
+  U(\t) \geq& X  \hspace{2cm} \text{(IR)} \\ 
+  \dot{U}(\t)=&\a(\t)X \hspace{2cm} \text{(IC)} \\ 
 \end{align*}
 %
 Standard derivations yield to the equivalent problem 
 %
 \begin{align*}
-\max_{\{z(\t)\}} &\int_{\t\in \N}\left( (1+\t)X-\a(\t)X\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t.
+\max_{\{\a(\t)\}} &\int_{\t\in \N}\left( (1+\t)X-\a(\t)X\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t.
 \end{align*}
 %
 Which is maximized when $\a(\t)$ is minimized.
-\todo[inline]{Patrick là je ne suis pas sur: This is achieved for $\a=\a(\t_0)=\frac{X-L(\t_0)}{(1+\t_0)X}$}
+\todo[inline]{Patrick là je ne suis pas sur: This is achieved for $\a=\a(\t_0)=\frac{X-L(\t_0)}{(1+\t_0)X-c}$. Si je fais ca on n'est plus dans du screening mais on a quand meme bien exclusion des bas types}
 %
-The expected payoff to firm $2$ is (using $T=L(\t_0)$ and $\a=\frac{X-L(\t_0)}{(1+\t_0)X}$)
+The expected payoff to firm $2$ is (using $p=L(\t_0)$ and $\a=\frac{X-L(\t_0)}{(1+\t_0)X-c}$)
 %
-\begin{equation}\label{eq:V-t0}
+
+\paragraph{When $\frac{c}{X}\geq\t_0$}
+
+Firm 2 faces an adverse selection problem: all firm 1 of type $\t\in[0,\frac{c}{X}]$ have interest to accept the menu, take transfer $p$ as they know that the merger will not be carried on by firm 2. Thus the profits of firm 2 is:
+
+\[
+V(\t_0):=\int_{0}^{\frac{c}{X}}-L(\t_0)f(\t)d\t+\int_{\frac{c}{X}}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t
+\]
+
+Nevertheless, larger $p$ decrease the information rent given to firm 1 on $[\frac{c}{X},\overline \t]$: 
+
+\[
+V'(\t_0):=-L'(\t_0)F(\frac{c}{X})+\frac{L'(\t_0)(1+\t_0-\frac{c}{X})+(X-L(\t_0))}{(1+\t_0-\frac{c}{X})^2}\int_{\frac{c}{X}}^{\overline \t}1-F(\t)d\t
+\]
+
+
+
+
+\[
+V'(0)\geq0 \iff -L'(0)F(\frac{c}{X})+\frac{L'(0)(1-\frac{c}{X})+X}{(1-\frac{c}{X})^2}\int_{\frac{c}{X}}^{\overline \t}1-F(\t)d\t
+\]
+
+\[
+\int_{\frac{c}{X}}^{\overline \t}1-F(\t)d\t=E_{\frac{c}{X}}[\t]-\frac{c}{X}(1-F(\frac{c}{X}))
+\]
+
+Uniform distribution over $[0,\overline \t]$:
+
+\[
+V'(0)\geq0 \iff L'(0)(\frac{1}{2\overline \t}\frac{(\overline \t-\frac{c}{X})^2}{1-\frac{c}{X}}-\frac{c}{X\overline \t})+X\frac{1}{2\overline \t}\frac{(\overline \t-\frac{c}{X})^2}{(1-\frac{c}{X})^2}
+\]
+
+Exponential distribution with PDF $f(\t)=e^{-\l \t}$:
+
+\[
+V'(0)\geq0 \iff L'(0)(\frac{1}{\l}\frac{e^{-\l c/X}}{1-\frac{c}{X}}-1+e^{-\l c/X})+X\frac{e^{-\l c/X}}{\l(1-\frac{c}{X})^2}
+\]
+
+
+
+\paragraph{When $\frac{c}{s}\geq\t_0\geq\frac{c}{X}$}
+
+
+Consumers on $[0,\frac{c}{X}]$ will behave as before and firm 2 will incur a loss of profits of $-L(\t_0)$. Consumers on $[\t_0,\overline \t]$ will accept the merger without information sharing.
+
+Consumers on $[\frac{c}{X},\t_0]$ will not accept the merger under asymmetric information. However firm 2 can purchase information from these firms. As their outside option is not to merge and get $X$, firm 2 can set a price to zero for information, learn the type of firm 1 and merge by proposing a transfer equal to $X$. In this case the profit of firm 2 is $\t X-c$. Thus the total profit of firm 2 in this case is:
+
+
+
+\[
+V(\t_0):=
+    \int_0^{\frac{c}{X}} -L(\t_0)f(\t)d\t +\int_{\frac{c}{X}}^{\t_0}(\t X-c)f(\t)d\t+\int_{\t_0}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t
+\]
+
+
+\[
+V'(\t_0):=-L'(\t_0)F(\frac{c}{X})-X f(\t_0)+\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}(1-F(\t_0))+\frac{L'(\t_0)(1+\t_0-\frac{c}{X})+(X-L(\t_0))}{(1+\t_0-\frac{c}{X})^2}\int_{\t_0}^{\overline \t}1-F(\t)d\t
+\]
+
+Firm 2 chooses $\t_0\geq \frac{c}{X}$ if $V'(\frac{c}{X})\geq0$:
+
+\[
+V'(\frac{c}{X})\geq0 \iff-L'(\frac{c}{X})F(\frac{c}{X})-X f(\frac{c}{X})+(X-L(\frac{c}{X}))(1-F(\frac{c}{X}))+(L'(\frac{c}{X})+X-L(\frac{c}{X}))\int_{\frac{c}{X}}^{\overline \t}1-F(\t)d\t\geq0
+\]
+
+Uniform distribution over $[0,\overline \t]$:
+
+\[
+V'(\frac{c}{X})\geq0 \iff L'(\frac{c}{X})(\frac{\overline{\t}}{2}-\frac{c}{X}+\frac{c^2}{2X^2\overline \t}-\frac{c}{X\overline \t})+(X-L(\frac{c}{X}))(\frac{1}{\overline \t}(\overline{\t}-\frac{c}{X})+\frac{1}{2\overline{\t}}(\overline{\t}-\frac{c}{X})^2)-\frac{X}{\overline{\t}}\geq0
+\]
+
+Exponential distribution with PDF $f(\t)=e^{-\l \t}$:
+
+
+\[
+V'(\frac{c}{X})= L'(\frac{c}{X})((1+\l)e^{-\l c/X}-1)+X(1-\l+\frac{1}{\l}) e^{-\l c/X}-(1+\frac{1}{\l})L(\frac{c}{X})e^{-\l c/X}
+\]
+
+
+\paragraph{When $\t_0\geq\frac{c}{s}$}
+
+
+There are now firm 1 with types $\t\in[\frac{c}{s},\t_0]$, that will not sell $s$ at a zero price. Indeed, if firm 2 purchase information from these firms, it will want to exploit the data purchased in case there is no merger, and the outside option of firm 1 is $X-L(\t)$. Thus the minimum price that firm 1 in this interval accepts to sell data is $L(\t)$, which is set at $L(\t_0)$ so that all types up to $\t_0$ sell information. Profits of firm 1 are $X+L(\t_0)-L(\t)$, and for firm 2 $\t X-L(\t_0)+L(\t)$
+
+Thus consumers on $[0,\frac{c}{X}]$ will behave as before - and are now indifferent between selling information at price $L(\t_0)$ or engaging negotiation for a merger that will not occur in the end - and firm 2 will incur a loss of profits of $-L(\t_0)$. Consumers on $[\t_0,\overline \t]$ will accept the merger without information sharing.
+
+Consumers on $[\frac{c}{X},\t_0]$ will not accept the merger under asymmetric information. However firm 2 can purchase information from these firms, and they are now pooled with types in $[\frac{c}{s},\t_0]$. In this case the profit of firm 2 is $\t X-c-L(\t_0)$. Thus the total profit of firm 2 in this case is:
+
+
+
+\begin{equation}
 \begin{aligned}
-  V(\t_0):=\begin{cases}
-    \int_0^{\frac{c}{X}} -L(\t_0)f(\t)d\t +\int_{\frac{c}{X}}^{\frac{c}{s}}(\t X-c-L(\t_0))f(\t)d\t+\int_{\frac{c}{s}}^{\t_0}(\t X-c-L(\t_0)+L(\t))f(\t)d\t\\
-    +\int_{\t_0}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t ~~\textrm{if}~~ \t_0\geq\frac{c}{s}\\
-    \\
-    \int_0^{\frac{c}{X}} -L(\t_0)f(\t)d\t +\int_{\frac{c}{X}}^{\t_0}(\t X-c-L(\t_0))f(\t)d\t+\int_{\t_0}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t~~\textrm{if}~~ \frac{c}{s}\geq\t_0\geq\frac{c}{X}\\
-    \\
-    \int_{\t_0}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t~~\textrm{if}~~ \frac{c}{X}\geq\t_0\\
-    \end{cases}
+  V(\t_0):=&\int_0^{\frac{c}{X}} -L(\t_0)f(\t)d\t +\int_{\frac{c}{X}}^{\frac{c}{s}}(\t X-c-L(\t_0))f(\t)d\t+\int_{\frac{c}{s}}^{\t_0}(\t X-L(\t_0)+L(\t)-c)f(\t) d\t\\
+  &+\int_{\t_0}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t
 \end{aligned}
-  \end{equation}
+\end{equation}
+
+
+\begin{equation}
+\begin{aligned}
+  V'(\t_0):=&-L'(\t_0)F(\t_0)-X f(\t_0)+\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}(1-F(\t_0))\\
+  &+\frac{L'(\t_0)(1+\t_0-\frac{c}{X})+(X-L(\t_0))}{(1+\t_0-\frac{c}{X})^2}(E_{\t_0}(\t)-\t_0(1-F(\t_0)))
+\end{aligned}
+\end{equation}
+
+
+\paragraph{Does information sharing occur in equilibrium?}
+
+A sufficient condition for information sharing to occur, is that profits always increase on $[0,\t_0^*]$ with $\t_0^*>\frac{c}{X}$
+
+\medskip
+
+On $[0,\frac{c}{X}]$: 
+
+\[
+V'(\t_0):=-L'(\t_0)F(\frac{c}{X})+\frac{L'(\t_0)(1+\t_0-\frac{c}{X})+(X-L(\t_0))}{(1+\t_0-\frac{c}{X})^2}\int_{\frac{c}{X}}^{\overline \t}1-F(\t)d\t
+\]
+
+Clearly a sufficient condition for this expression to be positive is $\int_{\frac{c}{X}}^{\overline \t}1-F(\t)d\t\geq F(\frac{c}{X})$
+
+which is satisfied for $E[\t|\t\geq \frac{c}{X}]\geq 1$
+
+\medskip
+
+On $\frac{c}{s}\geq\t_0\geq\frac{c}{X}$
+
+\[
+V'(\t_0):=-L'(\t_0)F(\frac{c}{X})-X f(\t_0)+\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}(1-F(\t_0))+\frac{L'(\t_0)(1+\t_0-\frac{c}{X})+(X-L(\t_0))}{(1+\t_0-\frac{c}{X})^2}\int_{\t_0}^{\overline \t}1-F(\t)d\t
+\]
+
+A sufficient condition for this expression to be positive is 
+
+$E[\t|\t\geq \frac{c}{s}]\geq F(\frac{c}{X})(1+\frac{c}{s}-\frac{c}{X})$ and $\frac{X-L(\frac{c}{S})}{1+\frac{c}{S}-\frac{c}{X}}\frac{1-F(\frac{c}{S})}{f(\frac{c}{S})}\geq X$
+
+\paragraph{Does costly information sharing occur in equilibrium?}
+
+A sufficient condition for costly information sharing to occur is that both conditions above are verified and that $V'(\frac{c}{s})>0$:
+
+\medskip
+
+On $\t_0\geq\frac{c}{s}$
+\begin{equation}
+\begin{aligned}
+  V'(\t_0):=&-L'(\t_0)F(\t_0)-X f(\t_0)+\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}(1-F(\t_0))\\
+  &+\frac{L'(\t_0)(1+\t_0-\frac{c}{X})+(X-L(\t_0))}{(1+\t_0-\frac{c}{X})^2}(E_{\t_0}(\t)-\t_0(1-F(\t_0)))
+\end{aligned}
+\end{equation}
+
+
+
+Information sharing for types $\t_0\geq \frac{c}{s}$ occur if $V'(\frac{c}{s})\geq 0$
 
 \begin{prop}~~
-
   \begin{enumerate}[(i)]\setlength\itemsep{0em}
-    \item When $f(0)\leq 1+\frac{X+L'(0)}{X}E(\t)$, Firm $2$ chooses $\t_0>0$, that is there is data sharing in equilibrium. 
+    \item when $V'(\frac{c}{s})>0$ information sharing occurs in equilibrium.
     \item There is a set of firms, those with the highest type on $[\t_0,\overline \t]$, that never share information, and for which merger occurs.
-    \item Firm 1 with type on $[0,\min\{\t_0,\frac{c}{X}\}]$ always share data but firm 2 never use them.
-    \item If $\t_0\geq \frac{c}{X}$, firm 1 with types on $[\frac{c}{X},\t_0]$ always share data and firm 2 chooses to merge.
+    \item Firm 1 with type on $[0,\min\{\t_0,\frac{c}{X}\}]$ are indifferent between selling data and accepting the merger, firm 2 always make transfers $L(\t_0)$ without exploiting the data or merging.
   \end{enumerate}
 \end{prop}
+
 \begin{proof}
-  To show (i), it is enough to show that $V(\t_0)$ is increasing at $0$. If $\t_0=0$, all firms are expected not to share data and as $\theta_0$ increases beyond $0$, the value of $V(\t_0)$ is given by the first function in \eqref{eq:V-t0}. 
-  
-  
-  \begin{equation}\label{eq:V-t0}
-\begin{aligned}
-  V'(\t_0):=&-L'(\t_0)F(\t_0)-X f(\t_0)+\frac{X-L(\t_0)}{1+\t_0}(1-F(\t_0))\\
-  &+\frac{-L'(\t_0)(1+\t_0)-(X-L(\t_0))}{(1+\t_0)^2}(\t_0(1-F(\t_0))-E_{\t_0}(\t))~~\textrm{if}~~ \t_0\geq\frac{c}{X}\\
-  \\
-  V'(\t_0):=&-L'(\t_0)F(\t_0)-(1+\t_0)X f(\t_0)+\frac{X-L(\t_0)}{1+\t_0}(1-F(\t_0))\\
-  &+\frac{-L'(\t_0)(1+\t_0)-(X-L(\t_0))}{(1+\t_0)^2}(\t_0(1-F(\t_0))-E_{\t_0}(\t))~~\textrm{if}~~\frac{c}{X} \geq\t_0\\
-\end{aligned}
-  \end{equation}
 
-
-$$V'(0)\geq 0 \iff f(0)\leq 1+\frac{X+L'(0)}{c+X}E(\t)$$
-
-This implies the result.
-
-%
-The solution to $\max_{\t_0} V(\t_0)$ necessarily involves $\t_0>0$, that is in equilibrium, data sharing happens.
-
-$$V'(\overline \t)<0$$
-
-
-  To show (ii)), note that at $\t_0=\overline \t$, $\overline \t>\t^*$, and therefore in a neighborhood of $\overline \t$, $V(\t_0)$ is the function in the second part of \eqref{eq:V-t0}, where all types choose to share data. Then, 
-    %
-  \[
-    \lim_{\t_0\uparrow \overline \t}V'(\t_0)=Xf(\overline \t)\t^*- ls^*
- \]
-  %
-and under the condition in the proposition, $\lim_{\t_0\uparrow \overline \t}V'(\t_0)<0$, implying that $\t_0<\overline \t$.
-
-To show (iii), assume that $\t_0>\t^*$. Then using the second function in \eqref{eq:V-t0}, we have
-\begin{align*}
-  V'(\t_0)&=Xf(\t_0)\t^*-F(\t_0)l s^*
-\end{align*}
-  % 
-A sufficient condition for having $\t_0<\t^*$ is that for all $\t_0\geq \t^*$, $V'(\t_0)$ is negative. This requires that $ls^*$ be larger than $X\frac{f(\t_0)}{F(\t_0)}$. By MLRP, it must then be that  $X\frac{f(\t^*)}{F(\t^*)}$, and using the definition of $\t^*$ that $ls^*\geq X\frac{1-F(\t^*)}{F(\t^*)}$, as claimed.
 \end{proof}
-%
-An example is for the exponential distribution with positive parameter $\lambda$. For this distribution, $\t^*=\frac{1}{\lambda}$, $f(0)=\lambda$ and $f(\infty)=0$. The condition in (i) is satisfied; because $f(\infty)=0$, the condition in (ii) holds for all values of $ls^*$. Finally, the right hand side in condition in (iii) is equal to $\frac{(1+\lambda) e^{-\lambda \t_0}}{1+(\lambda \t_0-1)e^{-\lambda \t_0}}$, a decreasing function of $\t_0\geq \frac{1}{\lambda}$, hence with a maximum value of $\frac{\lambda+1}{e}$. Hence, it is sufficient for (iii) that (in fact could derive a necessary and sufficient condition by directly looking at $V'(\t)$ for the exponential distribution).
-%
-\[
-ls^*>\frac{\lambda+1}{e}.
-\]
-%
-%
-Under condition (iii), there is no merger for types in the interval $(\t_0,\t^*)$, which is an inefficient outcome from the point of view of the industry. A conjecture is that when the bargaining power is more evenly split among the two firms, the likelihood of such an outcome decreases.
 
 \begin{remark}
-  The size of the competitive loss $ls^*$ is key.. For instance, if $l=0$, both conditions (ii)-(ii) do not hold. In this case, firm $2$ may as well offer any price for data sharing (because firm $1$ does not bear a competitive penalty). If $l$ is very large, conditions (i)-(iii) hold at $\t_0$ close to zero, and the inefficiency is maximum as there is no merger for all $\t\in[0,\t^*)$. Interpret this in light of potential data sharing between Biotechs and Big pharmas.
+  The size of the competitive loss $L(\t)$ is key. For small $L$ information sharing will occur for a larger set of parameters. On the opposite, for large $L$... Interpret this in light of potential data sharing between Biotechs and Big pharmas.
 
   \underline{We need to provide interpretations}, real life examples that could fit with the theoretical results. 
   \end{remark}
+  
+  
+\section{Extension}
 
-\section{Collusive data sharing}
-
-We now consider the case where there is a competitive \emph{gain} of data sharing, that is $l<0$.\footnote{This is in line with the theoretical literature on information sharing in oligopolies such as \cite{vives1984duopoly} and \cite{gal1986information}.} For clarity we normalize the notations to $l:=-l>0$.
- 
-
-Firm $1$ is willing to share data in case the merger does not occur, as profits without and with sharing can be written:
-
-\[
-U_1(\t|s=s^*)=X+\t l s^* > U_1(\t|s=0)=X
-\]
+\textit{If information is synergistic, it may be possible for firm 2 to share its data with firm 1 (this may also solve the question of asymmetric information post-experimentation in the second model), but may also be a way to have sharing in equilibrium in the model without having a price for sharing data (hence more like a cross-sharing agreement). May be worth looking at in an extension (that supposes that firm 1 has a relative low costs c1 of implementing the synergy).}
 
 
+Consider now firm 2 that also has information with synergistic value $\t_2$ (we still denote by $\t$ the synergistic value of information owned by firm 1), whose synergistic value depend on information owned by firm 1: $\t_2 \t$. In this extension firm 1 knows the type $\t_2$ of firm 2 and information sharing is not used by firm 2 to correct an information asymmetry but to separate firm 1 of different types.  
 
-Thus the payoff of a firm that accepts to share $s^*$ for a price $T$ anticipates that firm 2 will make a TIOLI offer if a merger possibly arises, and will extract all the surplus. Hence, the payoff of a firm that accepts to share is:
+Firm 2 either purchases information from firm 1, or exchanges it against a share $s^*$ of its own information. 
 
+Why would some firms want information instead of money?
+
+The utility of firm 1 of type $t$ when exchanging information with firm 2 is
 
 \[
-U_1(\t|s=s^*)=X+T+t l s^*
+X-L(\t)+\t_2 \t
 \]
 
-which is an increasing function of $\t$. On the other hand, firms that do not share data anticipate that firm 2 will make an offer that gives them an informational rent, that is $U_1(\t|s=0)$ is increasing in $\t$. 
+While its profits when selling information is:
 
+\[
+X-L(\t)+T
+\]
+
+Where $T$ is the price of information. Sharing information is more profitable than selling it for $$\t\geq \frac{T}{\t_2}$$
+
+
+By setting $T=0$, only firm 1 with types such that $\t \t_2\geq L(\t)$ accept to share. 
+
+todo reprendre ici
+
+Sharing information allows firm 2 to identify low types, in particular $\t\in[0,\frac{c}{X}]$ for which merger is never profitable. However a rent is given to high types, which incurs a loss for firm 2.
 
 
 
@@ -343,6 +474,7 @@ which is an increasing function of $\t$. On the other hand, firms that do not sh
 \section{EXTENSIONS TO BE DONE}  
 (order not necessarily sequential)
     \begin{enumerate}[TBD 1.]\setlength\itemsep{0em}
+    \item Collusive data sharing
       \item Look at the case where there is a competitive \emph{gain} of data sharing, that is $l<0$. Firm $1$ is less reluctant to share with firm $2$, so...?
       \item Look at case where sharing $s$ allows firm $2$ to learn the true value of $\t$ with probability $\alpha(s)$, an increasing function of $s$. (The case above coincides with $\alpha(s)=0$ is $s<s^*$ and $\alpha(s)=1$ if $s\geq s^*$.)
       \item The general case where firm $2$ has bargaining power $\beta<1$. Hence it is as if the two firms agree on a price $T$ and a mechanism that satisfies IR and IC for firm $1$ in order to maximize the weighted sum $(1_\beta)U_1+\beta U_2$, that is $U_1+U_2-\beta U_1$: as $\beta$ decreases. Is it less likely that the firms will \emph{not} merge?
