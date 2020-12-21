@@ -96,6 +96,12 @@ urlcolor=NavyBlue}
 
 \section{Literature}
 \begin{itemize}\setlength\itemsep{-1em}
+    \item Competition policy for the digital era
+    
+    \cite{tirole2020competition}; \cite{scott2019committee}; \cite{cremer2019competition}; \cite{cabral2020merger}
+    
+    None of them has seen data as a motivation to acquire merger. We fill a gap in this literature.
+    
     \item Optimal merger policy when firms have private information \cite{Besanko1993}
     \item Information sharing in oligopolies
     
@@ -159,7 +165,7 @@ Hence, waiting to merge generates ex-post inefficiencies while not waiting insur
     \begin{itemize}
         \item Firm 2 proposes a menu composed by couple $(\a(\t),p(\t))$. 
         \item Firm 1 selects $(\a(\t),p(\t))$.
-        \item Firm 2 transfers $p(\t)$, and learns the type of Firm 1.
+        \item Firm 2 transfers $p(\t)$, and believes Firm 1 has type $\t$.
         \item Firm 2 then either decides to go on with the merger, invests $c$, give $\a(\t)$ to firm 1 and profits are $(1-\a(\t))[(1+\t)X-c]-p(\t)$ for firm 2 and $\a(\t)[(1+\t)X-c]+p(\t)$ for firm 1.
         \item Or firm 2 does not pursue and merger does not occur, Firm 1 gets $p(\t)+X$ and firms 2 makes $-p(\t)$.
     \end{itemize}   
@@ -218,7 +224,7 @@ which is a decreasing function of $\t$. By contrast, firms that do not share dat
 \paragraph{Consider $\t\in[\frac{c}{X},\frac{c}{s}]$}
 
 
-Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X$, which corresponds to its outside option. Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-X-L(\t_0)-c=\t X-L(\t_0)-c$. Firm $1$ has expected payoff $X+L(\t_0)$.
+Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will accept the merger if she receives a payoff of $X$, which corresponds to its outside option (transfer $T$ is sunk). Therefore, the expected payoff to firm $2$ of inducing sharing by type $\t$ is equal to $X(1+\t)-X-L(\t_0)-c=\t X-L(\t_0)-c$. Firm $1$ has expected payoff $X+L(\t_0)$.
 
 
 \paragraph{Consider $\t\in[\frac{c}{s},\overline \t]$}
@@ -229,14 +235,14 @@ Following sharing by type $\t$, if a merger opportunity arises, firm $1$ will ac
 
 \paragraph{Mechanism if firm $2$ believes that $\t\in\N$ at the merging phase.} At the merging stage, firm $2$ believes that types have a distribution with support on $\N=[\t_0,\overline \t]$. Note that all types in $\N$ do not share data and have the same outside option of $X$. The value to the merger is $X(1+\t)-c$. 
 
-A mechanism is then a menu $\{(p(\t),\a(\t));\t\in \N\}$, where $p(\t)$ is the price paid by firm $1$ to firm $2$ and $\a(\t)$ is the share of the merged entity that firm $2$ gives to firm 1. Clearly firm 2 would prefer to give $p=X$ to all firms and get all the surplus. However, in this case firm 1 of type $\t\in[0,\frac{c}{X}]$ has interest not to sell information, and to bargain under asymmetric information. Indeed in this case firm 2 will pay $p$ but wont find it profitable to merge, and thus firm 1 will make $X+p>X+L(\t_0)$. Thus firm 2 cannot set $p>L(\t_0)$ and has to set $\a >0$ so that firm 1 accepts the offer. It should be clear that if $\t_0$ does not get a rent in the mechanism, types $\t<\t_0$ get a negative rent if they do not share data; by contrast they get a positive rent equal to $L(\t_0)-L(\t)$ if they share data. The participation constraint of firm $1$ is
+A mechanism is a menu $\{(p(\t),\a(\t));\t\in \N\}$, where $p(\t)$ is the price paid by firm $1$ to firm $2$ and $\a(\t)$ is the share of the merged entity that firm $2$ gives to firm 1.\footnote{Clearly firm 2 would prefer to give $p=X$ to all firms and get all the surplus. However, in this case firm 1 of type $\t\in[0,\frac{c}{X}]$ has interest not to sell information, and to bargain under asymmetric information. Indeed in this case firm 2 will pay $p$ but wont find it profitable to merge, and thus firm 1 will make $X+p>X+L(\t_0)$. Thus firm 2 cannot set $p>L(\t_0)$ and has to set $\a >0$ so that firm 1 accepts the offer.} For firm 1 to accept the menu it is necessary that firm 2 commits to giving share $\a$ to firm 1 if the merger occur, else firm 2 could give a small transfer, obtain all the data from firm 1 and exploit it without merging. It should be clear that if $\t_0$ does not get a rent in the mechanism, types $\t<\t_0$ get a negative rent if they do not share data; by contrast they get a positive rent equal to $L(\t_0)-L(\t)$ if they share data. The participation constraint of firm $1$ is
 \begin{equation}
   U(\t):=p(\t)+\a(\t)[X(1+\t)-c]\geq X 
 \end{equation}
 
 while the truth-telling constraint is
 \begin{equation*}
-  \t \in \arg\max_{\th} U(\th|\t):=p(\th)+\a(\t)[X(1+\t)-c]
+  \t \in \arg\max_{\th} U(\th|\t):=p(\th)+\a(\hat \t)[X(1+\t)-c]
 \end{equation*}
 %
 Usual manipulations yield 
@@ -257,7 +263,7 @@ Hence, firm $2$ offers a mechanism $(p,\a)$ to solve $\max_{\{p(\cdot),\a(\cdot)
 Standard derivations yield to the equivalent problem 
 %
 \begin{align*}
-\max_{\{\a(\t)\}} &\int_{\t\in \N}\left( (1+\t)X-\a(\t)X\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t.
+\max_{\{\a(\t)\}} &\int_{\t\geq \frac{c}{X}\in \N}\left( (1+\t)X-\a(\t)X\frac{1-F(\t)}{f(\t)}\right)f(\t)d\t.
 \end{align*}
 %
 Which is maximized when $\a(\t)$ is minimized.
@@ -268,11 +274,19 @@ The expected payoff to firm $2$ is (using $p=L(\t_0)$ and $\a=\frac{X-L(\t_0)}{(
 
 \paragraph{When $\frac{c}{X}\geq\t_0$}
 
-Firm 2 faces an adverse selection problem: all firm 1 of type $\t\in[0,\frac{c}{X}]$ have interest to accept the menu, take transfer $p$ as they know that the merger will not be carried on by firm 2. Thus the profits of firm 2 is:
+Firm 2 faces an adverse selection problem: all firm 1 of type $\t\in[0,\frac{c}{X}]$ have interest to accept the menu, take highest transfer $\overline p$ as they know that the merger will not be carried on by firm 2. Thus the profits of firm 2 is:
+
 
 \[
-V(\t_0):=\int_{0}^{\frac{c}{X}}-L(\t_0)f(\t)d\t+\int_{\frac{c}{X}}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t
+V(\t_0):=\int_{0}^{\frac{c}{X}}-\overline p f(\t)d\t+\int_{\frac{c}{X}}^{\overline \t}\left[(1+\t)X-c-\a(\t)X\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t
 \]
+
+\footnote{\[
+V(\t_0):=\int_{0}^{\frac{c}{X}}-L(\t_0)f(\t)d\t+\int_{\frac{c}{X}}^{\overline \t}\left[(1+\t)X-c-\frac{X-L(\t_0)}{1+\t_0-\frac{c}{X}}\frac{1-F(\t)}{f(\t)}\right]f(\t)d\t
+\]}
+
+
+
 
 Nevertheless, larger $p$ decrease the information rent given to firm 1 on $[\frac{c}{X},\overline \t]$: 
 
@@ -436,9 +450,12 @@ Information sharing for types $\t_0\geq \frac{c}{s}$ occur if $V'(\frac{c}{s})\g
   \end{remark}
   
   
-\section{Extension}
+\section{Extension: bilateral information sharing}
 
 \textit{If information is synergistic, it may be possible for firm 2 to share its data with firm 1 (this may also solve the question of asymmetric information post-experimentation in the second model), but may also be a way to have sharing in equilibrium in the model without having a price for sharing data (hence more like a cross-sharing agreement). May be worth looking at in an extension (that supposes that firm 1 has a relative low costs c1 of implementing the synergy).}
+
+
+\subsection{No competitive loss for firm 2 due to information sharing}
 
 
 Consider now firm 2 that also has information with synergistic value $\t_2$ (we still denote by $\t$ the synergistic value of information owned by firm 1), whose synergistic value depend on information owned by firm 1: $\t_2 \t$. In this extension firm 1 knows the type $\t_2$ of firm 2 and information sharing is not used by firm 2 to correct an information asymmetry but to separate firm 1 of different types.  
@@ -447,7 +464,7 @@ Firm 2 either purchases information from firm 1, or exchanges it against a share
 
 Why would some firms want information instead of money?
 
-The utility of firm 1 of type $t$ when exchanging information with firm 2 is
+The utility of firm 1 of type $\t$ when exchanging information with firm 2 is
 
 \[
 X-L(\t)+\t_2 \t
@@ -462,12 +479,16 @@ X-L(\t)+T
 Where $T$ is the price of information. Sharing information is more profitable than selling it for $$\t\geq \frac{T}{\t_2}$$
 
 
-By setting $T=0$, only firm 1 with types such that $\t \t_2\geq L(\t)$ accept to share. 
+In case firm 2 sets $T=0$ and there is no information purchasing, only firm 1 with types such that $\t \t_2\geq L(\t)$ accept to share (the fact that all types above, and no type below accept information exchange comes naturally from the concavity of $L$). We write $\underline \t$ that verifies $\t^* \t_2= L(\t^*)$, or equivalently $\t_2= \frac{L(\t^*)}{\t^*}$. The right hand term is always strictly decreasing which guarantees the uniqueness of $t^*$.
 
-todo reprendre ici
 
-Sharing information allows firm 2 to identify low types, in particular $\t\in[0,\frac{c}{X}]$ for which merger is never profitable. However a rent is given to high types, which incurs a loss for firm 2.
+Sharing information allows firm 2 to identify low types, in particular $\t\in[0,\frac{c}{X}]$ for which merger is never profitable. However a rent is given to high types, which induces a loss for firm 2.
 
+\subsection{Firm 2 looses $H(\t_2)$ when sharing}
+
+Now by sharing information with firm 1 of type $\t$, firm 2 incurs a cost that we assume to be equal to that of firm 1:
+
+$-L(\t_2)$
 
 
 
