@@ -3,44 +3,53 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: antoine.aux
 The style file: agsm.bst
 Database file #1: biblio-synergies.bib
-You've used 9 entries,
+Repeated entry---line 113 of file biblio-synergies.bib
+ : @article{cremer2019competition
+ :                               ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 325 of file biblio-synergies.bib
+ : @misc{scott2019committee
+ :                         ,
+I'm skipping whatever remains of this entry
+You've used 13 entries,
             2909 wiz_defined-function locations,
-            703 strings with 6129 characters,
-and the built_in function-call counts, 32635 in all, are:
-= -- 5227
-> -- 465
+            721 strings with 6891 characters,
+and the built_in function-call counts, 55251 in all, are:
+= -- 8968
+> -- 758
 < -- 0
-+ -- 2435
-- -- 140
-* -- 2815
-:= -- 6624
-add.period$ -- 9
-call.type$ -- 9
-change.case$ -- 126
-chr.to.int$ -- 9
-cite$ -- 9
-duplicate$ -- 153
-empty$ -- 324
-format.name$ -- 180
-if$ -- 5858
++ -- 4272
+- -- 231
+* -- 4795
+:= -- 11076
+add.period$ -- 13
+call.type$ -- 13
+change.case$ -- 182
+chr.to.int$ -- 13
+cite$ -- 13
+duplicate$ -- 226
+empty$ -- 437
+format.name$ -- 281
+if$ -- 9923
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 9
-newline$ -- 30
-num.names$ -- 92
-pop$ -- 32
+missing$ -- 13
+newline$ -- 42
+num.names$ -- 134
+pop$ -- 54
 preamble$ -- 1
-purify$ -- 135
+purify$ -- 195
 quote$ -- 0
-skip$ -- 130
+skip$ -- 201
 stack$ -- 0
-substring$ -- 7303
-swap$ -- 32
-text.length$ -- 126
+substring$ -- 12663
+swap$ -- 51
+text.length$ -- 182
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 36
+type$ -- 52
 warning$ -- 0
-while$ -- 205
+while$ -- 290
 width$ -- 0
-write$ -- 116
+write$ -- 167
+(There were 2 error messages)

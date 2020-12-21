@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.21)  17 DEC 2020 12:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020) (preloaded format=pdflatex 2020.8.21)  21 DEC 2020 12:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -597,7 +597,6 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 76.
 LaTeX Info: Redefining \pageref on input line 76.
 LaTeX Info: Redefining \nameref on input line 76.
- (/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/antoine.out) (/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/antoine.out)
 \@outlinefile=\write4
 \openout4 = `antoine.out'.
 
@@ -661,58 +660,141 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
  (/usr/local/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [1
+)
 
-{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3] [4] [5]
-Overfull \hbox (42.90909pt too wide) in paragraph at lines 250--251
+Package natbib Warning: Citation `tirole2020competition' on page 1 undefined on input line 101.
+
+
+Package natbib Warning: Citation `scott2019committee' on page 1 undefined on input line 101.
+
+
+Package natbib Warning: Citation `cremer2019competition' on page 1 undefined on input line 101.
+
+
+Package natbib Warning: Citation `cabral2020merger' on page 1 undefined on input line 101.
+
+
+Package natbib Warning: Citation `Besanko1993' on page 1 undefined on input line 105.
+
+
+Package natbib Warning: Citation `vives1984duopoly' on page 1 undefined on input line 108.
+
+
+Package natbib Warning: Citation `gal1986information' on page 1 undefined on input line 108.
+
+
+Package natbib Warning: Citation `stucke2016introduction' on page 1 undefined on input line 114.
+
+
+Package natbib Warning: Citation `bertschinger2014quantifying' on page 1 undefined on input line 117.
+
+
+Package natbib Warning: Citation `Griffith2014' on page 1 undefined on input line 117.
+
+
+Package natbib Warning: Citation `olbrich2015information' on page 1 undefined on input line 117.
+
+
+Package natbib Warning: Citation `Che1999' on page 1 undefined on input line 121.
+
+[1
+
+{/usr/local/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] [2] [3]
+
+LaTeX Warning: Reference `stage-merger' on page 4 undefined on input line 200.
+
+
+Package natbib Warning: Citation `anton2002sale' on page 4 undefined on input line 200.
+
+[4] [5]
+Overfull \hbox (42.90909pt too wide) in paragraph at lines 256--257
 []\OT1/cmr/m/n/10 Hence, firm $2$ of-fers a mech-a-nism $(\OML/cmm/m/it/10 p; \OT1/cmr/m/n/10 )$ to solve $[][] [][] [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R$
  []
 
 [6]
-Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 264.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input line 270.
  [7]
-Overfull \hbox (16.26326pt too wide) detected at line 320
+Overfull \hbox (16.26326pt too wide) detected at line 334
 \OML/cmm/m/it/10 V\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 ) := [][] \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 L\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R \OT1/cmr/m/n/10 + [][](\OML/cmm/m/it/10 ^^RX \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R \OT1/cmr/m/n/10 + [][] [] \OML/cmm/m/it/10 f\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R
  []
 
 
-Overfull \hbox (49.59634pt too wide) detected at line 325
+Overfull \hbox (49.59634pt too wide) detected at line 339
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 ) := \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Xf\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 ) + [](1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )) + [] [][] 1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R
  []
 
 
-Overfull \hbox (46.28658pt too wide) detected at line 331
+Overfull \hbox (46.28658pt too wide) detected at line 345
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0  \OMS/cmsy/m/n/10 ([])  ^^@\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 ([])\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Xf\OT1/cmr/m/n/10 ([]) + (\OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 ([]))(1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ([])) + (\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 ([]) + \OML/cmm/m/it/10 X \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 L\OT1/cmr/m/n/10 ([])) [][] 1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R \OMS/cmsy/m/n/10 ^^U \OT1/cmr/m/n/10 0
  []
 
 [8] [9]
-Overfull \hbox (49.59634pt too wide) detected at line 396
+Overfull \hbox (49.59634pt too wide) detected at line 410
 \OML/cmm/m/it/10 V[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 ) := \OMS/cmsy/m/n/10 ^^@\OML/cmm/m/it/10 L[]\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 F\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 Xf\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 ) + [](1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R[]\OT1/cmr/m/n/10 )) + [] [][] 1 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 F\OT1/cmr/m/n/10 (\OML/cmm/m/it/10 ^^R\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 d^^R
  []
 
-[10] [11] (/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/antoine.bbl [12]) [13]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 489.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 489.
+[10] [11]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 487.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\theta' on input line 487.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `subscript' on input line 487.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 487.
+
+[12]
+No file antoine.bbl.
+
+Package natbib Warning: There were undefined citations.
+
+[13]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 510.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 510.
  (/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/antoine.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 489.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 489.
-Package rerunfilecheck Info: File `antoine.out' has not changed.
-(rerunfilecheck)             Checksum: AA2002E8B976C2F438C1DE5622E6C62B;283.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 489.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 510.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 510.
+
+
+Package rerunfilecheck Warning: File `antoine.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `antoine.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  980E108FF7F370D44FCA921A8ECA8710;502.
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 510.
  ) 
 Here is how much of TeX's memory you used:
- 19204 strings out of 480608
- 357788 string characters out of 5903630
- 613959 words of memory out of 5000000
- 34614 multiletter control sequences out of 15000+600000
- 543106 words of font info for 65 fonts, out of 8000000 for 9000
+ 19163 strings out of 480608
+ 356523 string characters out of 5903630
+ 614387 words of memory out of 5000000
+ 34584 multiletter control sequences out of 15000+600000
+ 543413 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 68i,11n,83p,974b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on /Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/antoine.pdf (13 pages, 243671 bytes).
+ 68i,11n,83p,1214b,874s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist, replaced by a fixed one
+
+{/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2020/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on /Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/antoine.pdf (13 pages, 292024 bytes).
 PDF statistics:
- 268 PDF objects out of 1000 (max. 8388607)
- 214 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 157 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 249 PDF objects out of 1000 (max. 8388607)
+ 190 compressed objects within 2 object streams
+ 46 named destinations out of 1000 (max. 500000)
+ 109 words of extra memory for PDF output out of 10000 (max. 10000000)
 
