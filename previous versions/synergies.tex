@@ -1,0 +1,581 @@
+%  Synergies and mergers-Thursday, 19 November 2020
+%
+%  Created by Patrick on 2020-11-19.
+%  Copyright (c) 2020 __Patrick Legros__. All rights reserved.
+%
+%!TEX encoding = UTF-8 Unicode  
+
+\documentclass[a4paper,leqno]{article}%leqno to number equations on the left
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm,amsmath,amssymb,amsfonts}
+\usepackage{url}
+\usepackage{hyperref}
+\usepackage[round]{natbib}
+%\bibliographystyle{plainnat}
+\usepackage[mathscr]{euscript}
+\let\euscr\mathscr \let\mathscr\relax
+\usepackage[scr]{rsfso}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{blindtext}
+\usepackage{setspace}
+\usepackage{eurosym}
+\usepackage{hyperref}
+\usepackage{pdflscape}
+\usepackage{array, multirow}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage{todonotes}
+
+\usepackage{tikz}
+\hypersetup{
+colorlinks,
+citecolor=NavyBlue,
+linkcolor=NavyBlue,
+urlcolor=NavyBlue}
+\usetikzlibrary{matrix}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{ass}{Assumption}
+\newtheorem{result}{Result}
+\newtheorem{condition}{Condition}
+\newtheorem{Theorem}{Theorem}
+\newtheorem{Definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
+
+\newenvironment{reusefigure}[2][htbp]
+  {\addtocounter{figure}{-1}%
+   \renewcommand{\theHfigure}{dupe-fig}% If you're using hyperref
+   \renewcommand{\thefigure}{\ref{#2}}% Figure counter is \ref
+   \renewcommand{\addcontentsline}[3]{}% Avoid placing figure in LoF
+   \begin{figure}[#1]}
+  {\end{figure}}
+  
+  \usepackage{titlesec}
+
+%\setcounter{secnumdepth}{4}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+ \usepackage{geometry}
+
+ 
+ \newcommand{\E}{\mathbb E}
+ \newcommand{\N}{\mathcal N}
+\renewcommand{\th}{\hat\theta}
+\renewcommand{\t}{\theta}
+\renewcommand{\a}{\alpha}
+\renewcommand{\b}{\beta}
+\newcommand{\s}{\sigma}
+
+\begin{document}
+
+
+\title{Synergistic Information$^{3.0}$}
+\author{Antoine Dubus and Patrick Legros\thanks{We would like to thank.}}
+\date{\today}
+
+%\author{Antoine Dubus\thanks{~~Université Libre de Bruxelles, ECARES; \href{mailto:antoine1dubus@gmail.com}{antoine1dubus@gmail.com}.}}
+
+\maketitle
+
+ 
+\textbf{Very preliminary, do not circulate.}
+
+\baselineskip0.7cm
+Mergers fail, claimed efficiencies at the time of merger review are often not realized, or if they are realized, they are not passed through to consumers. Is this because firms pretend the synergies, efficiency gains are present in the hope of convincing authorities to give them an instrument for more market power? Is it because firms haven't done the homework and incorrectly evaluated the extent of synergies? Or is it because synergies exist ``on average'' only?
+
+If firms collaborate before engaging into a full merger review, they may learn the extent of potential synergies. Joint ventures, sharing of information are typical cases of such collaborations. You know algorithms and data are the source of value created to customers, the sharing of data among firms is another example of such collaboration.
+
+Arrow famously pointed out the difficulty of inducing such collaborations among competitors, especially if what is shared is an idea that can be replicated at no cost. But even if there is a cost to replication, providing assets to competitors enhances their ability to compete, hence sharing is costly for the firm that shares these assets. Our point in this paper is to show that this competitive disadvantage can turn into more efficient merger decisions, which is at the benefit of the firms, and sometimes consumers.
+
+
+
+\section{Literature}
+\begin{itemize}\setlength\itemsep{-1em}
+    \item Competition policy for the digital era
+    
+    \cite{tirole2020competition}; \cite{scott2019committee}; \cite{cremer2019competition}; \cite{cabral2020merger}
+    
+    None of them has considered data as a motivation to merge. We fill a gap in this literature.
+    
+    \item Optimal merger policy when firms have private information \cite{Besanko1993}
+    \item Information sharing in oligopolies
+    
+    \cite{vives1984duopoly, gal1986information} sharing information can have pro or anti competitive effects depending on the nature of competition (cournot vs bertrand)
+    
+    They justify that we look at $l$ positive and negative
+    \item Disclosure to consumers 
+    \item Data as assets
+    
+    \cite{stucke2016introduction} discuss how mergers are now motivated by the acquisition of a firm data set
+    
+    \item Value of a merger $v(\t)$
+    
+    When firm 2 purchases firm 1, it may not be able to get the same value form its product. This is supported by reputation effects such as in the GitHub acquisition by Microsoft: \href{https://www.theverge.com/2018/10/26/17954714/microsoft-github-deal-acquisition-complete}{the developer community got concerned by the acquisition}, and the reputation of GitHub is reduced because it was purchased by Microsoft. The acquisition benefited to competing service \href{https://www.itprotoday.com/linux/why-open-source-software-moving-gitlab-after-microsoft-github-deal}{Gitlab} even though GitHub services remained identical.
+    
+    \item This change of the value of a product after an acquisition is supported by the literature on reputation effects \citep{tadelis1999s}
+    
+    \item Computer science and data synergies:
+\begin{itemize}
+    \item \cite{bertschinger2014quantifying, Griffith2014, olbrich2015information} discuss how information synergies can arise when merging two data sets, 
+    
+    justify why we focus on information synergies.
+    \item \cite{sootla2017analyzing} empirically measures the synergistic coefficient of two data sets
+    
+    justifies our approach where the synergistic values is known when data sets are merged. Also support our idea that there is a cost $c$ to merging data sets and learning their synergistic value, that is identical whether only a subset of information is shared of the merger occurs
+    \item \cite{hernandez1995merge} describe the cost associated with the merger of two data sets: 
+    
+    support the extension where merger cost $c$ varies with the size of the data set
+\end{itemize}
+    
+    \item Joint ventures before merger
+    \item incomplete contracts and cooperative investments \citep{Che1999}
+\end{itemize}
+
+
+
+\section{Concrete example}
+
+\begin{itemize}
+    \item pre merger information sharing
+    
+    \href{https://sites-herbertsmithfreehills.vuturevx.com/46/12874/compose-email/the-altice-case--a-costly-warning-not-to-engage-in-gun-jumping-before-receiving-merger-control-clearance.asp}{Altice/OTL} The FCA found that Altice and SFR engaged in an extensive exchange of commercially sensitive information (including individualised trade data and future forecasts)
+    
+    \href{https://www.twobirds.com/en/news/articles/2020/global/double-caution-gun-jumping-risks-in-m-and-a-transactions}{Gun-jumping examples}
+    \item Acquisition failures:
+    
+    \href{https://www.investopedia.com/articles/insights/061816/4-cases-when-ma-strategy-failed-acquirer-ebay-bac.asp}{ebay/skype}: lack of complementarity
+    
+    \href{https://salessynergy.net/the-biggest-acquisition-disasters-that-put-companies-into-quite-a-bit-of-trouble/}{google/motorola}: android bugs on device
+    
+    \href{https://www.investopedia.com/articles/financial-theory/08/merger-acquisition-disasters.asp#:~:text=The\%20consolidation\%20of\%20AOL\%20Time,combination\%20up\%20until\%20that\%20time}{sprint/nextel} lack of common culture
+    
+    \href{https://www.theguardian.com/technology/2020/dec/23/elon-musk-i-tried-to-sell-tesla-to-apple?CMP=Share_iOSApp_Other}{Tesla/Apple}
+
+    
+    \item Regulator forbids merger:
+    
+    \href{https://www.livemint.com/companies/news/aurobindo-pharma-calls-off-1-billion-deal-with-sandoz-after-failing-to-get-ftc-nod-11585801128011.html}{Aurobindo/sandoz}
+    
+    \item Profit sharing mechanisms between two firms: \href{https://www.nytimes.com/2020/11/21/us/politics/coronavirus-vaccine.html?referringSource=articleShare}{Politics, Science and the Remarkable Race for a Coronavirus Vaccine}.
+\end{itemize}
+
+
+
+
+
+\section{Model}
+\begin{itemize}
+    \item There are two firms, indexed by $1,2$, where $2$ is a dominant firm (Google) and $1$ is a firm that has developed a new product of platform and has a stock of data of mass $1$ generated by this activity. Firm $1$ is able to give a utility level of $u$ to its customers and absent other competition can fix a price equal to $u$, making a profit of $u$ (assume a mass one of customers interested by the product.)
+    \item Firm $2$ has developed other products and has its own stock of data. Combining data from $1$ and $2$ will enhance the value to customers to $v(\t)$, where $v(0)=0$ and $v(\t)$ increasing in $\t$. (That $v(0)=0$ reflects the fact that destructive synergies can occur down to a point where the value to customer is lower when the merged firm $[12]$ offers the product than with firm $1$ only. This illustrates well potential negative reputation effects (in particular privacy related) that occur in Big Tech acquisitions such as Facebook/Whatsapp or Microsoft/GitHub.)
+    \item The value of $\t$ is unknown to firms, but each firm knows that it has a distribution $F(\t)$, with continuous density and no atom.
+    \item Generating synergies is costly, it requires for instance the development of new algorithms or code, further marketing efforts. Let $c$ be this cost. 
+    \item [No sharing]
+    \item Firm $1$ can share $s\%$ of its data with firm $2$, possibly at an agreed upon price $T(s)$: at this time of sharing, firms $1,2$ only know that $\t$ has distribution $F(\t)$. Upon receiving $s$, firm $2$ can 
+    \begin{itemize}
+        \item either invest $c$, in which case the synergy $\t$ is learned (to simplify by both firms, the case where firm $2$ gets this information privately is for an extension), and it is known that the product provides value $v(\t)s$ to customers if a share $s$ of the data of firm $1$ is used. Once $\t$ is known, Firm 2 can then make a TIOLI offer to firm $1$ for creating a merger, or can choose to use the information to compete with firm $1$. If there is a merger customers will have value $v(\t)$ (since all data from firm $1$ is part of the assets of the merged firm). If there is not a merger, firm $2$ has a product competing with that of firm $1$ that provides value $v(\t)s$ to customers.
+        \item Or not invest. In this case, firms $1,2$ still do not know the extend of the synergies and decide for a merger under imperfect information.
+    \end{itemize}
+    \item If firm $1$ does not share data, merger happens under imperfect information. (Note that sharing $s=0$ is equivalent to not sharing because even if firm $2$ invests $c$ the value to customers is $v(\t)s\equiv 0$ independently of the true value of $\t$, hence firm $2$ cannot compete with firm $1$.)
+\end{itemize}
+
+
+\section{Analysis}
+
+\subsection{Competition}
+
+Suppose that firm $1$ shares $s>0$, and let us ignore for the moment the possibility of a merger. If firm $2$ invests, it can provide its customs a value $v(\t)s$ while firm $1$ can provide a value $u$. Assuming Bertrand competition, it follows that the equilibrium price paid by the consumers and the profit per consumer are
+
+\begin{align}\label{comp}
+\begin{cases}
+    p=v(\t)s-u,\; \pi_1(\t,s)=0,\; \pi_2(\t,s)=v(\t)s-u & \text{ if }v(\t)s-u\geq 0\\ 
+    p=u-v(\t)s\; \pi_1(\t,s)=u-v(\t)s,\; \pi_2(\t,s)=0 & \text{ if }v(\t)s-u\leq 0.
+\end{cases}
+\end{align}
+If firm $2$ does not invest, its profit per consumer is equal to zero, that of firm $1$ is equal to $u$ and synergies are not learned.
+
+If mergers are not possible, it should be clear that firm $1$ has no incentive to share information. Note that absent a merger, firm $2$ will invest in $c$ only if 
+%
+\[
+\int_{\t:v(\t)s-u\geq 0}(v(\t)s-u) dF(\t)\geq c.
+\]
+The complication is that investing in $c$ may provide useful information for negotiating the purchase of assets of firm $1$ at the merger phase, hence firm $2$ may decide to invest in $c$ even if the previous inequality fails.
+
+\subsection{Merger}
+%
+Suppose that no data is shared. At the time of the merger the expected value is equal to $u$ and the merged firm has access to the full stock of data $s=1$. Therefore, the expected value if there is no investment is equal to $u$ and is equal to $\int v(\t)dF(\t)-c$ if there is investment. The value of the merger is therefore
+%
+Following a merger, consumers believe that the firm will provide value $v(\t)$. There is therefore no incentive for firm $2$ to learn $\t$: by doing so it would bear a cost $c$ but its maximum profit is $\E[v(\t)]-c$, while by not investing, it can sell the good at a price $\E[v(\t)]$. 
+\[
+W^M:=\E[v(\t)].
+\]
+%
+Note that if there is investment, the merged firm over-invest when $v(\t)-c<u$.
+
+\subsubsection{Data sharing}
+
+Suppose that the firms agree that firm $1$ will share $s$ with firm $2$, and that firm $2$ agrees to pay $T(s)$ to firm $1$ for this amount of data. 
+
+Upon receiving $s$, firm $2$ can decide to invest $c$ in order to learn $\t$. In this case, the two firms anticipate payoffs $\pi_i(\t,s)$ as given by \eqref{comp} if there is no merger. Because, $W^M\geq \pi_1(\t,s)+\pi_2(\t,s)$, a merger is always beneficial. Firm $2$ can make at TIOLI offer to buy firm $1$'s asset at a price $p(\t,s)$ that will make firm $1$ indifferent between merging and not merging, that is 
+%
+\begin{equation}\label{merger-price}
+    p(\t,s):=\pi_1(\t,s).  
+\end{equation}
+%
+It will be useful to use the notation
+%
+\[
+\s:=v^{-1}
+\]
+clearly, $\s(s)$ is an increasing function of $s$ and $v(\s(s))=s$. Using \eqref{comp}-\eqref{merger-price}, if $\t\geq \s(\frac{u}{s})$, firm $1$ has a zero profit if there is competition, hence firm $2$ can merge with firm $1$ by offering a zero price and get the full surplus $v(\t)$. If $\t< \s(s)$, firm $1$ makes a profit if there is competition and will merge only if the price is at least equal to $u-v(\t)s$; hence firm $2$ can make a profit of at most $(1+s)v(\t)-u$ from the merger, which is greater than her payoff under competition only if $\t\geq \s(\frac{u}{1+s})$. It follows that the expected payoff of firm $2$ of paying $T(s)$ to get $s$ and investing $c$ following sharing of data is 
+%
+\begin{equation}\label{value-merger-firm2}
+    \int_{\s(u/(1+s))}^{\s(u/s)} ((1+s)v(\t)-u)dF(\t)+\int_{\s(u/s)}^\infty v(\t)dF(\t)-c-T(s)
+\end{equation}
+%
+By contrast firm $1$ has an expected payoff of 
+\begin{equation}\label{value-merger-firm1}
+    \int_{0}^{\s(u/s)}(u-v(\t)s)dF(\t)+T(s).
+\end{equation}
+%
+Therefore, it must be the case that firm $2$ offers a price
+%
+\[
+T(s):=u-\int_{0}^{\s(u/s)}(u-v(\t)s)dF(\t),
+\]
+%
+for sharing $s$ and firm 2 has an expected payoff (substituting $T(s)$ in \eqref{value-merger-firm2}) equal to 
+%
+\[
+w(s)=\int_0^{\s(u/(1+s))}(u-v(\t)s)dF(\t)+\int_{\s(u/(1+s))}^\infty v(\t)dF(\t)-u-c.
+\]
+%
+The variation of this value is
+%
+\[
+w'(s)= -\int_0^{\s(u/(1+s))}v(\t)dF(\t).
+\]
+
+
+Which is always negative. 
+
+\begin{prop}
+
+When firm 2 purchases information, it optimally purchases the minimum possible such that the type of firm 1 is learned. 
+
+\end{prop}
+
+Purchasing information increases the profits of firm 2 as it worsen the outside option of firm 1 in case the merger is declined as it may face an competitor. Anticipating this, firm 1 agrees to share information with firm 2 only if this average loss is covered by the price of information. Thus the benefits for firm 2 from becoming competitive through information acquisition are dominated by the compensation it has to give firm 1 for information. 
+
+\medskip
+
+The fact that firm 2 wants to purchase as few data as possible has interesting policy implications. If possible firms will share very low amounts of consumer data, which lowers the ability of a regulator to identify the exchange. Moreover, it is in contrasts with \cite{hirshleifer1978private} where firms tend to over invest in information acquisition. In our model, the informative value of data can be learn with a very small share of the total set, and the remaining data has a distinct, exploitative value.
+
+\medskip
+
+
+In the remaining of the article we assume that there is a minimum relevant amount of information $s^*$ required so that firm 2 learns $\t$, and thus that firm 2 will purchase exactly $s^*$. 
+
+\medskip
+
+We characterize in the next section the profits of firm 2 in case no data is shared, and it offers a fixed price to firm 1 under imperfect information. 
+
+
+
+\subsubsection{No data sharing}
+
+The alternative is not to share data. In this case, firm $2$ makes a TIOLI offer to buy firm $1$ at price $u$ and firm $2$ makes profit $w(0):=W^M-u$.
+
+\medskip
+
+Note that $\lim_{s\downarrow 0}w(s)=\int_{\s(u)}^\infty v(\t)-u dF(\t)-c$ and \emph{is not equal } to what happens if there is no sharing: firm $2$ gets then $W^M-u=\max\{0, \E[v(\t)]-u-c\}$. It remains therefore to show that the optimal sharing dominates no sharing for firm $2$. 
+
+\medskip
+
+Firm 2 acquires $s$, pays $c(s)$ to learn $\t$, and then needs to pays $c(1-s)$ if it wants to go on with the merger. Thus the profits of firm 2 when purchasing information are:
+
+\[
+\int_{\s(u/(1+s))}^{\s(u/s)} ((1+s)v(\t)-u)dF(\t)+\int_{\s(u/s)}^\infty v(\t)dF(\t)-c-T(s)
+\]
+
+\medskip
+
+There are two cases to consider:
+
+\paragraph{If $\E[v(\t)]-u-c\leq 0$}
+
+Then sharing information is optimal if 
+
+\[
+\int_0^{\s(u/(1+s^*))}(-v(\t)s^*)dF(\t)+\int_{\s(u/(1+s^*))}^\infty (v(\t)-u)dF(\t)\geq c.
+\]
+
+This inequality is satisfied for a non-empty set of values of $c$. It implies that, by sharing information allowing firms to learn $\t$ before the merger, firms eventually merge even though merger does not seem initially profitable ($\E[v(\t)]-u-c\leq 0$). Proposition \ref{prop:1} (b) states this result.
+
+This inequality is not satisfied when the cost of experimentation is larger than the expected benefits from merging under perfect information. In this case firm 2 does not purchase information nor merge under imperfect information. 
+
+\paragraph{If $\E[v(\t)]-u-c\geq 0$}
+
+Then sharing information is optimal if 
+
+\[
+\int_0^{\s(u/(1+s^*))}(u-v(\t)(1+s^*))dF(\t)\geq 0.
+\]
+
+Which is always satisfied, for any value of $s^*$. For $\t \in [0,\s(u)]$ that would have lead firm 2 to merge with firm 1 at loss, pre-merger information sharing prevents the merger or reduces its price.
+
+
+
+
+This leads us to the following proposition:
+
+\begin{prop}~~\label{prop:1}
+
+\begin{itemize}
+    \item (a) When firms have the possibility to share information, sharing is always an equilibrium outcome.
+    \item (b) When merger under imperfect information is not profitable ($\E[v(\t)]-u-c\leq 0$), pre-merger information sharing allows firms to merge when $\t$ is high. 
+    \item (c) When merger under imperfect information is profitable ($\E[v(\t)]-u-c\geq 0$), pre-merger information sharing allows firms to avoid merger when $\t$ is low.
+\end{itemize} 
+
+\end{prop}
+
+\medskip
+
+When firms expect a benefit from a merger, they will always choose to share information because it allows them to identify cases where the merger is destructive. Even if firm 2 incurs a loss $c$ from learning $\t$, it allows it not to engage the merger and thus to save $u-v(\t)-c$
+
+\medskip
+
+\subsection{Variable data exploitation cost}
+
+\medskip
+
+We have assumed that $c$ is a constant, following the idea that the cost to learn the synergistic value of two data bases is the same for any size of data set, as firm 2 only needs to learn the nature of the data.\footnote{This assumption is supported by \cite{sootla2017analyzing}, who consider a cellular automaton: knowing to which row two data sets correspond allows to infer immediately their synergistic information, without looking at the data in itself.} We relax this assumption in this section, by considering two different scenarios: the cost of data exploitation either increases of decreases with $s$.
+
+\medskip
+
+Decreasing costs follow the idea that one can always do at least as good with more data than with fewer. This evolution of the cost can be represented for example thanks to the cost function $c(s)=\frac{c}{s}$ that decreases with $s$. In equilibrium, it is straightforward to see that, for a non-empty set of value of $c$, there exists a unique $s^*\in]0,1[$ such that $w(s)$ is maximized, and $s^*$ solves,
+
+$$s^*=\left(\frac{c}{\int_0^{\s(u/(1+s^*))}v(\t)dF(\t)}\right)^{1/2}.$$
+
+\medskip
+
+Increasing data exploitation costs are supported by a stream of the literature in applied data science that deals with issues of imprecise data and data processing under constrained computation resources \citep{hernandez1995merge}. In this case, the equilibrium shares the same characteristics as when $c$ is constant: firm 2 optimally purchases an infinitely small amount of information $s$ in order to learn the synergistic value of the data sets.
+
+\medskip
+
+Data exploitation cost is written $c(s)$ and $c(1)=c$ is the cost to exploit data when merger occurs. After investing $c(s)$ to learn $\t$, firm 2 invests $c(1-s)$ if $(1+s)v(\t)\geq u+c(1-s)$, that is, for $\t\geq \s((u+c(1-s))/(1+s))$.
+
+We compare the payoffs of firm 2 when purchasing $s$ and when merging under imperfect information. 
+
+\begin{equation}
+    \begin{aligned}
+w(s)=&\int_{\s((u+c(1-s))/(1+s)}^{\s(u/s)} ((1+s)v(\t)-u-c(1-s))dF(\t)+\int_{\s(u/s)}^\infty (v(\t)-c(1-s))dF(\t)-c(s)-T(s)\\
+=&\int_{\s((u+c(1-s))/(1+s)}^{\s(u/s)} ((1+s)v(\t)-u-c)dF(\t)+\int_{\s(u/s)}^\infty (v(\t)-c)dF(\t)\\
+&-\int_{0}^{\s((u+c(1-s))/(1+s)}(c(s))dF(\t)-T(s)
+\end{aligned}
+\end{equation}
+
+
+Again 
+
+\[
+T(s):=u-\int_{0}^{\s(u/s)}(u-v(\t)s)dF(\t),
+\]
+
+and 
+
+\[
+w(s)=\int_{\s((u+c(1-s))/(1+s)}^\infty (v(\t))dF(\t)+\int_{0}^{\s((u+c(1-s))/(1+s)}(u+c(1-s)-v(\t)s)dF(\t)-u-c
+\]
+
+\[
+w'(s)=-\int_{0}^{\s((u+c(1-s))/(1+s)}(c'(1-s)+v(\t))dF(\t)
+\]
+
+Interior solutions exist under the necessary conditions that $c'<0$ and that 
+
+\[
+\int_{0}^{\s(u+c)}(c'(1))dF(\t)\leq-\int_{0}^{\s(u+c)}(v(\t))dF(\t)
+\]
+
+
+Compared with the case with constant exploitation cost, the interval where profits are positive ($[0,\s((u+c(1-s))/(1+s)]$) is larger, and the profits of firm 2 ($u+c(1-s)-v(\t)(1+s)$) higher with variable exploitation costs.
+
+
+\paragraph{If $\E[v(\t)]-u-c\leq 0$}
+
+Then sharing information is optimal if 
+
+\[
+\int_0^{\s((u+c(1-s))/(1+s)}(c(1-s)-v(\t)s)dF(\t)+\int_{\s((u+c(1-s))/(1+s)}^\infty (v(\t)-u)dF(\t)\geq c.
+\]
+
+
+Which is satisfied for a wider range of values than with constant data collection costs. 
+
+\paragraph{If $\E[v(\t)]-u-c\geq 0$}
+
+Then sharing information is optimal if 
+
+\[
+\int_0^{\s((u+c(1-s))/(1+s)}(u+c(1-s)-v(\t)(1+s^*))dF(\t)\geq 0.
+\]
+
+This equation is satisfied for a wider range of values than with constant exploitation cost as.
+
+\medskip
+
+\section{Information sharing reveals $\t$ with probability $p(s)$}
+
+\medskip
+
+We have assumed that for any amount of information shared $s$ it is possible for firm 2 to learn the type of the synergistic coefficient $\t$. We have then considered different scenarios where the cost to learn $\t$ varies with the size of $s$. It is also interesting (and reasonable) to consider that the synergistic value of two data sets cannot be learned for sure. For instance, the synergies can only be observed after the product is on the market and consumers choose to purchase it or not. 
+
+\medskip
+
+We consider a probability that firm 2 learns $\t$ with information shared $s$: $p(s)$, $p'(s)\geq 0$, $p(0)=0$, $p(1)\leq 1$. If information is learned (w.p. $p(s)$), firm 2 competes with firm 1 if there is no merger. If information is not learned (w.p. $1-p(s)$), firm 2 cannot use it to compete with firm 1.
+
+In this case the expected payoff of firm 2 with $s$ information, transferring $T(s)$ and investing $c$ is:
+
+If $\E[v(\t)]-u-c\leq 0$
+
+\[
+\pi_2(s)=p(s)\left(\int_{\s(u/(1+s))}^{\s(u/s)} ((1+s)v(\t)-u)dF(\t)+\int_{\s(u/s)}^\infty v(\t)dF(\t)\right)-T(s)-c
+\]
+
+If $\E[v(\t)]-u-c\geq 0$
+
+
+\[
+\pi_2(s)=p(s)\left(\int_{\s(u/(1+s))}^{\s(u/s)} ((1+s)v(\t)-u)dF(\t)+\int_{\s(u/s)}^\infty v(\t)dF(\t)\right)+(1-p(s))\left(\int_{0}^\infty (v(\t)-u)dF(\t)\right)-T(s)-c
+\]
+
+
+The expected payoff of firm 1 when sharing $s$ is:
+
+\[
+\pi_1(s)=p(s)\left(\int_{0}^{\s(u/s)}(u-v(\t)s)dF(\t)\right)+(1-p(s))u+T(s)
+\]
+
+\medskip
+
+Therefore the price paid by firm 2 for information is:
+
+\medskip
+
+\[
+T(s):=p(s)\left(u-\int_{0}^{\s(u/s)}(u-v(\t)s)dF(\t)\right),
+\]
+
+\medskip
+
+And the expected payoff of firm 2 is:
+
+If $\E[v(\t)]-u-c\leq 0$
+%
+\[
+w(s)=p(s)\left(\int_0^{\s(u/(1+s))}(u-v(\t)s)dF(\t)+\int_{\s(u/(1+s))}^\infty v(\t)dF(\t)-u\right)-c
+\]
+%
+
+\begin{equation}
+    \begin{aligned}
+w'(s)=&p'(s)\left(\int_0^{\s(u/(1+s))}(u-v(\t)s)dF(\t)+\int_{\s(u/(1+s))}^\infty v(\t)dF(\t)-u\right)\\
+&-p(s)\int_0^{\s(u/(1+s))}v(\t)dF(\t)
+\end{aligned}
+\end{equation}
+
+
+\medskip
+
+If $\E[v(\t)]-u-c\geq 0$
+
+\medskip
+
+\[
+w(s)=p(s)\left(\int_0^{\s(u/(1+s))}(u-v(\t)(1+s))dF(\t)\right)+\int_{0}^\infty (v(\t)-u)dF(\t)-c
+\]
+
+\begin{equation}
+    \begin{aligned}
+w'(s)=&p'(s)\left(\int_0^{\s(u/(1+s))}(u-v(\t)(1+s))dF(\t)\right)-p(s)\left(\int_{0}^{\s(u/(1+s))}v(\t)dF(\t)\right)
+\end{aligned}
+\end{equation}
+
+
+\medskip
+
+In both cases $p(s)$ is now key to determine the optimal amount of information that firm 2 wants to purchase. Interior solutions can now exist.
+
+
+\medskip
+
+\section{Firm 2 privately learns the value of $\t$}
+
+IMPORTANT: once there is competition, or the products are put on the market, and before pricing happens, firm 1 and consumers learn $v(\t)s$. Firm 2 could first go on the market, generate information about $v(\t)s$ and then start the merger process. Alternatively, firm 2 could make the proposal before going to the market (but knowing $\t$). The first option implies that  merger negotiation is under symmetric information but at the cost of postponing the merger (discounting).
+
+
+Consider now the situation where, after information sharing occurs, firm 2 learns $\t$ privately. Firm 1 does not know the value of $\t$, it does not know what would be its profits if competing with firm 2 and has expected payoff $E[u-v(\t)s|\t\leq \s(\frac{u}{s})]$.
+
+Consumers do not know their valuation for firm 2's product, but they observe whether firm 2 makes an offer to firm 1. From this observation they infer the following information:
+
+
+Firm 2 makes an offer to firm 1 if $v(\t)(1+s)\geq u$, that is, $\t\geq \s(\frac{u}{1+s})$. Thus the expected utility of consumers when purchasing the product of firm 2 under competition is $E[v(\t)s|\t\geq \s(\frac{u}{1+s})]$.
+
+On the contrary, is firm 2 does not make an offer to firm 1, consumers infer that $v(\t)(1+s)\leq u$, that is, $\t\leq \s(\frac{u}{1+s})$. In this case, the expected utility of consumers when purchasing the product of firm 2 under competition is $E[v(\t)s|\t\leq \s(\frac{u}{1+s})]$.
+
+\todo[inline]{Patrick à ce stade il est toujours profitable pour la firm 2 d'acquerir firm 1: la valeur du coefficient synergétique n'importe pas, seules importes les croyances des consomateurs.}
+
+
+\section{The Regulator's Problem}
+
+We consider now a regulator who chooses whether to allow the merger or not. The regulator tradeoffs the cost from increased market power (assumed to simplify to be proportional to the industry profit) and the gain from synergies. There is some uncertainty on the weight $w$ the regulator will put on synergies, and this uncertainty is resolved only at the time the regulator evaluates the merger proposal, that is after $s$ has been shared and firms engage a merger: conditional on obvserving $s$, both firms decide to approach the regulator to authorize the merger.
+
+\medskip
+
+The regulator observes a draw $w$ from a distribution $F$ on $\mathbb R_+$ with a continuous density. The regulator decides to allow or to prevent the merger. The market structure, profits and welfare, are realized.
+
+\medskip
+
+The regulator maximizes a social welfare function that weights the social cost of high industry profits and the social benefit of synergies. Contrary to the usual view that synergies are created only during the merger, synergies endogenously happen without a merger if firm $1$ shares some of its data with firm $2$. Hence, when evaluating a merger proposal, the regulator will compare the \emph{relative synergy gain} to the \emph{relative industry profit gain.}
+
+\medskip
+
+At the time the regulator has to evaluate a merger, firm $1$ has already shared $s$ with firm $2$ and both firms and the regulator know the value of $\t$. Under competition firms lower their prices providing consumers with surplus $min\{u,v(\t)s\}$, which is lost to consumers if the regulator allows the merger. On the other hand, the synergy gain is $v(\t)w$. Hence welfare is
+    %
+$$v(\t)w-min\{u,v(\t)s\}.$$
+    %
+
+
+The probability that the merger is authorized depends on the share $s$ and on the synergistic value $\t$. The merger is authorized for 
+   %    
+    \begin{equation}
+           w\geq w^*(s):=min\{\frac{u}{v(\t)},s\}
+    \end{equation}
+    %
+
+
+At the ex-ante stage, when firms share information, the probability that a merger will be approved when firm $1$ shares $s$ with firm $2$ is then equal to  
+\[
+a(s):=1-F(w^*(s)).
+\]
+
+\begin{itemize}
+    \item For $s\in[0,\frac{u}{v(\t)}]$, the probability that a merger is allowed decreases with $s$: more information shared implies that firms would compete fiercely, which would benefit consumers. The opportunity cost of a merger is thus larger for higher values of $s$.
+    \item For $s\in[\frac{u}{v(\t)},1]$, the probability of merger increases with the synergistic coefficient $\t$.
+\end{itemize}
+
+
+
+\bibliographystyle{agsm}
+\bibliography{biblio-synergies.bib}
+
+\end{document}
+
