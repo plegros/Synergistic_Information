@@ -407,7 +407,7 @@ We consider now a regulator who chooses whether to allow the merger or not. The 
     \item Consumer surplus is equal to:
     \begin{itemize}
         \item zero if the firm is in monopoly and there is full surplus extraction, that is, no sharing occurs.
-        \item $min\{u,v(\t)s\}$ if information has been shared and firms compete.
+        \item $\min\{u,v(\t)s\}$ if information has been shared and firms compete.
     \end{itemize}
 \end{itemize}
 
@@ -446,7 +446,7 @@ min\{v(\t)-u,v(\t)(1-s)\}\rho-min\{u,v(\t)s\}(1-\rho)
 
 The probability that the merger is authorized depends on the share $s$ and on the synergistic value $\t$. 
 
-If $u\geq v(\t)s$, the merger is authorized when $v(\t)(1+s)\geq u$ and for 
+If $u\geq v(\t)s$, firm 2 will ask for a merger when $v(\t)(1+s)\geq u$ and the regulator approves it only if  
    %    
     \begin{equation}
            \rho\geq \rho^*(s,\t):=\frac{v(\t)s}{v(\t)(1+s)-u}
@@ -455,7 +455,7 @@ If $u\geq v(\t)s$, the merger is authorized when $v(\t)(1+s)\geq u$ and for
 A necessary and sufficient condition for $\rho\in[0,1]$ is to have $v(\t)\geq u$. Note that if $v(\t)<u$ the merger is always prevented.
 
 \[
-\rho^{*'}(s,\t):=\frac{v(\t)(v(\t)-u)}{(v(\t)(1+s)-u)^2}
+\frac{\partial \rho^{*}(s,\t)}{\partial s}:=\frac{v(\t)(v(\t)-u)}{(v(\t)(1+s)-u)^2}
 \]
     
 If $u\leq v(\t)s$, the merger is authorized for 
@@ -464,9 +464,10 @@ If $u\leq v(\t)s$, the merger is authorized for
            \rho\geq \rho^*(s,\t):=\frac{u}{v(\t)(1-s)+u}
     \end{equation}
 
+[transition?]
 
 \[
-\rho^{*'}(s,\t):=\frac{v(\t)u}{(v(\t)(1-s)+u)^2}
+    \frac{\partial \rho^{*}(s,\t)}{\partial s}:=\frac{v(\t)u}{(v(\t)(1-s)+u)^2}
 \]
 
 
@@ -493,7 +494,7 @@ If $u\leq v(\t)s$, the merger is authorized for
     \end{itemize} 
 \end{itemize}
 
-Information sharing can thus lead the regulator to prevent efficient mergers when $v(\t)\geq u$ and $\rho \leq \rho^*(s)$, because without merger, firms compete, which benefits consumers through an increase of their surplus. In this case, the product on the market has a quality $max\{u,v(\t)s\}\leq v(\t)$.
+Information sharing can thus lead the regulator to prevent efficient mergers when $v(\t)\geq u$ and $\rho \leq \rho^*(s)$, because without merger, firms compete, which benefits consumers through an increase of their surplus. In this case, the product on the market has a quality $\max\{u,v(\t)s\}\leq v(\t)$.
 
 At the ex-ante stage, when firms share information, the probability that a merger will be approved when firm $1$ shares $s$ with firm $2$ is then equal to:
 
@@ -662,14 +663,16 @@ There is thus always fewer consumer data collected with the regulator.
 This leads us to the following proposition:
 
 \begin{prop}~~\label{prop:2}
-
+For a uniform distribution of $\rho$,
 \begin{itemize}
     \item (a) When there is a regulator, firms always share information in equilibrium.
-    \item (b) Fewer information is shared than without a regulator.
+    \item (b) The optimal sharing is inferior to the optimal sharing without regulation.
 \end{itemize} 
 \end{prop}
 
 \medskip 
+
+QUID du surplus du consommateur???? 
 
 The presence of the regulator reduces the incentives of firm 2 to acquire information because when more information is shared, the benefits from competition increase which reduces the chances that the merger is allowed.
 
