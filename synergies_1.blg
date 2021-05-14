@@ -1,0 +1,46 @@
+This is BibTeX, Version 0.99d (TeX Live 2020)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: synergies_1.aux
+The style file: agsm.bst
+Database file #1: biblio-synergies.bib
+You've used 16 entries,
+            2909 wiz_defined-function locations,
+            739 strings with 7316 characters,
+and the built_in function-call counts, 68688 in all, are:
+= -- 11158
+> -- 943
+< -- 0
++ -- 5328
+- -- 287
+* -- 5963
+:= -- 13767
+add.period$ -- 16
+call.type$ -- 16
+change.case$ -- 223
+chr.to.int$ -- 16
+cite$ -- 16
+duplicate$ -- 274
+empty$ -- 534
+format.name$ -- 345
+if$ -- 12334
+int.to.chr$ -- 5
+int.to.str$ -- 0
+missing$ -- 17
+newline$ -- 51
+num.names$ -- 166
+pop$ -- 67
+preamble$ -- 1
+purify$ -- 240
+quote$ -- 0
+skip$ -- 238
+stack$ -- 0
+substring$ -- 15776
+swap$ -- 58
+text.length$ -- 224
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 62
+warning$ -- 0
+while$ -- 356
+width$ -- 0
+write$ -- 207
