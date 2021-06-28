@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: synergies.aux
 The style file: agsm.bst
 Database file #1: biblio-synergies.bib
-You've used 40 entries,
+You've used 41 entries,
             2909 wiz_defined-function locations,
-            869 strings with 11182 characters,
-and the built_in function-call counts, 170475 in all, are:
-= -- 27742
-> -- 2331
+            870 strings with 11349 characters,
+and the built_in function-call counts, 177578 in all, are:
+= -- 28932
+> -- 2422
 < -- 0
-+ -- 13245
-- -- 707
-* -- 14843
-:= -- 34207
-add.period$ -- 40
-call.type$ -- 40
-change.case$ -- 560
-chr.to.int$ -- 40
-cite$ -- 40
-duplicate$ -- 642
-empty$ -- 1292
-format.name$ -- 862
-if$ -- 30574
++ -- 13833
+- -- 735
+* -- 15444
+:= -- 35578
+add.period$ -- 41
+call.type$ -- 41
+change.case$ -- 574
+chr.to.int$ -- 41
+cite$ -- 41
+duplicate$ -- 674
+empty$ -- 1314
+format.name$ -- 893
+if$ -- 31873
 int.to.chr$ -- 5
 int.to.str$ -- 0
-missing$ -- 40
-newline$ -- 123
-num.names$ -- 415
-pop$ -- 150
+missing$ -- 41
+newline$ -- 126
+num.names$ -- 426
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 600
+purify$ -- 615
 quote$ -- 0
-skip$ -- 551
+skip$ -- 591
 stack$ -- 0
-substring$ -- 39192
-swap$ -- 114
-text.length$ -- 560
+substring$ -- 40876
+swap$ -- 130
+text.length$ -- 574
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 158
+type$ -- 162
 warning$ -- 0
-while$ -- 887
+while$ -- 905
 width$ -- 0
-write$ -- 514
+write$ -- 527
