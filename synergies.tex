@@ -245,31 +245,30 @@ If firm $2$ does not invest, its profit per consumer is equal to zero, that of f
 
 \subsection{Merger}
 %
-Suppose that no data is shared. At the time of the merger the expected value is equal to $u$ and the merged firm has access to the full stock of data $s=1$ that it can exploit at cost $C(1)=0$. Therefore, the expected value if there is no investment is equal to $u$ and is equal to $\E[v]=\a \uv+(1-\a)\ov$ if there is investment. The value of the merger is therefore
-%
+Suppose that no data is shared. A merged firm has access to the full stock of data $s=1$ that it can exploit at cost $C(1)=0$. Therefore, the expected value if there is investment is $\E[v]=\a \uv+(1-\a)\ov$.
 
-$$max\{u,\E[v]\}$$
-%
-
-It is useful to introduce the notion of ex-ante efficiency. A merger is ex-ante efficient if $\E[v]\geq u$ and it is ex-ante inefficient when $\E[v]\leq u$. It is clear that without information, firm 2 will acquire firm 1 only when the merger is ex-ante efficient. We will show in Proposition \ref{prop:1} that information sharing can allow firms to merge, even in cases where mergers are ex-ante inefficient. 
+It is useful to introduce the notion of ex-ante efficiency. A merger is ex-ante efficient if $\E[v]\geq u$ and it is ex-ante inefficient when $\E[v]\leq u$. It is clear that without information, firm 2 will acquire firm 1 only when the merger is ex-ante efficient. 
 
 
-%
-
-Additionally, $\uv<u$, which reflects the fact that destructive synergies can occur down to a point where the value to customer is lower when the merged firm offers the product than with firm $1$ only. This illustrates well potential negative reputation effects (in particular privacy related) that occur in Big Tech acquisitions such as Facebook/Whatsapp. Thus the merged firm over-invests when $v=\uv<u$. On the contrary, firms expect high synergies to take place with some probabilities and $\ov>u$.
+Because $\uv<u$, the merged firm over-invests when $v=\uv<u$. On the contrary, firms expect high synergies to take place with some probabilities and $\ov>u$. This explains why information sharing can allow firms to merge, even in cases where mergers are ex-ante inefficient, as we will show in Proposition \ref{prop:1}. 
 
 \subsection{Profits with data sharing}
 
 Suppose firm $1$ shares $s$ with firm $2$, and that firm $2$ agrees to pay $T(s)$ to firm $1$ for this amount of data. 
 
-Upon receiving $s$, firm $2$ can decide to invest $C(s)$ in order to learn $v$. In this case, the two firms anticipate payoffs $\pi_i(v,s)$ as given by Eq. \eqref{comp} if there is no merger. Firm $2$ can make a TIOLI offer to buy firm $1$'s asset at a price $p(v,s)$ that will make firm $1$ indifferent between merging and not merging, that is 
+Upon receiving $s$, firm $2$ can decide to invest $C(s)$ in order to learn $v$. In this case, the two firms anticipate payoffs $\pi_i(v,s)$ as given by \eqref{comp} if there is no merger. Firm $2$ can make a TIOLI offer to buy firm $1$'s asset at a price $p(v,s)$ that will make firm $1$ indifferent between merging and not merging, that is 
 %
 \begin{equation}\label{merger-price}
     p(v,s):=\pi_1(v,s).  
 \end{equation}
 %
 
-Lemma \ref{lem1} gives the price $T(s)$ paid by firm 2 for information as well as the price of the acquisition when firm 2 invests $C(s)$ following sharing of data and learning $v$.
+When $s\leq \frac{u}{\ov}$, firm 1 makes positive profits when firms compete, regardless of the value of $v$. Firm 2 exerts a competitive pressure on firm 1, and to compensate for this loss of profits, it has to pay $T(s)=\E[v]s$ to acquire information $s$. Firms merge only when $v=\ov$, and the price of the acquisition corresponds to the profits of firm 1 when firms compete: $p(\ov,s)=u-\ov s$.
+
+But when $\frac{u}{\ov}\leq s$ and firms compete, firm 1 makes positive profits if $v=\uv$, and makes zero profits if $v=\ov$. Hence, to compensate for this loss, firm 2 must pay $T(s)=u-\a(u-\uv s)$ to firm 1 to acquire information. Firm 2 wants to merge only when $v=\ov$ and as in this case, firm 1 makes zero profits in the competitive set-up, firm 2 can acquire firm 1 at a zero price.
+
+
+Lemma \ref{lem1} gives the price $T(s)$ paid by firm 2 for information as well as the price of the acquisition when firm 2 invests $C(s)$ following sharing of data and learning $v$ (all proofs absent from the text are in the Appendix).
 
 \begin{lemma}~~\label{lem1}
 
@@ -285,13 +284,7 @@ The price of information, and the price firm 2 pays to acquire firm 1 are:
 
 \end{lemma}
 
-\noindent Proof: see Appendix \ref{lem1p}.
-
-\noindent When $s\leq \frac{u}{\ov}$, firm 1 makes positive profits when firms compete, regardless of the value of $v$. Firm 2 exerts a competitive pressure on firm 1, and to compensate for this loss of profits, it has to pay $T(s)=\E[v]s$ to acquire information $s$. Firms merge only when $v=\ov$, and the price of the acquisition corresponds to the profits of firm 1 when firms compete: $p(\ov,s)=u-\ov s$.
-
-When $\frac{u}{\ov}\leq s$ and firms compete, firm 1 makes positive profits if $v=\uv$, and makes zero profits if $v=\ov$. Hence, to compensate for this loss, firm 2 must pay $T(s)=u-\a(u-\uv s)$ to firm 1 to acquire information. Firm 2 wants to merge only when $v=\ov$ and as in this case, firm 1 makes zero profits in the competitive set-up, firm 2 can acquire firm 1 at a zero price.
-
-The price firm 2 pays to acquire firm 1 after the synergies are learned decreases with $s$. For $s\geq\frac{u}{\ov}$, firm 2 can sell a better product than firm 1 if firms compete, firm 1 makes zero profits and is indifferent between competing or being acquired at a zero price. Thus the price $T(s)$ of information increases with $s$, as firm 1 expects lower revenues when sharing more information with firm 2.
+\noindent The price firm 2 pays to acquire firm 1 after the synergies are learned decreases with $s$. For $s\geq\frac{u}{\ov}$, firm 2 can sell a better product than firm 1 if firms compete, firm 1 makes zero profits and is indifferent between competing or being acquired at a zero price. Thus the price $T(s)$ of information increases with $s$, as firm 1 expects lower revenues when sharing more information with firm 2.
 
 \medskip
 
@@ -305,8 +298,6 @@ The expected profit of firm 2 purchasing information $s$ from firm 1 is:
 
 \end{lemma}
 
-\noindent Proof: see Appendix \ref{lem2p}.
-
 \noindent More information shared has two opposite effects on the profits of firm 2. On the one hand, more information is costly to acquire from firm 1, which lowers the profits of firm 2. On the other hand, more information also decreases the data exploitation cost $C(s)$ and increases the profits of firm 2. We characterize in the next section the optimal amount of information shared, which balances these two opposite effects of information acquisition on the profits of firm 2.
 
 
@@ -314,20 +305,15 @@ The expected profit of firm 2 purchasing information $s$ from firm 1 is:
 
 \subsection{Information acquisition}\label{infacq}
 
-We analyze when it is profitable for firm 2 to purchase information from firm 1, and we characterize optimal information sharing. The alternative for firm 2 is not to purchase data, and to merge under imperfect information. In this case, firm $2$ makes a TIOLI offer to buy firm $1$ at price $u$ and firm $2$ makes profit $\E[v]-u$. We show that the optimal sharing can dominate no sharing for firm $2$. 
-
-\medskip
-
-To obtain the equilibrium amount of information shared by firm 1 we apply first order conditions with respect to $s$ on the profit of firm 2 with information $s$: $\pi_2(s)=(1-\a)(\ov -u)-\a \uv s-C(s)$. In equilibrium, $s^*$ satisfies $\a \uv =-C'(s^*)$, and is provided in Lemma \ref{lem0}.
+We analyze when it is profitable for firm 2 to purchase information from firm 1, and we characterize optimal information sharing. The alternative for firm 2 is not to purchase data, and to merge under imperfect information. In this case, firm $2$ makes a TIOLI offer to buy firm $1$ at price $u$ and firm $2$ makes profit $\E[v]-u$. 
 
 
-\begin{lemma}~~\label{lem0}
+We show that the optimal sharing can dominate no sharing for firm $2$. To obtain the equilibrium amount of information shared by firm 1 we apply first order conditions with respect to $s$ on the profit of firm 2 with information $s$: $\pi_2(s)=(1-\a)(\ov -u)-\a \uv s-C(s)$. In equilibrium, $s^*$ satisfies $\a \uv =-C'(s^*)$, or, given our assumption on $C(s)$:
 
-The optimal amount of information shared $s^*$ satisfies:
+\begin{equation}
+    s^*=\min\left\{1,\sqrt{\frac{c}{\a \uv}}\right\}.
+\end{equation}
 
-$$s^*=\sqrt{\frac{c}{\a \uv}}.$$
-
-\end{lemma}
 
 \noindent When $c$ decreases, the data exploitation cost decreases as well and the benefits for firm 2 of lowering the cost by purchasing more information decrease.
 
@@ -348,16 +334,12 @@ We now compare profits with and without information sharing and we show that fir
 
 \medskip
 
-\noindent Proposition \ref{prop:1} is an important contribution of this article. When $E[v]>u$, mergers are ex-ante efficient and firms always benefit from information sharing. Information allows firms to learn the value of synergies, and to avoid merger when synergies are low. Firms always benefit from sharing, which calls for more evidence on pre-merger information sharing practices. Moreover, the efficiency gains realized when synergies are low and firms avoid merging thanks to information sharing suggest that there is a social benefit from allowing such information sharing practices. 
+\noindent Proposition \ref{prop:1} is an important contribution of this article. When $E[v]>u$, mergers are ex-ante efficient and firms always benefit from information sharing. Information allows firms to learn the value of synergies, and to avoid merger when synergies are low. 
 
 \medskip
 
-When $E[v]<u$, information sharing is profitable if $\pi_2(s)=(1-\a)(\ov -u)-\a \uv s-C(s)\geq0$. The profitability of partial information sharing thus depends on the variations of the data exploitation cost. If $C(s)$ decreases quickly, partial information sharing is more profitable than merging under imperfect information. On the contrary, if the data exploitation cost is high, firm 2 does not exploit data and as mergers are ex-ante inefficient, firms do not merge. 
+By contrast, when $E[v]<u$, information sharing is profitable if $\pi_2(s)=(1-\a)(\ov -u)-\a \uv s-C(s)\geq0$. The profitability of partial information sharing thus depends on the level of the data exploitation cost. If the data exploitation cost is high, firm 2 does not exploit data and, as mergers are ex-ante inefficient, firms do not merge. On the contrary, if $C(s)$ decreases quickly, partial information sharing is more profitable than not merging, and information sharing allows ex-ante inefficient mergers to take place
 
-\medskip
-
-Firm 2 choose to purchase information for a low data exploitation cost as it allows to identify cases where the merger is destructive. Even if firm 2 incurs a loss $C(s)\geq 0$ from exploiting partial information $s$ (versus merging and investing $c(1)=0$), learning $v$ allows firm 2 not to engage in mergers when $v=\uv$. It can be profitable for firm to purchase information even for mergers that are ex-ante inefficient, as it provides this ability to identify destructive synergies. In this case, when synergies are high, information sharing allows ex-ante inefficient mergers to take place. 
- 
 \medskip
 
 
@@ -367,25 +349,20 @@ We consider now a regulator who decides whether to allow or prevent the merger. 
 
 \medskip
 
-The total profits of the industry are equal to $u$ if there is no information sharing and no merger, to $max\{u-v s,v s-u\}$ if firm 2 has information $s$ and firms compete, and to $v$ if firms merge.
+The total profit of the industry is equal to $u$ if there is no information sharing and no merger, to $max\{u-v s,v s-u\}$ if firm 2 has information $s$ and firms compete, and to $v$ if firms merge.
 
 \medskip
 
-Consumer surplus is equal to zero if a firm is in monopoly and there is full surplus extraction. This case takes place when there is no information sharing and no merger, and firm 1 is a monopolist, or when firm 2 acquires firm 1. On the contrary, if information has been shared and firms compete, consumer surplus is equal to $\min\{u,v s\}$.
+Consumer surplus is equal to zero if a firm is a monopoly and there is full surplus extraction. This case takes place when there is no information sharing and no merger, and firm 1 is a monopolist, or when firm 2 acquires firm 1. On the contrary, if information has been shared and firms compete, consumer surplus is equal to $\min\{u,v s\}$.
 
 \medskip
 
-At the time firms exchange information, there is some uncertainty over the value of $\rho$ that the regulator puts on consumer surplus. 
 
 \subsection{Merger decision without information sharing}
 
-We analyze the decision of the regulator to allow or prevent a merger when no information has been shared. In this case, consumer surplus does not change as competition never occurs, and only the gains of the industry are considered: $(1-\rho) (v-u)$.
+We analyze the decision of the regulator with draw $\rho$ to allow or prevent a merger when no information has been shared. In this case, consumer surplus does not change as competition never occurs, and only the gains of the industry are considered: $(1-\rho) (v-u)$.
 
-For $v=\ov\geq u$, without information sharing merger is always beneficial from the regulator's point of view: since firms do not compete, there is no loss of surplus for consumers, and there is a social benefit from synergy gains.
-
-On the opposite, for $v=\uv\leq u$, without information sharing merger is never beneficial from the regulator's point of view.
-
-Without information sharing, there is imperfect information on $v$ and the regulator allows the merger if $\E[v]\geq u$ and prevents it if $\E[v]\leq u$.
+For $v=\ov\geq u$, without information sharing merger is always beneficial from the regulator's point of view: since firms do not compete, there is no loss of surplus for consumers, and there is a social benefit from synergy gains. Now, for $v=\uv$, without information sharing a merger is never beneficial from the regulator's point of view. Hence, without information sharing, there is imperfect information on $v$ and the regulator allows the merger if $\E[v]\geq u$ and prevents it if $\E[v]\leq u$.
 
 \medskip
 
@@ -401,62 +378,51 @@ At the time the regulator has to evaluate a merger, firm $1$ has already shared 
 (1-\rho) (\ov-\max\{u-\ov s,\ov s-u\})-min\{u,\ov s\}\rho
 \]
 
-Lemma \ref{lem3} characterizes the probability that a merger is authorized.
+Lemma \ref{lem3} characterizes the probability that a merger is authorized, and the expected payoff of firm 2 when acquiring information from firm 1.
 
 \begin{lemma}~~\label{lem3}
 
-The probability that a merger is authorized depends on the share $s$, and there exists $\rho^*(s)$ such that:
-
 \begin{itemize}
-    \item When $\rho\leq \rho^*(s)$ the regulator authorizes the merger.
-    \item When $\rho\geq \rho^*(s)$ the regulator forbids the merger.
-    \item $\rho^*(s)$ decreases with $s$.
+    \item There exists a decreasing function $\rho^*(s)$ such that the regulator authorizes the merger if, and only if, $\rho\leq \rho^*(s)$. 
+
+Hence, as we consider $\rho$ following a uniform distribution over $[0,1]$, the probability of a merger is $\rho^*(s)$.
+    \item The function $\rho^*(s)$ depends on whether $s\in[0,\frac{u}{\ov}]$ or $s\in[\frac{u}{\ov},1]$, and we have: 
+
+\begin{align}
+~\rho^*(s)=
+\begin{cases}
+    ~~\frac{\ov(1+s)-u}{\ov(1+2s)-u}~~\textrm{if}~s\in[0,\frac{u}{\ov}]\\ 
+    ~~\frac{\ov(1-s)+u}{\ov(1-s)+2u}~~\textrm{if}~s\in[\frac{u}{\ov},1].
+\end{cases}
+\end{align}
+    \item The expected payoff of firm 2 when purchasing $s$ information from firm 1 is:
+    
+\begin{align}
+~\pi_{2r}(s)=
+\begin{cases}
+    ~~(1-\a)\rho^*(s)(\ov(1+s)-u)-\E[v]s-C(s)&\textrm{if}~s\in[0,\frac{u}{\ov}]\\ 
+    ~~(1-\a)[\rho^*(s)\ov+(1-\rho^*(s))(\ov s-u)-u]-\a\uv s-C(s)~~&\textrm{if}~s\in[\frac{u}{\ov},1].
+\end{cases}
+\end{align}
 \end{itemize}
 
 \end{lemma}
 
-\noindent Proof: see Appendix \ref{lem3p}.
+\medskip
 
-\noindent The expression of $\rho^*(s)$ depends on whether $s\in[0,\frac{u}{\ov}]$ or to $[\frac{u}{\ov},1]$, and we have: 
-
-$$\textrm{If}~s\in[0,\frac{u}{\ov}],~\rho^*(s)=\frac{\ov(1+s)-u}{\ov(1+2s)-u};$$
-
-$$\textrm{if}~s\in[\frac{u}{\ov},1],~\rho^*(s)=\frac{\ov(1-s)+u}{\ov(1-s)+2u}.$$
+\noindent The probability $\rho^*(s)$ that a merger is allowed decreases with $s$ as more information sharing implies that firms compete more fiercely, which benefits consumers. The opportunity cost of a merger is thus larger for higher values of $s$ and a merger is beneficial only if $\rho$ is large enough. 
 
 \medskip
 
-The probability $\rho^*(s)$ that a merger is allowed decreases with $s$ as more information sharing implies that firms compete more fiercely, which benefits consumers. The opportunity cost of a merger is thus larger for higher values of $s$ and a merger is beneficial only if $\rho$ is large enough. 
+Information sharing can lead the regulator to prevent ex-ante efficient mergers ($\E[v] \geq u$) when $\rho \geq \rho^*(s)$, as without merger, firms compete, which benefits consumers through an increase of their surplus. 
 
 \medskip
-
-Information sharing can lead the regulator to prevent ex-ante efficient mergers ($\E[v] \geq u$) when $\rho \leq \rho^*(s)$, as without merger, firms compete, which benefits consumers through an increase of their surplus. 
-
-\medskip
-
-As we consider $\rho$ that follows a uniform distribution over $[0,1]$, at the stage when firms share information, the probability that a merger will be approved when firm $1$ shares $s$ with firm $2$ is equal to $\rho^*(s)$.
-
 
 \subsection{Information acquisition}
 
-We analyze how the presence of the regulator and the possibility that it prevents the merger impact the incentives of firm 2 to purchase information from firm 1.
+We analyze how the presence of the regulator and the possibility that it prevents the merger impact the incentives of firm 2 to purchase information from firm 1. There are two opposite effects of the regulator on the incentives of firms to share information. On the one hand, the possibility that the regulator prevents a merger increases with the amount of information shared, which reduces the incentives of firms to share information. On the other hand, firm 2 has interest to acquire more information in case the merger does not go through: with more information, firm 2 will achieve higher profits in the competitive case. 
 
-Lemma \ref{lem4} characterizes the expected profits of firm 2 when purchasing an amount $s$ of information.
-
-\begin{lemma}~~\label{lem4}
-
-The expected payoff of firm 2 when purchasing $s$ information from firm 1 is:
-
-\begin{itemize}
-    \item When $s\leq\frac{u}{\ov}$:
-    $$\pi_{2r}(s)=(1-\a)\rho^*(s)(\ov(1+s)-u)-\E[v]s-C(s).$$
-    \item When $s\geq \frac{u}{\ov}$:
-    $$\pi_{2r}(s)=(1-\a)[\rho^*(s)\ov+(1-\rho^*(s))(\ov s-u)-u]-\a\uv s-C(s).$$
-\end{itemize}
-\end{lemma}
-
-\noindent Proof: see Appendix \ref{lem4p}.
-
-\noindent In order to analyze the impacts of the regulator on the amount of information shared in equilibrium, we characterize in Lemma \ref{lem5} the expected payoff of firm 2 with the regulator. 
+In order to analyze the impacts of the regulator on the amount of information shared in equilibrium, Lemma \ref{lem5} provides condition on the data exploitation cost for the expected payoff of firm 2 to be strictly concave when there is a regulator. 
 
 \begin{lemma}~~\label{lem5}
 
@@ -513,7 +479,7 @@ The data exploitation cost is key to understand the effect of the regulator on i
 
 \medskip
 
-Let us look at the last case, where the profit of firm 2 is maximized for $s=1$. Replacing $s$ by $1$ in the profit of firm 2 given in Lemma \ref{lem4} we obtain:
+Let us look at the last case, where the profit of firm 2 is maximized for $s=1$. Replacing $s$ by $1$ in the profit of firm 2 given in Lemma \ref{lem3} we obtain:
 
 $$\pi_{2r}(s)=(1-\a)\ov-\a\uv-\frac{3}{2}(1-\a)u.$$
 
@@ -530,6 +496,8 @@ This inequality is satisfied under two conditions: $3\a\geq1$; and $\frac{u}{\uv
 \subsubsection{Does the presence of the regulator drive up or down consumer information sharing?}
 
 We compare information sharing in equilibrium with and without the regulator. We replace $s$ by $s^*$, the optimal amount of information shared without a regulator, into $\pi_{2r}(s)$ and we see whether the profit of firm 2 with the regulator increases or decreases  at $s^*$. This allows us to show whether more or less information is shared when there is a regulator. 
+
+todo voir comment faire "this should be earlier"
 
 \begin{prop}~~\label{prop:2}
 
@@ -549,15 +517,17 @@ Let's $s_r^*$ denote the optimal value of $s$ with the regulator. there exists a
 \noindent Proof: see Appendix \ref{prop:2p}.
 
 
-\noindent There are two cases to consider to understand to impact of the regulator on pre-merger information sharing. When $s\leq u/ \ov$, more information shared decreases the exploitation costs but lowers the probability that the merger is accepted. In this case, firm 2 purchases \textit{less} information from firm 1 than without the regulator. 
+\noindent There are two cases to consider to understand to impact of the regulator on pre-merger information sharing. When $s_r^* < u/ \ov$, more information shared decreases the exploitation costs but lowers the probability that the merger is accepted. In this case, firm 2 purchases \textit{less} information from firm 1 than without the regulator. 
 
 \medskip
 
-When $s\geq u/ \ov$ there is an additional positive effect of information sharing on the profits of firm 2: if the merger is prevented, the larger $s$ is, the higher the profits of firm 2 under competition. With a uniform distribution this second effect dominates the first effect on the interval $[u/\ov,1]$, and firm 2 purchases \textit{more} information than without a regulator. 
+When $s_r^*> u/ \ov$ there is an additional positive effect of information sharing on the profits of firm 2: if the merger is prevented, the larger $s$ is, the higher the profits of firm 2 under competition. With a uniform distribution this second effect dominates the first effect on the interval $[u/\ov,1]$, and firm 2 purchases \textit{more} information than without a regulator. 
 
 \medskip
 
-Using numerical values we illustrate cases where $s_r^*\in[0,u/\ov]$ and $s_r^*\in[u/\ov,1]$. Consider $\a=\frac{3}{4}$, $\ov=4u=8\uv=1280$. Clearly in this example the condition given in Eq. \ref{eq2} for information sharing to be more profitable than non sharing is satisfied as $u(3\a-1)\geq 4\a\uv$, and the profit function is strictly concave on $[0,u/\ov]$ and on $[u/\ov,1]$ for $c>5.76$. In this case, $c_0=6.7$, $c_1=21.1$ and $c_2=40$. For $c\in[5.76,6.7]$, $\pi_{2r}$ has a unique maximum $s_r^*\in[0,u/\ov]$, and there is less data sharing than without the regulator. For $c\geq21.1$, $\pi_{2r}$ has a unique maximum $s_r^*\in[u/\ov,1]$ and firm 2 collects more data than without the regulator. In particular, when $c\geq 40$ $s^*_r=1$ and firm 1 shares all information. 
+We illustrate these cases where $s_r^*\in[0,u/\ov]$ and $s_r^*\in[u/\ov,1]$ in a numerical example. Consider $\a=\frac{3}{4}$, $\ov=4u=8\uv=1280$. Clearly in this example the condition given in Eq. \ref{eq2} for information sharing to be more profitable than non sharing is satisfied as $u(3\a-1)\geq 4\a\uv$, and the profit function is strictly concave on $[0,u/\ov]$ and on $[u/\ov,1]$ for $c>\underline{c}=5.76$. In this case, $c_0=6.7$, $c_1=21.1$ and $c_2=40$. For $c\in[5.76,6.7]$, $\pi_{2r}$ has a unique maximum $s_r^*\in[0,u/\ov]$, and there is less data sharing than without the regulator. For $c\geq21.1$, $\pi_{2r}$ has a unique maximum $s_r^*\in[u/\ov,1]$ and firm 2 collects more data than without the regulator. In particular, when $c\geq 40$ $s^*_r=1$ and firm 1 shares all information. 
+
+todo verifier les valeurs numériques
 
 \medskip
 
@@ -599,7 +569,7 @@ If firm 2 purchases $s_r^*\in[0,u/\ov]$ data, $s_r^*<s^*$ and consumer surplus i
 
 \subsection{Regulating pre-merger information sharing}
 
-The regulator can allow or prevent firm 2 from purchasing information from firm 1 before sharing occurs. Before learning the value of $\rho$, the regulator compares social welfare with and without information sharing and chooses whether to allow firms to share.\footnote{The regulator does not know $\rho$ at the time of this decision for instance as $\rho$ be market specific and the decision to allow information sharing or not is for all markets. Moreover, if the regulator allows or prevents information sharing while knowing $\rho$, this would send a signal to firm 2 on the value of $\rho$.}
+Another tool for the regulator is to allow or prevent firm 2 from purchasing information from firm 1 before sharing occurs. Before learning the value of $\rho$, the regulator compares social welfare with and without information sharing and chooses whether to allow firms to share.\footnote{The regulator does not know $\rho$ at the time of this decision for instance as $\rho$ be market specific and the decision to allow information sharing or not is for all markets. Moreover, if the regulator allows or prevents information sharing while knowing $\rho$, this would send a signal to firm 2 on the value of $\rho$.}
 
 \medskip
 
@@ -693,7 +663,7 @@ If $\beta\geq 1$, $s_2=\frac{1}{\beta}$, $s_1=1$ and
 
 \medskip
 
-Let's compare profits in equilibrium under bilateral information sharing and information purchasing:
+Let compare profits in equilibrium under bilateral information sharing and information purchasing:
 
 $$\pi_2(s^*)=(1-\a)(\ov-u)-2\sqrt{c\a \uv}+c,$$
 
@@ -783,6 +753,7 @@ And bilateral information sharing always yields higher welfare than information 
 
 \medskip
 
+todo trouver condition
 \begin{prop}~~
 
 \begin{itemize}
@@ -805,10 +776,10 @@ Our model of pre-merger information sharing allows us to reach four conclusions 
 
 Secondly, by reducing the risk or mergers and acquisition, information sharing can have an impact on the willingness of firms to merge, and thus on market concentration, innovation and consumer surplus. Preliminary studies suggest that firms are increasingly sharing data \citep{scaria2018study} and it is thus essential to better document to what extent information sharing is a common practice between firms and how it impacts mergers and acquisitions.
 
-Thirdly, we have shown that data exploitation costs are key to understand information sharing decisions of firm. With low data exploitation costs, firms need to share less data to learn the value of synergies, and it is more probable that information sharing flies below the radar of regulators such as competition authorities. It is therefore essential for policy makers to assess the cost of exploiting data, as recent advances in cloud computing have allowed costs of data storage and data exploitation to fall in the last decade \citep{lambrecht2015can}.\footnote{See also \href{https://www.enterprisestorageforum.com/management/can-cloud-storage-costs-fall-to-zero/}{Can Cloud Storage Costs Fall to Zero?, Enterprise Storage Forum, last accessed 10/05/2021.}.} 
+Thirdly, we have shown that data exploitation costs may be key to understand information sharing decisions of firm. With low data exploitation costs, firms need to share less data to learn the value of synergies, and it is more probable that information sharing flies below the radar of regulators such as competition authorities. It is therefore essential for policy makers to assess the cost of exploiting data, as recent advances in cloud computing have allowed costs of data storage and data exploitation to fall in the last decade \citep{lambrecht2015can}.\footnote{See also \href{https://www.enterprisestorageforum.com/management/can-cloud-storage-costs-fall-to-zero/}{Can Cloud Storage Costs Fall to Zero?, Enterprise Storage Forum, last accessed 10/05/2021.}.} 
 
 
-Finally, further research should explore how the duration of the data impacts information sharing practices. As \cite{valavi2020time} emphasize, data can be short lived and long lived, and our model focuses on long lived data. Short lived data are not subject to the Arrow information paradox, and firms may have incentives to share all available information in this case. More research in needed regarding the relation between data duration and their impact on market competition.
+Finally, further research should explore how the durability of the data impacts information sharing practices. As \cite{valavi2020time} emphasize, data can be short lived and long lived, and our model focuses on long lived data. Short lived data are not subject to the Arrow information paradox, and firms may have incentives to share all available information in this case. 
 
 %todo discuter l'impact des variables comme \a sur outcome, comment le risque associé à une fusion impact sharing? en deduire policy guidelines
 
@@ -944,10 +915,9 @@ Again we compute the derivative of $\rho^*$ with respect to $s$:
     \frac{\partial \rho^{*}(s)}{\partial s}:=-\frac{\ov u}{(\ov(1-s)+2u)^2}
 \]
 
-\subsection{Proof of Lemma \ref{lem4}}\label{lem4p}
 
 
-We provide the expected payoff of firm 2 when purchasing $s$ information from firm 1.
+We now provide the expected payoff of firm 2 when purchasing $s$ information from firm 1.
 
 
 \begin{itemize}
