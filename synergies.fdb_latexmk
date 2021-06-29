@@ -1,14 +1,14 @@
 # Fdb version 3
-["bibtex synergies"] 1624889616 "synergies.aux" "synergies.bbl" "synergies" 1624889618
+["bibtex synergies"] 1624951582 "synergies.aux" "synergies.bbl" "synergies" 1624951585
   "/usr/local/texlive/2020/texmf-dist/bibtex/bst/harvard/agsm.bst" 1136766823 25549 e3d0f1ab4ae55e777f7352db30e2c6f7 ""
   "biblio-synergies.bib" 1624889613 18581 768c11d6c8f6d8b9f6ee5da6c2f5835e ""
-  "synergies.aux" 1624889617 11845 b1547e9f237b3b30e35295c59bd2e7db "pdflatex"
+  "synergies.aux" 1624951585 11560 817063b6f7f9aee040fda08ad7dcbf49 "pdflatex"
   (generated)
   "synergies.blg"
   "synergies.bbl"
-["pdflatex"] 1624889616 "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.tex" "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.pdf" "synergies" 1624889618
-  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.aux" 1624889617 11845 b1547e9f237b3b30e35295c59bd2e7db ""
-  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.tex" 1624889613 83974 99bc644cd4f2f8d4191e11d2854c80f4 ""
+["pdflatex"] 1624951584 "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.tex" "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.pdf" "synergies" 1624951585
+  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.aux" 1624951585 11560 817063b6f7f9aee040fda08ad7dcbf49 ""
+  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.tex" 1624951580 82537 3e36f890b74c91cd457c298481639932 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/jknappen/ec/tcrm0600.tfm" 1136768653 1536 12e8c510d3e158fdd0e9a42e75118bd9 ""
@@ -39,6 +39,7 @@
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti10.tfm" 1136768653 1480 aa8e34af0eb6a2941b776984cf1dfdc4 ""
+  "/usr/local/texlive/2020/texmf-dist/fonts/tfm/public/cm/cmti7.tfm" 1136768653 1492 86331993fe614793f5e7e755835c31c5 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb" 1248133631 34811 78b52f49e893bcba91bd7581cdc144c0 ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1248133631 32080 340ef9bf63678554ee606688e7b5339d ""
   "/usr/local/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb" 1248133631 32298 c6d25bb16d1eac01ebdc6d7084126a1e ""
@@ -214,14 +215,14 @@
   "/usr/local/texlive/2020/texmf.cnf" 1586288231 577 d60164b4589a341208aff7a667fbbdcb ""
   "Figure1.png" 1624889613 20809 ba486a9bbf1be12fc021b1d3a4278f66 ""
   "Figure2.png" 1624889613 15654 27cd8685047ecef7b5b876ef5249e380 ""
-  "synergies.aux" 1624889617 11845 b1547e9f237b3b30e35295c59bd2e7db "pdflatex"
-  "synergies.bbl" 1624889616 11461 c8d8b0d5739189c72e79831ada019241 "bibtex synergies"
-  "synergies.out" 1624889617 2175 a7bb03c3143a0d82db138d938646e405 "pdflatex"
-  "synergies.tex" 1624889613 83974 99bc644cd4f2f8d4191e11d2854c80f4 ""
+  "synergies.aux" 1624951585 11560 817063b6f7f9aee040fda08ad7dcbf49 "pdflatex"
+  "synergies.bbl" 1624951582 11461 c8d8b0d5739189c72e79831ada019241 "bibtex synergies"
+  "synergies.out" 1624951585 2108 152f6b34eba505d26a43d5e832461298 "pdflatex"
+  "synergies.tex" 1624951580 82537 3e36f890b74c91cd457c298481639932 ""
   (generated)
-  "synergies.pdf"
-  "synergies.log"
-  "synergies.out"
-  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.pdf"
   "synergies.aux"
+  "synergies.pdf"
+  "synergies.out"
+  "synergies.log"
+  "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.pdf"
   "/Users/patricklegros/Dropbox/Git_Projects/Synergistic_Information/synergies.log"
